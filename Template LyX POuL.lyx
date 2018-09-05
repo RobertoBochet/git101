@@ -1,13 +1,28 @@
-#LyX 2.1 created this file. For more info see http://www.lyx.org/
-\lyxformat 474
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
 \begin_document
 \begin_header
+\save_transient_properties true
+\origin unavailable
 \textclass beamer
 \begin_preamble
-\usetheme{Madrid}
-\usefonttheme{serif}
-% \usecolortheme{crane} %GIALLA
+\usetheme{Pittsburgh}
+\usefonttheme{structurebold}
+\usecolortheme{crane} %GIALLA
 % more colors & themes http://www.hartwork.org/beamer-theme-matrix/
+
+% colori personalizzati: testo bianco e sfondo nero
+\definecolor{amber}{rgb}{1.0, 0.75, 0.0}
+
+\setbeamercolor{titlelike}{fg=black}
+\setbeamercolor{background canvas}{bg=black}
+\setbeamercolor{normal text}{fg=white}
+\setbeamercolor{section in toc}{fg=amber}
+\setbeamercolor{item projected}{bg=amber}
+\setbeamercolor{item projected}{fg=black}
+\setbeamercolor{item}{fg=amber}
+\setbeamercolor{block title}{fg=white}
+\setbeamercolor{block body}{fg=black}
 
 \setbeamercovered{transparent}
 % transizioni: gli elementi nascosti vengono visualizzati in trasparenza
@@ -61,16 +76,18 @@
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman default
-\font_sans default
-\font_typewriter default
-\font_math auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
-\font_sf_scale 100
-\font_tt_scale 100
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -109,6 +126,7 @@
 \suppress_date false
 \justification true
 \use_refstyle 0
+\use_minted 0
 \index Index
 \shortcut idx
 \color #008000
@@ -117,7 +135,10 @@
 \tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation default
-\quotes_language french
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style swiss
+\dynamic_quotes 0
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
@@ -147,7 +168,8 @@ ocumento -> Imposta
 \bar under
 z
 \bar default
-ioni -> Preambolo di LaTeX 
+ioni -> Preambolo di \SpecialChar LaTeX
+ 
 \end_layout
 
 \begin_layout Plain Layout
@@ -361,6 +383,10 @@ A title should summarize the slide in an understandable fashion for anyone
 \end_inset
 
 
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -399,7 +425,8 @@ are e distrarre i suoi compagni.
 \end_layout
 
 \begin_layout Itemize
-Ora mi interrompo con una pausa forzata (linea tratteggiata in LyX)
+Ora mi interrompo con una pausa forzata (linea tratteggiata in \SpecialChar LyX
+)
 \end_layout
 
 \begin_layout Pause
@@ -411,15 +438,20 @@ E ricompaio una transizione dopo
 \end_layout
 
 \end_deeper
-\begin_layout Separator
+\begin_layout Standard
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
 ricorda di inserire un Separatore tra una dipositiva e l'altra.
- (Metterli in automatico non è più di moda da LyX 2.1)
+ (Metterli in automatico non è più di moda da \SpecialChar LyX
+ 2.1)
 \end_layout
 
+\end_inset
+
+
+\begin_inset Separator latexpar
 \end_inset
 
 
@@ -437,6 +469,10 @@ status open
 esempio elenchi
 \end_layout
 
+\end_inset
+
+
+\begin_inset Separator latexpar
 \end_inset
 
 
@@ -492,6 +528,10 @@ un
 
 \begin_layout Enumerate
 elenco
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -501,6 +541,10 @@ numerato
 
 \begin_layout Enumerate
 a più livelli
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -519,7 +563,10 @@ con gli elenchi annidati
 \end_deeper
 \end_deeper
 \end_deeper
-\begin_layout Separator
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
 
 \end_layout
 
@@ -534,6 +581,10 @@ prova anche i blocchi
 \end_inset
 
  
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -613,6 +664,10 @@ In un blocco posso fare domande?
 \end_inset
 
 
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -626,11 +681,19 @@ io posso rispondere
 
 \begin_layout Itemize
 usando un elenco
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
 \begin_layout Enumerate
 dentro un elenco
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -673,6 +736,10 @@ Fonti
 \end_inset
 
 
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -703,7 +770,10 @@ riferimento
  all'etichetta.
 \end_layout
 
-\begin_layout Separator
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
 
 \end_layout
 
@@ -719,6 +789,10 @@ status open
 Fine
 \end_layout
 
+\end_inset
+
+
+\begin_inset Separator latexpar
 \end_inset
 
 
@@ -761,13 +835,17 @@ ricordate di configurare inkscape per le immagini vettoriali (se non lo
 \end_inset
 
 
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
 \begin_layout Standard
 \align center
 \begin_inset Graphics
-	filename by-sa.svg
+	filename by-sa.pdf
 	height 0.9cm
 
 \end_inset
