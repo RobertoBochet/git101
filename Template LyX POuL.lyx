@@ -13,7 +13,6 @@
 
 % colori personalizzati: testo bianco e sfondo nero
 \definecolor{amber}{rgb}{1.0, 0.75, 0.0}
-
 \setbeamercolor{titlelike}{fg=black}
 \setbeamercolor{background canvas}{bg=black}
 \setbeamercolor{normal text}{fg=white}

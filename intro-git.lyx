@@ -1,0 +1,2041 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass beamer
+\begin_preamble
+\usetheme{Pittsburgh}
+\usefonttheme{structurebold}
+\usecolortheme{crane} %GIALLA
+% more colors & themes http://www.hartwork.org/beamer-theme-matrix/
+
+% colori personalizzati: testo bianco e sfondo nero
+\definecolor{amber}{rgb}{1.0, 0.75, 0.0}
+\setbeamercolor{titlelike}{fg=black}
+\setbeamercolor{background canvas}{bg=black}
+\setbeamercolor{normal text}{fg=white}
+\setbeamercolor{section in toc}{fg=amber}
+\setbeamercolor{item projected}{bg=amber}
+\setbeamercolor{item projected}{fg=black}
+\setbeamercolor{item}{fg=amber}
+\setbeamercolor{block title}{fg=white}
+\setbeamercolor{block body}{fg=black}
+
+% elenchi puntati con quadratini =)
+\setbeamertemplate{itemize item}[square]
+
+\setbeamercovered{invisible}
+% transizioni: gli elementi nascosti vengono visualizzati in trasparenza
+
+%\beamerdefaultoverlayspecification{<+->}
+% transizioni: di default i paragrafi e gli elenchi (puntati e numerati) vengono scoperti passo per passo.
+% usate con cautela
+
+\usenavigationsymbolstemplate{}
+% hide navigation symbols (bottom-right corner in every slide)
+
+\titlegraphic{\includegraphics[height=1.4cm]{poul-white.pdf}}
+% Aggiunge il logo del POuL in prima pagina
+% Ricordate che dovete sempre avere il logo in pdf nella cartella dove avete il documento (poul-logo.pdf)
+
+\IfFileExists{lmodern.sty}{\usepackage{lmodern}}{}
+% sets nice fonts (if available)
+
+% inserisce AUTOMATICAMENTE una slide di titolo sezione all'inizio di OGNI sezione: in questa slide viene visualizzato l'indice delle sezioni, evidenziata quella corrente.
+\AtBeginSection[]
+{
+  \begin{frame}<beamer>
+    \frametitle{Sezione \thesection}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+
+% ridefinisce il footer per evitare di includere \institute tra () accanto al nome
+% LyX 2.1 pare abbia risolto questo bug. Lascio questo codice commentato, rimane utile per nascondere forzatamente \institute dal pedice nel caso si desiderasse aggiungerlo in seguito
+% fonte: http://tex.stackexchange.com/questions/35166/how-can-i-remove-the-institute-from-the-author-footline-on-beamer
+%\setbeamertemplate{footline}
+%{
+%  \leavevmode%
+%  \hbox{%
+%  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+%    \usebeamerfont{author in head/foot}\insertshortauthor%~~\beamer@ifempty{\insertshortinstitute}{}{(\insertshortinstitute)}
+ % \end{beamercolorbox}%
+ % \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+%    \usebeamerfont{title in head/foot}\insertshorttitle
+%  \end{beamercolorbox}%
+%  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+%    \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
+%    \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
+%  \end{beamercolorbox}}%
+%  \vskip0pt%
+%}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language italian
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks true
+\pdf_pdfborder true
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style swiss
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Corsi Linux Base
+\end_layout
+
+\begin_layout Subtitle
+(Milano Bovisa)
+\end_layout
+
+\begin_layout Author
+Lorenzo Prosseda
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+href{mailto:lerokamut@gmail.com}{
+\backslash
+nolinkurl{lerokamut@gmail.com}}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Lorenzo Prosseda
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Date
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+color{amber} 
+\backslash
+textbf{Introduzione a GIT}}
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+VCS e Repository
+\end_layout
+
+\begin_layout Subsection
+Perché mantenere ogni versione
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Perché mantenere ogni versione
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Quando lavoriamo su uno o più file apportando delle modifiche, accade spesso
+ di volerne annullare qualcuna in particolare...
+\end_layout
+
+\begin_layout Itemize
+scorciatoia 
+\family typewriter
+CTRL + Z
+\end_layout
+
+\begin_layout Itemize
+copiare i file aggiungendo un timestamp al nome
+\end_layout
+
+\begin_layout Itemize
+usare un version control system
+\end_layout
+
+\begin_layout Pause
+\begin_inset VSpace 1.2cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/git-white.pdf
+	display false
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Perché mantenere ogni versione
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Un VCS mantiene una base di dati che conserva le modifiche effettuate sui
+ file tracciati
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+color{amber}locale}
+\end_layout
+
+\end_inset
+
+: i file tracciati risiedono sulla propria macchina
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+color{amber}centralizzato}
+\end_layout
+
+\end_inset
+
+: i file tracciati risiedono solamente su un server centrale
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+color{amber}distribuito}
+\end_layout
+
+\end_inset
+
+: la base di dati e i file tracciati risiedono sulle macchine di ciascun
+ utente
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Perché mantenere ogni versione
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+GIT è un VCS decentralizzato, che tiene traccia delle modifiche ai file
+ tramite snapshot
+\end_layout
+
+\begin_layout Itemize
+la maggior parte delle operazioni sono svolte in locale
+\end_layout
+
+\begin_layout Itemize
+ogni modifica viene salvata con un controllo di integrità
+\end_layout
+
+\begin_layout Itemize
+difficile 
+\begin_inset Quotes cld
+\end_inset
+
+convincere
+\begin_inset Quotes crd
+\end_inset
+
+ GIT a cancellare delle informazioni
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Usare un repository GIT
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Usare un repository GIT
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Una directory i cui file siano tracciati da GIT è chiamata repository; per
+ crearne una locale basta solo:
+\end_layout
+
+\begin_layout Itemize
+spostarsi nella directory radice del progetto che si vuole tracciare
+\end_layout
+
+\begin_layout Itemize
+
+\family typewriter
+\series bold
+$ git init
+\end_layout
+
+\begin_layout Itemize
+...
+ tutto qui!
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Hey, e se volessi configurare cose?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
+GIT salva le proprie impostazioni in tre aree del file system; possiamo
+ modificarle col comando
+\family typewriter
+:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\family typewriter
+\series bold
+$ git config <--local|--global|--system>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Usare un repository GIT
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Configurare GIT:
+\end_layout
+
+\begin_layout Itemize
+
+\family typewriter
+$ git config <scope> user.name <name>
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Imposta il nome utente che sarà associato alle modifiche
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\family typewriter
+$ git config <scope> user.email <mail>
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Imposta anche una mail da associare a un nome utente
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\family typewriter
+$ git config <scope> core.editor <editor>
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Scegli l'editor predefinito da usare con GIT
+\end_layout
+
+\end_deeper
+\begin_layout Pause
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Inoltre, può essere utile controllare l'output dei seguenti comandi:
+\end_layout
+
+\begin_layout Itemize
+
+\family typewriter
+$ git help <verb>
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Mostra una pagina di aiuto per una specifica funzione di GIT
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\family typewriter
+$ git config --list
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Mostra un alista di impostazioni con i relativi valori
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Usare un repository GIT
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Se il repository fosse online?
+\end_layout
+
+\begin_layout Itemize
+
+\family typewriter
+$ git clone <repo-address>
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+in questo modo verrà copiato sulla propria macchina anche lo storico delle
+ modifiche di tutti i file del repository
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Workflow
+\end_layout
+
+\begin_layout Subsection
+Modifiche e staging area
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Modifiche e staging area
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Ho capito come creare la mia repository locale o come scaricarla, ma come
+ faccio a tenere traccia delle modifiche?
+\end_layout
+
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Stato dei file nella repository
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
+GIT gestisce i file permettendo all'utente di assegnargli uno stato, nei
+ modi seguenti:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+color{amber}staged}
+\end_layout
+
+\end_inset
+
+: ho chiesto a GIT di 
+\begin_inset Quotes cld
+\end_inset
+
+mettere da parte
+\begin_inset Quotes crd
+\end_inset
+
+ lo snapshot di un file col comando 
+\family typewriter
+$ git add <file>
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+color{amber}modified}
+\end_layout
+
+\end_inset
+
+: ho chiesto a GIT di tracciare un file con 
+\family typewriter
+
+\begin_inset Newline newline
+\end_inset
+
+$ git add <file>
+\family default
+, dopodiché ho modificato quel file
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+color{amber}committed}
+\end_layout
+
+\end_inset
+
+: ho chiesto a GIT di prendere il contenuto della staging area e di spostarlo
+ nella cartella 
+\family typewriter
+.git
+\family default
+, tramite il comando 
+\family typewriter
+$ git commit
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Modifiche e staging area
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Aree e stato dei file
+\begin_inset VSpace defskip
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/areas.png
+	display false
+	scale 20
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace defskip
+\end_inset
+
+Ciclo di vita di un file tracciato
+\begin_inset VSpace defskip
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/lifecycle.png
+	display false
+	scale 28
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Commit
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Commit
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Per salvare permanentemente gli snapshot dei file contenuti nella staging
+ area, si usa il comando 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+color{amber} 
+\end_layout
+
+\end_inset
+
+
+\family typewriter
+$ git commit
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+per prima cosa si aprirà l'editor di testo per scrivere un messaggio 
+\emph on
+significativo
+\emph default
+ da associare al commit
+\end_layout
+
+\begin_layout Itemize
+gli snapshot nella staging area saranno spostati nella cartella 
+\family typewriter
+.git
+\family default
+, e i file associati saranno marcati come 
+\begin_inset Quotes cld
+\end_inset
+
+unmodified
+\begin_inset Quotes crd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+Possiamo controllare in ogni momento lo stato dei file tracciati e nella
+ staging area
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+color{amber} 
+\end_layout
+
+\end_inset
+
+
+\family typewriter
+$ git status
+\family default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+: mostra lo stato dei file tracciati, indicando le modifiche e il contenuto
+ della staging area (così sapremo cosa finirà nel commit)
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+color{amber} 
+\end_layout
+
+\end_inset
+
+
+\family typewriter
+$ git diff <--staged>
+\family default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+: mostra in modo specifico le differenze dei contenuti dei file 
+\begin_inset Quotes cld
+\end_inset
+
+modified
+\begin_inset Quotes crd
+\end_inset
+
+ ma non 
+\begin_inset Quotes cld
+\end_inset
+
+staged
+\begin_inset Quotes crd
+\end_inset
+
+ rispetto all'ultimo commit
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Commit
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Il mio editor genera millanta file di configurazione e log che non voglio
+ includere nei commit: GIT permette di gestire una lista di esclusioni sotto
+ forma di file di testo
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+File di esclusioni 
+\family typewriter
+.gitignore
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+si tratta di un file di testo che supporta la sintassi glob
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+name "Glob Pattern [Wikipedia]"
+target "https://en.wikipedia.org/wiki/Glob_%28programming%29"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+va posto nella directory radice della repository
+\end_layout
+
+\begin_layout Itemize
+GitHub mantiene una lista
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+name "Lista di gitignore [GitHub]"
+target "https://github.com/github/gitignore"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ di file 
+\family typewriter
+.gitignore
+\family default
+ standard, adatti ai principali casi d'uso
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Commit
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Poffarbacco! Per sbaglio ho incuso nel mio commit un file inutile, che non
+ ho specificato nel 
+\family typewriter
+.gitignore
+\family default
+!
+\end_layout
+
+\begin_layout Itemize
+prima rimuovo il file dal controllo di versione, rimuovendolo dalla staging
+ area e dal disco, grazie al comando 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+color{amber} 
+\end_layout
+
+\end_inset
+
+
+\family typewriter
+$ git rm <file>
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+adesso uso la mia staging area attuale al posto dell'ultimo commit effettuato,
+ tramite il comando
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+color{amber} 
+\end_layout
+
+\end_inset
+
+
+\family typewriter
+$ git commit --amend
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\family default
+ (non creo un nuovo commit)
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\emph on
+Pro tip
+\emph default
+: posso usare questo comando senza modificare la staging area, solamente
+ per modificare il messaggio dell'ultimo commit
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+E se invece volessi solo rimuovere un file dalla staging area, ma non dal
+ file system?
+\end_layout
+
+\begin_layout Itemize
+uso il comando 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+color{amber} 
+\end_layout
+
+\end_inset
+
+
+\family typewriter
+$ git rm –cached <file>
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Commit
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Come posso gestire e utilizzare la cronologia dei commit?
+\end_layout
+
+\begin_layout Itemize
+tramie il comando 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+color{amber} 
+\end_layout
+
+\end_inset
+
+
+\family typewriter
+$ git log
+\family default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ posso consultare la cronologia dei commit relativi alla repository in cui
+ il comando viene invocato
+\end_layout
+
+\begin_layout Itemize
+tramite il comando 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+color{amber} 
+\end_layout
+
+\end_inset
+
+
+\family typewriter
+$ git reset <sha-1>
+\family default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ posso riportare la staging area allo stesso stato del commitidentificato
+ dallo SHA-1 specificato
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Annullare un commit indecente
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
+Tramite il comando 
+\family typewriter
+\series bold
+$ git reset --hard <sha-1>
+\family default
+\series default
+ non solo la staging area, ma anche i file sul disco saranno sovrascritti
+ da quelli salvati tramite il commit di riferimento; da usare con cautela!
+\end_layout
+
+\begin_layout Block
+È possibile invocare lo stesso comando specificando il percorso di un unico
+ file da sovrascrivere con l'omonimo proveniente dal commit di riferimento.
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Remotes
+\end_layout
+
+\begin_layout Subsection
+Gestire repositoy remoti
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Gestire repositoy remoti
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+GIT non era un VCS distribuito?
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Standard
+Possiamo associare al nostro progetto una o più repository remote scegliendo
+ di caricare o scaricare dati da una o più di esse
+\end_layout
+
+\begin_layout Itemize
+col comando 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+color{amber} 
+\end_layout
+
+\end_inset
+
+
+\family typewriter
+$ git remote -v
+\family default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ si ottiene una lista di repository remoti associati e i rispettivi URL
+\end_layout
+
+\begin_layout Itemize
+col comando 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+color{amber} 
+\end_layout
+
+\end_inset
+
+
+\family typewriter
+$ git remote show <shortname>
+\family default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ si ottengono maggiori informazioni su una origine remota
+\end_layout
+
+\begin_layout Itemize
+col comando 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+color{amber} 
+\end_layout
+
+\end_inset
+
+
+\family typewriter
+$ git remote add <shortname> <url>
+\family default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ si aggiunge una repository remota al progetto corrente, associandola al
+ nick 
+\family typewriter
+shortname
+\end_layout
+
+\begin_layout Itemize
+col comando 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+color{amber} 
+\end_layout
+
+\end_inset
+
+
+\family typewriter
+$ git remote rm <shortname>
+\family default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ si rimuove una repository remota associata
+\end_layout
+
+\begin_layout Itemize
+col comando 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+color{amber} 
+\end_layout
+
+\end_inset
+
+
+\family typewriter
+$ git remote rename <old>
+\family default
+ <new>
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ si modifica il nick associato a una origine remota
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Push e pull
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Push e pull
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Dopo aver associato delle repository remote a un progetto, possiamo caricare
+ o scaricare modifiche da e verso di esse:
+\end_layout
+
+\begin_layout Itemize
+col comando 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+color{amber} 
+\end_layout
+
+\end_inset
+
+
+\family typewriter
+$ git pull
+\family default
+ <remote>
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ scarichiamo dalla repository remota i commit che non abbiamo in locale
+\end_layout
+
+\begin_layout Itemize
+col comando 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+color{amber} 
+\end_layout
+
+\end_inset
+
+
+\family typewriter
+$ git 
+\family default
+push <remote>
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ carichiamo le modifiche al progetto sulla repository remota
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Conflitti e merging
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
+Nel caso in cui due commit contengano modifiche allo stesso file, bisogna
+ scegliere manualmente la modifica da tenere prima di poter caricare o scaricare
+ entrambi i commit nella stessa repository
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Push e pull
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Facciamo tira e molla coi commit: demo!
+\end_layout
+
+\begin_layout Itemize
+Clono una repository e inizio a lavorarci sopra
+\end_layout
+
+\begin_layout Itemize
+Creo una repository locale che vorrei condividere
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+URL della repository che sto usando: 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+href{https://github.com/Procsiab/pollarrosto}{{
+\backslash
+color{amber} 
+\end_layout
+
+\end_inset
+
+
+\family typewriter
+Procsiab/pollarrosto.git
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Section*
+Appendice
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Fonti
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Itemize
+Manuale Pro GIT
+\end_layout
+
+\begin_layout Itemize
+Slide corso GIT 2017 poul
+\end_layout
+
+\begin_layout Itemize
+Video corso GIT 2017 poul
+\end_layout
+
+\begin_layout Itemize
+Manuale Linux per GIT
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Licenza
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Fine
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+
+\size largest
+Grazie per l'attenzione!
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename by-sa.pdf
+	display false
+	height 0.9cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size footnotesize
+Queste slides sono licenziate Creative Commons Attribution-ShareAlike 4.0
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://www.poul.org
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_body
+\end_document
