@@ -1929,19 +1929,51 @@ backgroundcolor "none"
 status open
 
 \begin_layout Itemize
-Manuale Pro GIT
+\begin_inset CommandInset href
+LatexCommand href
+name "Manuale Pro GIT"
+target "https://git-scm.com/book/en/v2"
+literal "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
-Slide corso GIT 2017 poul
+\begin_inset CommandInset href
+LatexCommand href
+name "Slide corso GIT 2017 POUL"
+target "https://slides.poul.org/2017/corso-git/"
+literal "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
-Video corso GIT 2017 poul
+\begin_inset CommandInset href
+LatexCommand href
+name "Video corso GIT 2017 POUL"
+target "https://www.youtube.com/watch?v=IyZAYTLQnM8&list=PLA27EZBY5veN02RzEr6Ecm7KcjWadthBh"
+literal "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
-Manuale Linux per GIT
+\begin_inset CommandInset href
+LatexCommand href
+name "Manuale Linux per GIT"
+target "https://mirrors.edge.kernel.org/pub/software/scm/git/docs/"
+literal "false"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset

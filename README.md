@@ -1,6 +1,6 @@
-SlidesTemplatePOuL
+Slide per Intro GIT
 ==================
 
-A recommended LyX 2.1 Template for creating POuL presentations :)
+Dal template SlidesTemplatePOuL
 
-Also available for LyX 2.0.x
+Una prima bozza delle slide, ancora da rifinire e provare per un talk da 1h massimo
