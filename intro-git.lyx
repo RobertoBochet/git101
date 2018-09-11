@@ -36,7 +36,7 @@
 \usenavigationsymbolstemplate{}
 % hide navigation symbols (bottom-right corner in every slide)
 
-\titlegraphic{\includegraphics[height=1.4cm]{poul-white.pdf}}
+\titlegraphic{\includegraphics[height=1.4cm]{img/poul-white.pdf}}
 % Aggiunge il logo del POuL in prima pagina
 % Ricordate che dovete sempre avere il logo in pdf nella cartella dove avete il documento (poul-logo.pdf)
 
@@ -1843,11 +1843,11 @@ Facciamo tira e molla coi commit: demo!
 \end_layout
 
 \begin_layout Itemize
-Clono una repository e inizio a lavorarci sopra
+Creo una repository locale che vorrei condividere
 \end_layout
 
 \begin_layout Itemize
-Creo una repository locale che vorrei condividere
+Clono una repository e inizio a lavorarci sopra
 \end_layout
 
 \begin_layout Standard
@@ -1862,7 +1862,7 @@ status open
 
 
 \backslash
-href{https://github.com/Procsiab/pollarrosto}{{
+href{https://github.com/Procsiab/gtk-counter}{{
 \backslash
 color{amber} 
 \end_layout
@@ -1871,7 +1871,14 @@ color{amber}
 
 
 \family typewriter
-Procsiab/pollarrosto.git
+\bar under
+Procsiab/
+\family default
+gtk-counter
+\family typewriter
+.git
+\bar default
+
 \begin_inset ERT
 status open
 
@@ -1929,6 +1936,8 @@ backgroundcolor "none"
 status open
 
 \begin_layout Itemize
+
+\bar under
 \begin_inset CommandInset href
 LatexCommand href
 name "Manuale Pro GIT"
@@ -1941,6 +1950,8 @@ literal "false"
 \end_layout
 
 \begin_layout Itemize
+
+\bar under
 \begin_inset CommandInset href
 LatexCommand href
 name "Slide corso GIT 2017 POUL"
@@ -1953,6 +1964,8 @@ literal "false"
 \end_layout
 
 \begin_layout Itemize
+
+\bar under
 \begin_inset CommandInset href
 LatexCommand href
 name "Video corso GIT 2017 POUL"
@@ -1965,6 +1978,8 @@ literal "false"
 \end_layout
 
 \begin_layout Itemize
+
+\bar under
 \begin_inset CommandInset href
 LatexCommand href
 name "Manuale Linux per GIT"
@@ -2037,7 +2052,7 @@ Grazie per l'attenzione!
 \begin_layout Standard
 \align center
 \begin_inset Graphics
-	filename by-sa.pdf
+	filename img/by-sa.pdf
 	display false
 	height 0.9cm
 
