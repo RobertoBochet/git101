@@ -6,13 +6,20 @@
 \origin unavailable
 \textclass beamer
 \begin_preamble
+% Tema struttura
 \usetheme{Pittsburgh}
+% Tema font
 \usefonttheme{structurebold}
-\usecolortheme{crane} %GIALLA
-% more colors & themes http://www.hartwork.org/beamer-theme-matrix/
+% Tema colore
+\usecolortheme{crane}
+% Tabella di temi e colori
+% http://www.hartwork.org/beamer-theme-matrix/
 
-% colori personalizzati: testo bianco e sfondo nero
+% Colore personalizzato: ambra
 \definecolor{amber}{rgb}{1.0, 0.75, 0.0}
+
+% Imposta i colori degli elementi in modo da rispecchiare
+% il tema con sfondo nero e testo bianco e ambra
 \setbeamercolor{titlelike}{fg=black}
 \setbeamercolor{background canvas}{bg=black}
 \setbeamercolor{normal text}{fg=white}
@@ -23,27 +30,28 @@
 \setbeamercolor{block title}{fg=white}
 \setbeamercolor{block body}{fg=black}
 
-% elenchi puntati con quadratini =)
+% Elenchi puntati di primo livello con quadratini
 \setbeamertemplate{itemize item}[square]
 
+% Gli elementi che seguono una pausa saranno invisibili
 \setbeamercovered{invisible}
-% transizioni: gli elementi nascosti vengono visualizzati in trasparenza
 
+% Tra i paragrafi e gli elementi di un elenco vengono 
+% inserite automaticamente delle pause (usare con cautela)
 %\beamerdefaultoverlayspecification{<+->}
-% transizioni: di default i paragrafi e gli elenchi (puntati e numerati) vengono scoperti passo per passo.
-% usate con cautela
 
+% Nascondi le icone di navigazione in basso a destra
 \usenavigationsymbolstemplate{}
-% hide navigation symbols (bottom-right corner in every slide)
 
+% Logo del POuL in prima pagina
 \titlegraphic{\includegraphics[height=1.4cm]{img/poul-white.pdf}}
-% Aggiunge il logo del POuL in prima pagina
-% Ricordate che dovete sempre avere il logo in pdf nella cartella dove avete il documento (poul-logo.pdf)
 
+% Usa font lmodern se presente (bello)
 \IfFileExists{lmodern.sty}{\usepackage{lmodern}}{}
-% sets nice fonts (if available)
 
-% inserisce AUTOMATICAMENTE una slide di titolo sezione all'inizio di OGNI sezione: in questa slide viene visualizzato l'indice delle sezioni, evidenziata quella corrente.
+% Inserisci AUTOMATICAMENTE una slide di titolo sezione all'inizio
+% di OGNI sezione: in questa slide viene visualizzato l'indice
+% delle sezioni, con quella corrente evidenziata
 \AtBeginSection[]
 {
   \begin{frame}<beamer>
@@ -52,7 +60,7 @@
   \end{frame}
 }
 
-% ridefinisce il footer per evitare di includere \institute tra () accanto al nome
+% Ridefinisce il footer per evitare di includere \institute tra () accanto al nome
 % LyX 2.1 pare abbia risolto questo bug. Lascio questo codice commentato, rimane utile per nascondere forzatamente \institute dal pedice nel caso si desiderasse aggiungerlo in seguito
 % fonte: http://tex.stackexchange.com/questions/35166/how-can-i-remove-the-institute-from-the-author-footline-on-beamer
 %\setbeamertemplate{footline}
@@ -720,7 +728,7 @@ Modifiche e staging area
 
 \begin_deeper
 \begin_layout Standard
-Ho capito come creare la mia repository locale o come scaricarla, ma come
+Ho capito come creare il mio repository locale o come scaricarlo, ma come
  faccio a tenere traccia delle modifiche?
 \end_layout
 
@@ -729,7 +737,7 @@ Ho capito come creare la mia repository locale o come scaricarla, ma come
 status open
 
 \begin_layout Plain Layout
-Stato dei file nella repository
+Stato dei file nel repository
 \end_layout
 
 \end_inset
@@ -1173,7 +1181,7 @@ literal "false"
 \end_layout
 
 \begin_layout Itemize
-va posto nella directory radice della repository
+va posto nella directory radice del repository
 \end_layout
 
 \begin_layout Itemize
@@ -1414,7 +1422,7 @@ status open
 
 \end_inset
 
- posso consultare la cronologia dei commit relativi alla repository in cui
+ posso consultare la cronologia dei commit relativi al repository in cui
  il comando viene invocato
 \end_layout
 
@@ -1447,7 +1455,7 @@ status open
 
 \end_inset
 
- posso riportare la staging area allo stesso stato del commitidentificato
+ posso riportare la staging area allo stesso stato del commit identificato
  dallo SHA-1 specificato
 \end_layout
 
@@ -1527,7 +1535,7 @@ GIT non era un VCS distribuito?
 \end_layout
 
 \begin_layout Standard
-Possiamo associare al nostro progetto una o più repository remote scegliendo
+Possiamo associare al nostro progetto uno o più repository remote scegliendo
  di caricare o scaricare dati da una o più di esse
 \end_layout
 
@@ -1624,8 +1632,8 @@ status open
 
 \end_inset
 
- si aggiunge una repository remota al progetto corrente, associandola al
- nick 
+ si aggiunge un repository remoto al progetto corrente, associandolo all'alias
+ 
 \family typewriter
 shortname
 \end_layout
@@ -1659,7 +1667,7 @@ status open
 
 \end_inset
 
- si rimuove una repository remota associata
+ si rimuove un repository remoto associata
 \end_layout
 
 \begin_layout Itemize
@@ -1691,7 +1699,7 @@ status open
 
 \end_inset
 
- si modifica il nick associato a una origine remota
+ si modifica l'alias associato a una origine remota
 \end_layout
 
 \end_deeper
@@ -1718,8 +1726,8 @@ Push e pull
 
 \begin_deeper
 \begin_layout Standard
-Dopo aver associato delle repository remote a un progetto, possiamo caricare
- o scaricare modifiche da e verso di esse:
+Dopo aver associato dei repository remoti a un progetto, possiamo caricare
+ o scaricare modifiche da e verso di essi:
 \end_layout
 
 \begin_layout Itemize
@@ -1751,7 +1759,7 @@ status open
 
 \end_inset
 
- scarichiamo dalla repository remota i commit che non abbiamo in locale
+ scarichiamo dal repository remoto i commit che non abbiamo in locale
 \end_layout
 
 \begin_layout Itemize
@@ -1783,7 +1791,7 @@ status open
 
 \end_inset
 
- carichiamo le modifiche al progetto sulla repository remota
+ carichiamo le modifiche al progetto sul repository remoto
 \end_layout
 
 \begin_layout Standard
@@ -1809,7 +1817,7 @@ Conflitti e merging
 \begin_layout Block
 Nel caso in cui due commit contengano modifiche allo stesso file, bisogna
  scegliere manualmente la modifica da tenere prima di poter caricare o scaricare
- entrambi i commit nella stessa repository
+ entrambi i commit nello stesso repository
 \end_layout
 
 \end_deeper
@@ -1843,18 +1851,18 @@ Facciamo tira e molla coi commit: demo!
 \end_layout
 
 \begin_layout Itemize
-Creo una repository locale che vorrei condividere
+Creo un repository locale che vorrei condividere
 \end_layout
 
 \begin_layout Itemize
-Clono una repository e inizio a lavorarci sopra
+Clono un repository e inizio a lavorarci sopra
 \end_layout
 
 \begin_layout Standard
 \begin_inset VSpace bigskip
 \end_inset
 
-URL della repository che sto usando: 
+URL del repository che sto usando: 
 \begin_inset ERT
 status open
 
@@ -1862,7 +1870,7 @@ status open
 
 
 \backslash
-href{https://github.com/Procsiab/gtk-counter}{{
+href{https://gitlab.poul.org/corsi/linuxBase/gtk-counter}{{
 \backslash
 color{amber} 
 \end_layout
@@ -1872,11 +1880,7 @@ color{amber}
 
 \family typewriter
 \bar under
-Procsiab/
-\family default
-gtk-counter
-\family typewriter
-.git
+corsi/linuxBase/gtk-counter.git
 \bar default
 
 \begin_inset ERT
@@ -2065,7 +2069,7 @@ Grazie per l'attenzione!
 \align center
 
 \size footnotesize
-Queste slides sono licenziate Creative Commons Attribution-ShareAlike 4.0
+Queste slide sono licenziate Creative Commons Attribution-ShareAlike 4.0
 \end_layout
 
 \begin_layout Standard
