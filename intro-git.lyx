@@ -503,7 +503,7 @@ $ git init
 status open
 
 \begin_layout Plain Layout
-Hey, e se volessi configurare cose?
+Hey, se volessi configurare cose?
 \end_layout
 
 \end_inset
@@ -1349,7 +1349,7 @@ color{amber}
 
 
 \family typewriter
-$ git rm –cached <file>
+$ git rm --cached <file>
 \begin_inset ERT
 status open
 
@@ -1459,6 +1459,39 @@ status open
  dallo SHA-1 specificato
 \end_layout
 
+\begin_layout Itemize
+tramite il comando 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+color{amber} 
+\end_layout
+
+\end_inset
+
+
+\family typewriter
+$ git revert <sha-1>
+\family default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ posso annullare le modifiche legate solamente al commit indicato dallo
+ SHA-1 specificato
+\end_layout
+
 \begin_layout Standard
 \begin_inset VSpace bigskip
 \end_inset
@@ -1488,11 +1521,6 @@ $ git reset --hard <sha-1>
 \series default
  non solo la staging area, ma anche i file sul disco saranno sovrascritti
  da quelli salvati tramite il commit di riferimento; da usare con cautela!
-\end_layout
-
-\begin_layout Block
-È possibile invocare lo stesso comando specificando il percorso di un unico
- file da sovrascrivere con l'omonimo proveniente dal commit di riferimento.
 \end_layout
 
 \end_deeper
@@ -1818,6 +1846,87 @@ Conflitti e merging
 Nel caso in cui due commit contengano modifiche allo stesso file, bisogna
  scegliere manualmente la modifica da tenere prima di poter caricare o scaricare
  entrambi i commit nello stesso repository
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Push e pull
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Per mille schede madri: chi è quella testa di fagiolo che ha introdotto
+ il bug?!
+\end_layout
+
+\begin_layout Itemize
+Faccio pull - commit - push per caricare le modifiche che ho fatto sulla
+ repository
+\end_layout
+
+\begin_layout Itemize
+Quando eseguo di nuovo il codice il compilatore segnala un errore alla riga
+ X, in un file che non ho toccato
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+GIT ha il comando per 
+\begin_inset Quotes cld
+\end_inset
+
+incolpare
+\begin_inset Quotes crd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
+Col comando
+\family typewriter
+\series bold
+ $ git blame <-L riga_ini,riga_fin> file
+\family default
+\series default
+ viene invocato lo strumento per visualizzare le annotazioni dei file: esso
+ mostrarà esattamente a chi appartengono i commit che contengono le modifiche
+ per ciascuna riga di un file (o un intervallo di righe specificato).
 \end_layout
 
 \end_deeper
