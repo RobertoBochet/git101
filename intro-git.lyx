@@ -162,7 +162,7 @@
 \begin_body
 
 \begin_layout Title
-Corsi Linux Base
+Corsi Linux Base 2018
 \end_layout
 
 \begin_layout Subtitle
@@ -648,7 +648,7 @@ $ git config --list
 
 \begin_deeper
 \begin_layout Itemize
-Mostra un alista di impostazioni con i relativi valori
+Mostra una lista di impostazioni con i relativi valori
 \end_layout
 
 \end_deeper
@@ -1615,38 +1615,6 @@ color{amber}
 
 
 \family typewriter
-$ git remote show <shortname>
-\family default
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
- si ottengono maggiori informazioni su una origine remota
-\end_layout
-
-\begin_layout Itemize
-col comando 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-{
-\backslash
-color{amber} 
-\end_layout
-
-\end_inset
-
-
-\family typewriter
 $ git remote add <shortname> <url>
 \family default
 
@@ -1660,10 +1628,7 @@ status open
 
 \end_inset
 
- si aggiunge un repository remoto al progetto corrente, associandolo all'alias
- 
-\family typewriter
-shortname
+ si aggiunge un repository remoto al progetto corrente
 \end_layout
 
 \begin_layout Itemize
@@ -1698,36 +1663,33 @@ status open
  si rimuove un repository remoto associata
 \end_layout
 
-\begin_layout Itemize
-col comando 
-\begin_inset ERT
+\begin_layout Block
+\begin_inset Argument 2
 status open
 
 \begin_layout Plain Layout
-
-{
-\backslash
-color{amber} 
+Tracking Branch
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
+GIT usa in ogni repositoy degli aggeggi chiamati 
+\emph on
+branch
+\emph default
+: se avete appena aggiunto un remote in cui volete caricare i commit, dovete
+ dire a GIT di usarlo come upstream col comando
+\begin_inset Newline newline
 \end_inset
 
 
 \family typewriter
-$ git remote rename <old>
-\family default
- <new>
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
- si modifica l'alias associato a una origine remota
+\series bold
+$ git branch -u shortname/branchname
 \end_layout
 
 \end_deeper
@@ -1925,7 +1887,7 @@ Col comando
 \family default
 \series default
  viene invocato lo strumento per visualizzare le annotazioni dei file: esso
- mostrarà esattamente a chi appartengono i commit che contengono le modifiche
+ mostrerà esattamente a chi appartengono i commit che contengono le modifiche
  per ciascuna riga di un file (o un intervallo di righe specificato).
 \end_layout
 
