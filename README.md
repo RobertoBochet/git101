@@ -4,7 +4,7 @@
 
 **Autore**: Lorenzo Prosseda *(Lero)*
 
-Queste slide sono state ricavate adattando il template SlidesTemplatePOuL ([gtk-counter](https://gitlab.poul.org/corsi/linuxBase/gtk-counter)); esse hanno un riferimento a un'altra repository per una demo.
+Queste slide sono state ricavate adattando il template SlidesTemplatePOuL ([poul-lyx](https://gitlab.poul.org/corsi/template-slide)); esse hanno un riferimento a un'altra repository per una demo.
 
 Le risorse grafiche sono tutte esportate in PDF, sotto la directory `img/`; questo sia per una migliore organizzazione, sia per evitare problemi con altri formati e il compilatore `pdflatex`.
 

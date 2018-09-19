@@ -210,6 +210,8 @@ status open
 
 {
 \backslash
+huge 
+\backslash
 color{amber} 
 \backslash
 textbf{Introduzione a GIT}}
@@ -1851,7 +1853,7 @@ Quando eseguo di nuovo il codice il compilatore segnala un errore alla riga
  X, in un file che non ho toccato
 \end_layout
 
-\begin_layout Standard
+\begin_layout Pause
 \begin_inset VSpace bigskip
 \end_inset
 
@@ -1918,7 +1920,11 @@ Push e pull
 
 \begin_deeper
 \begin_layout Standard
-Facciamo tira e molla coi commit: demo!
+Facciamo tira e molla coi commit: 
+\series bold
+demo
+\series default
+!
 \end_layout
 
 \begin_layout Itemize
@@ -1933,7 +1939,7 @@ Clono un repository e inizio a lavorarci sopra
 \begin_inset VSpace bigskip
 \end_inset
 
-URL del repository che sto usando: 
+URL del repository che sto usando (dal GitLab del POuL): 
 \begin_inset ERT
 status open
 
