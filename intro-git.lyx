@@ -6,79 +6,13 @@
 \origin unavailable
 \textclass beamer
 \begin_preamble
-% Tema struttura
-\usetheme{Pittsburgh}
-% Tema font
-\usefonttheme{structurebold}
-% Tema colore
-\usecolortheme{crane}
-% Tabella di temi e colori
-% http://www.hartwork.org/beamer-theme-matrix/
+% Tema GIALLO di Lapo (2017)
+\usetheme{poul}
+\definecolor{orange}{RGB}{255,198,10}
 
-% Colore personalizzato: ambra
-\definecolor{amber}{rgb}{1.0, 0.75, 0.0}
-
-% Imposta i colori degli elementi in modo da rispecchiare
-% il tema con sfondo nero e testo bianco e ambra
-\setbeamercolor{titlelike}{fg=black}
-\setbeamercolor{background canvas}{bg=black}
-\setbeamercolor{normal text}{fg=white}
-\setbeamercolor{section in toc}{fg=amber}
-\setbeamercolor{item projected}{bg=amber}
-\setbeamercolor{item projected}{fg=black}
-\setbeamercolor{item}{fg=amber}
-\setbeamercolor{block title}{fg=white}
-\setbeamercolor{block body}{fg=black}
-
-% Elenchi puntati di primo livello con quadratini
-\setbeamertemplate{itemize item}[square]
-
-% Gli elementi che seguono una pausa saranno invisibili
-\setbeamercovered{invisible}
-
-% Tra i paragrafi e gli elementi di un elenco vengono 
-% inserite automaticamente delle pause (usare con cautela)
-%\beamerdefaultoverlayspecification{<+->}
-
-% Nascondi le icone di navigazione in basso a destra
-\usenavigationsymbolstemplate{}
-
-% Logo del POuL in prima pagina
-\titlegraphic{\includegraphics[height=1.4cm]{img/poul-white.pdf}}
-
-% Usa font lmodern se presente (bello)
-\IfFileExists{lmodern.sty}{\usepackage{lmodern}}{}
-
-% Inserisci AUTOMATICAMENTE una slide di titolo sezione all'inizio
-% di OGNI sezione: in questa slide viene visualizzato l'indice
-% delle sezioni, con quella corrente evidenziata
-\AtBeginSection[]
-{
-  \begin{frame}<beamer>
-    \frametitle{Sezione \thesection}
-    \tableofcontents[currentsection]
-  \end{frame}
-}
-
-% Ridefinisce il footer per evitare di includere \institute tra () accanto al nome
-% LyX 2.1 pare abbia risolto questo bug. Lascio questo codice commentato, rimane utile per nascondere forzatamente \institute dal pedice nel caso si desiderasse aggiungerlo in seguito
-% fonte: http://tex.stackexchange.com/questions/35166/how-can-i-remove-the-institute-from-the-author-footline-on-beamer
-%\setbeamertemplate{footline}
-%{
-%  \leavevmode%
-%  \hbox{%
-%  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
-%    \usebeamerfont{author in head/foot}\insertshortauthor%~~\beamer@ifempty{\insertshortinstitute}{}{(\insertshortinstitute)}
- % \end{beamercolorbox}%
- % \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
-%    \usebeamerfont{title in head/foot}\insertshorttitle
-%  \end{beamercolorbox}%
-%  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
-%    \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
-%    \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
-%  \end{beamercolorbox}}%
-%  \vskip0pt%
-%}
+% Per qualche motivo fixa il fatto che le footnote spariscono a caso:
+\let\oldfootnote\footnote
+\renewcommand\footnote[1][]{\oldfootnote[frame,#1]}
 \end_preamble
 \use_default_options true
 \maintain_unincluded_children false
@@ -162,40 +96,23 @@
 \begin_body
 
 \begin_layout Title
-Corsi Linux Base 2018
+Introduzione a GIT
 \end_layout
 
 \begin_layout Subtitle
-(Milano Bovisa)
+Corsi Linux Base 2018
 \end_layout
 
 \begin_layout Author
 Lorenzo Prosseda
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-href{mailto:lerokamut@gmail.com}{
-\backslash
-nolinkurl{lerokamut@gmail.com}}
 \end_layout
 
-\end_inset
-
-
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-Lorenzo Prosseda
-\end_layout
+\begin_layout Institute
+\begin_inset CommandInset href
+LatexCommand href
+target "lerokamut@gmail.com"
+type "mailto:"
+literal "false"
 
 \end_inset
 
@@ -203,24 +120,14 @@ Lorenzo Prosseda
 \end_layout
 
 \begin_layout Date
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-{
-\backslash
-huge 
-\backslash
-color{amber} 
-\backslash
-textbf{Introduzione a GIT}}
+10 ottobre 2018
 \end_layout
 
-\end_inset
+\begin_layout TitleGraphic
+\begin_inset Graphics
+	filename img/poul-white.pdf
+	height 2cm
 
-
-\begin_inset VSpace bigskip
 \end_inset
 
 
@@ -300,7 +207,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename img/git-white.pdf
+	filename /home/l3r0/Documenti/Polimi/poul/intro-git/img/git-white.pdf
 	display false
 	scale 50
 
@@ -353,7 +260,7 @@ status open
 
 {
 \backslash
-color{amber}locale}
+color{orange}locale}
 \end_layout
 
 \end_inset
@@ -369,7 +276,7 @@ status open
 
 {
 \backslash
-color{amber}centralizzato}
+color{orange}centralizzato}
 \end_layout
 
 \end_inset
@@ -385,7 +292,7 @@ status open
 
 {
 \backslash
-color{amber}distribuito}
+color{orange}distribuito}
 \end_layout
 
 \end_inset
@@ -761,7 +668,7 @@ status open
 
 {
 \backslash
-color{amber}staged}
+color{orange}staged}
 \end_layout
 
 \end_inset
@@ -787,7 +694,7 @@ status open
 
 {
 \backslash
-color{amber}modified}
+color{orange}modified}
 \end_layout
 
 \end_inset
@@ -811,7 +718,7 @@ status open
 
 {
 \backslash
-color{amber}committed}
+color{orange}committed}
 \end_layout
 
 \end_inset
@@ -884,7 +791,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename img/areas.png
+	filename /home/l3r0/Documenti/Polimi/poul/intro-git/img/areas.png
 	display false
 	scale 20
 
@@ -929,7 +836,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename img/lifecycle.png
+	filename /home/l3r0/Documenti/Polimi/poul/intro-git/img/lifecycle.png
 	display false
 	scale 28
 
@@ -976,7 +883,7 @@ status open
 
 {
 \backslash
-color{amber} 
+color{orange} 
 \end_layout
 
 \end_inset
@@ -1037,7 +944,7 @@ status open
 
 {
 \backslash
-color{amber} 
+color{orange} 
 \end_layout
 
 \end_inset
@@ -1069,7 +976,7 @@ status open
 
 {
 \backslash
-color{amber} 
+color{orange} 
 \end_layout
 
 \end_inset
@@ -1258,7 +1165,7 @@ status open
 
 {
 \backslash
-color{amber} 
+color{orange} 
 \end_layout
 
 \end_inset
@@ -1293,7 +1200,7 @@ status open
 
 {
 \backslash
-color{amber} 
+color{orange} 
 \end_layout
 
 \end_inset
@@ -1344,7 +1251,7 @@ status open
 
 {
 \backslash
-color{amber} 
+color{orange} 
 \end_layout
 
 \end_inset
@@ -1404,7 +1311,7 @@ status open
 
 {
 \backslash
-color{amber} 
+color{orange} 
 \end_layout
 
 \end_inset
@@ -1437,7 +1344,7 @@ status open
 
 {
 \backslash
-color{amber} 
+color{orange} 
 \end_layout
 
 \end_inset
@@ -1470,7 +1377,7 @@ status open
 
 {
 \backslash
-color{amber} 
+color{orange} 
 \end_layout
 
 \end_inset
@@ -1578,7 +1485,7 @@ status open
 
 {
 \backslash
-color{amber} 
+color{orange} 
 \end_layout
 
 \end_inset
@@ -1610,7 +1517,7 @@ status open
 
 {
 \backslash
-color{amber} 
+color{orange} 
 \end_layout
 
 \end_inset
@@ -1642,7 +1549,7 @@ status open
 
 {
 \backslash
-color{amber} 
+color{orange} 
 \end_layout
 
 \end_inset
@@ -1691,7 +1598,7 @@ branch
 
 \family typewriter
 \series bold
-$ git branch -u shortname/branchname
+$ git push --set-upstream shortname branchname
 \end_layout
 
 \end_deeper
@@ -1731,7 +1638,7 @@ status open
 
 {
 \backslash
-color{amber} 
+color{orange} 
 \end_layout
 
 \end_inset
@@ -1763,7 +1670,7 @@ status open
 
 {
 \backslash
-color{amber} 
+color{orange} 
 \end_layout
 
 \end_inset
@@ -1949,7 +1856,7 @@ status open
 \backslash
 href{https://gitlab.poul.org/corsi/linuxBase/gtk-counter}{{
 \backslash
-color{amber} 
+color{orange} 
 \end_layout
 
 \end_inset
@@ -2133,7 +2040,7 @@ Grazie per l'attenzione!
 \begin_layout Standard
 \align center
 \begin_inset Graphics
-	filename img/by-sa.pdf
+	filename /home/l3r0/Documenti/Polimi/poul/intro-git/img/by-sa.pdf
 	display false
 	height 0.9cm
 
