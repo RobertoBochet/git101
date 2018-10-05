@@ -5,6 +5,14 @@ using advanced technologies such as Markdown, reveal.js (thus the
 industry-standard language JavaScript), still complying with the mandatory
 design guidelines.
 
+## Getting Started
+
+In order for the slides to work (ie. display anything) you need to run:  
+`git submodule update --init --depth 1`  
+
+In case you need the mathjax submodule as well  
+`git submodule update --init --depth 1 --recursive`
+
 ## How do I use this thing?
 
 ### Where do I write my stuff?
