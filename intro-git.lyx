@@ -557,7 +557,7 @@ $ git config --list
 
 \begin_deeper
 \begin_layout Itemize
-Mostra una lista di impostazioni con i relativi valori
+Mostra la lista di impostazioni configurate, con i relativi valori
 \end_layout
 
 \end_deeper
@@ -724,11 +724,7 @@ color{orange}committed}
 \end_inset
 
 : ho chiesto a GIT di prendere il contenuto della staging area e di spostarlo
- nella cartella 
-\family typewriter
-.git
-\family default
-, tramite il comando 
+ nel database degli snapshot, tramite il comando 
 \family typewriter
 $ git commit
 \end_layout
