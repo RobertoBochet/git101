@@ -66,6 +66,8 @@ something like `http://127.0.0.1:8080/?print-pdf`.
 
 Then just use the print function of your browser to make a PDF of the page.
 
+On **Firefox** it is advised to enable *Print Backgrounds* under the *Options* tab,
+to select paper size *Choukei 2 Envelope* and *Landscape* orientation.
 
 [download]: https://gitlab.poul.org/corsi/revealjs-poul/repository/archive.zip?ref=master
 [markdown-guide]: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
