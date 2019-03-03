@@ -305,3 +305,167 @@ non è stato aggiunto nulla al commit ma sono presenti file non tracciati (usa "
 
 ---
 
+# Git log
+
+----
+
+## Git log
+
+Eseguendo `git log` possiamo vedere la lista dei commit salvati in precedenza:
+
+
+```bash
+$ git log -1 # -1 ci permette di vedere solo l'ultimo commit
+
+commit 28a648a2a12b7dc8f24ea99aa5a41d290cd332a2 (HEAD -> master)
+Author: Il mio nome <mia@email.com>
+Date:   Thu Oct 25 12:19:29 2018 +0200
+
+	Questo è il mio commento
+```
+
+----
+
+## Git Log
+
+Le informazioni che abbiamo sono:
+
+- Il **messaggio** con cui è stato creato il commit
+- La **data** di creazione del commit
+- L'**identità** di chi ha creato il commit
+- L'**hash** (sha1) identificativo del commit
+
+----
+
+## Git log
+
+La hisotry, in realtà, può essere vista in maniera grafica con:
+
+```bash
+
+$ git log --graph
+
+```
+
+Questo ci andrà a mostrare i commit in formato grafico, con eventuali diramazioni rispetto all'albero principale.
+
+---
+
+## Albero?
+
+Git gestice le modifiche con una struttura ad albero in cui i vari nodi sono i commit (snapshot delle modifiche).
+
+Posso avere delle diramazioni come negli alberi?  <!-- .element: class="fragment" -->
+
+---
+
+# I Branch
+
+----
+
+## I Branch
+
+I **branch** sono diramazioni nel nostro albero delle modifiche.
+
+Queste diramazioni potranno essere unite (merge) a quella principale in futuro.
+
+----
+
+## I Branch
+
+Git ha, di default, ha il branch principale chiamato `master`
+
+----
+
+## I Branch
+
+Per creare un branch:
+
+```bash
+$ git branch nuovo_branch
+```
+
+Per eliminare un branch:
+
+```bash
+$ git branch -D nuovo_branch
+```
+
+---
+
+# Ok, ed ora?
+
+Come faccio a muovermi all'interno di questo albero e dei suoi branch?
+
+---
+
+# Git Checkout
+
+----
+
+## Git checkout
+
+Per muoverci tra un branch e l'altro possiamo usare:
+
+```bash
+$ git checkout nuovo_branch
+Si è passati al branch 'nuovo_branch'
+```
+
+----
+
+## Git checkout
+
+Possiamo usarlo anche per muoverci all'interno della history:
+
+```bash
+$ git checkout <sha_hash>
+```
+
+----
+
+## Git checkout
+
+Se eseguiamo ora `git log` vediamo che la dicitura di fianco al commit è cambiata.
+
+```bash
+$ git log -1 
+
+commit 28a648a2a12b7dc8f24ea99aa5a41d290cd332a2 (HEAD -> nuovo_branch, master)
+Author: Il mio nome <mia@email.com>
+Date:   Thu Oct 25 12:19:29 2018 +0200
+
+	Questo è il mio commento
+```
+
+---
+
+Cosa vuol dire quel `HEAD -> nuovo_branch`?
+
+---
+
+# HEAD
+
+----
+
+## HEAD
+
+La **HEAD** è un segnaposto che indica a git (e a noi) su quale commit ci troviamo.
+
+Quando la **HEAD** punta ad un commit non assiociato con il nome del branch si è nello stato di **detached HEAD** 
+
+---
+
+# TL;DR
+
+- `git add` per tracciare un file
+- `git commit` per salvarne lo stato
+- **HEAD** puntatore all'ultimo commit
+- **branch** ramo delle modifiche
+- **master** nostro branch principale
+
+---
+
+# Demo!
+
+
