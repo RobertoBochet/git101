@@ -147,3 +147,92 @@ $ git config --local user.name "Il Mio Nome"
 ```
 
 ---
+
+# Git Add
+
+----
+
+## Git Add
+
+Ok, siamo pronti:
+
+- Abbiamo settato le nostre informazioni <!-- .element: class="fragment" -->
+- Abbiamo creato i nostri file <!-- .element: class="fragment" -->
+- Vogliamo aggiungere i file a git. <!-- .element: class="fragment" -->
+
+----
+
+## Git Add
+
+Per aggiungere i file, ci basta usare `git add`
+
+```bash
+$ git add nome_file
+
+```
+
+----
+
+## Git Add
+
+Se vogliamo aggiungere solo una parte dei file modificati (e.g alcune linee, un blocco di codice, ecc) possiamo usiare:
+
+```bash
+$ git add --patch nome_file
+
+```
+
+---
+
+# Git Commit
+
+----
+
+## Git commit
+
+Abbiamo aggiunto i nostri file a git.
+
+Abbiamo finito? <!-- .element: class="fragment" -->
+
+No! <!-- .element: class="fragment" -->
+
+----
+
+## Git commit
+
+Per salvarne effettivamente lo stato su git dobbiamo eseguire un'operazione chiamata **commit**
+
+`git add` dice a git solo di tener traccia di quel file o di quelle modiche 
+
+----
+
+## Git commit
+
+Per farlo ci basta eseguire:
+
+```bash
+$ git commit
+```
+
+Questa operazione ci chiederà anche un commento per dare maggiori informazioni sulle nostre modifiche. <!-- .element: class="fragment" -->
+
+----
+
+## Git commit
+
+Questo commento può essere anche passato da cli:
+
+```bash
+$ git commit -m "Questo è il mio commento"
+
+```
+
+Una buona pratica è avere dei messaggi brevi e significativi <!-- .element: class="fragment" -->
+
+---
+
+Perché abbiamo dovuto usare **due** comandi per aggiungere i file a git?
+
+Dove aggiunge i file  `git add` se non al repository git?
+
+---
