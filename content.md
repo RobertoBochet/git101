@@ -236,3 +236,72 @@ Perché abbiamo dovuto usare **due** comandi per aggiungere i file a git?
 Dove aggiunge i file  `git add` se non al repository git?
 
 ---
+
+# Staging Area
+
+----
+
+## Staging Area
+
+Quando esguiamo `git add` i file vengo "mossi" dalla nostra area di lavor ad una **Staging Area**.
+
+Qui, le modifiche, sono pronte per essere salvate ma non lo sono ancora. <!-- .element: class="fragment" -->
+
+----
+
+## Staging Area
+
+In realtà un file può essere in 4 stati per git:
+
+- **Untracked**: Git sa che esiste ma non sa cosa farci 
+- **Modified**: Git sa che esiste e sa che è stato modificato, ma non sa che farci 
+- **Unmodified**: Git sa che esiste e che non ha subito modifiche 
+- **Staged**: Git sa che esiste e che è stato modificato e sa che verrà aggiunto a breve 
+
+----
+
+## Uno schema per visualizzare il tutto
+
+![File Status](https://git-scm.com/book/en/v2/images/lifecycle.png) 
+
+---
+
+Come faccio a sapere in che stato sono i miei file allora?
+
+---
+
+# Git status
+
+----
+
+## Git status
+
+Il comando `git status` ci permette di sapere in che stato siamo e in che stato sono i nostri file
+
+----
+
+## Git status
+
+Un esempio:
+
+```bash
+$ git status
+
+Sul branch master
+File non tracciati:
+  (usa "git add <file>..." per includere l'elemento fra quelli di cui verrà eseguito il commit)
+
+	content.md
+
+non è stato aggiunto nulla al commit ma sono presenti file non tracciati (usa "git add" per tracciarli)
+```
+
+---
+
+## Cosa sappiamo ora?
+
+- Ora sappiamo dove siamo e cosa dovremmo andare a fare. <!-- .element: class="fragment" -->
+- Coma facciamo a sapere cosa è stato già fatto?  <!-- .element: class="fragment" -->
+
+---
+
