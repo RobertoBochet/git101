@@ -106,7 +106,7 @@ Non è detto che vogliamo che vengano gestiti **tutti** i file all'interno di un
 
 ## Gitignore
 
-Per far questo ci basta definire un file `.gitignore` e specifiare, anche tramite espressioni regolari, quali file "nascondere" a git.
+Per far questo ci basta definire un file `.gitignore` e specifiare quali file "nascondere" a git.
 
 ----
 
@@ -120,6 +120,8 @@ $ cat .gitignore
 *.log
 # Tutti i file che si chiamano test[numero].c
 test[0-9].c
+# Tutti i file che si chiamano test[qualunque cosa].c
+test*.c
 # Non i file che si chiamano test10.c
 !test10.c
 ```
@@ -339,7 +341,7 @@ Le informazioni che abbiamo sono:
 
 ## Git log
 
-La hisotry, in realtà, può essere vista in maniera grafica con:
+La history, in realtà, può essere vista in maniera grafica con:
 
 ```bash
 
@@ -373,7 +375,7 @@ Queste diramazioni potranno essere unite (merge) a quella principale in futuro.
 
 ## I Branch
 
-Git ha, di default, ha il branch principale chiamato `master`
+Git ha, di default, un branch principale chiamato `master`
 
 ----
 
