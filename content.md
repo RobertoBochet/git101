@@ -1,9 +1,3 @@
-# Introduzione a GIT
-
-
----
-
-
 ## Di cosa parleremo oggi:
 
  - Cosa è Git? <!-- .element: class="fragment" -->
