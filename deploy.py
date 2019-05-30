@@ -20,10 +20,14 @@ parser.add_argument('--show', action='store_true', default=False,
 arg = parser.parse_args()
 
 
-def httpd_t():
-    print("Serving at http://{}:{}".format(DEFAULT_ADDR, arg.port))
-    s = TCPServer((DEFAULT_ADDR, arg.port), Handler)
-    s.serve_forever()
+class stoppable_httpd(Thread):
+    def run(self):
+        print("Serving at http://{}:{}".format(DEFAULT_ADDR, arg.port))
+        self.s = TCPServer((DEFAULT_ADDR, arg.port), Handler)
+        self.s.serve_forever()
+
+    def stop(self):
+        self.s.shutdown()
 
 
 def show():
@@ -31,8 +35,7 @@ def show():
 
 
 if __name__ == '__main__':
-    httpd = Thread(target=httpd_t)
-    httpd.daemon = True
+    httpd = stoppable_httpd()
     httpd.start()
 
     if arg.show:
@@ -42,4 +45,5 @@ if __name__ == '__main__':
         while True:
             sleep(60 * 60 * 24)
     except (KeyboardInterrupt, SystemExit):
+        httpd.stop()
         sys.exit(0)
