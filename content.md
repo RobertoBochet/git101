@@ -1,60 +1,46 @@
-# Intro e outro dentro l'HTML
+## (Alcuni) Casi d'uso
 
-Il markdown contiene solo il contenuto.
-
-Di base si possono fare le slide anche in HTML se si vogliono animazioni buffe.
-
-----
-
-This is a long dash -- made of two little dashes (`--`).
-
-This dash is even longer --- and it is made of three little dashes (`---`).
-
-"Quoting" is fun and easy. `"`Plain quoting`"` is ugly.
+- Tenere traccia delle modifiche a un progetto <!-- .element: class="fragment" -->
+- Gestire un progetto a piú mani <!-- .element: class="fragment" -->
+- Versionare files di configurazione <!-- .element: class="fragment" -->
 
 ----
 
-# Heading level 1
+## Come fare?
 
-## Heading level 2
+<img src="/git-logo.svg" style="width: 400px;" /> <!-- .element: class="fragment" -->
 
-### Heading level 3
+---
 
-#### Heading level 4
+## Cos'é?
 
-There are **no** more heading levels.
+git é un sistema di *controllo versione distribuito* 
 
-----
 
-```python
-import sys
+---
 
-x = 1 + 2
-
-if x > 2:
-  pass
-
-try:
-    with open('/dev/null') as f:
-        pass
-except IOError:
-    raise Exception('Error!')
-finally:
-    sys.exit()
-```
+## Distribuito o centralizzato?
 
 ----
 
-- Do you remember bullet list?
-  ```python
-  bullet_list = ["Do you remember bullet list?"]
-  ```
-- You can also allign code to bullet lists!
-  ```python
-  bullet_list.append("You can also allign code to bullet lists!")
-  ```
-- It's not too hard!
-  ```python
-  if not hard:
-      bullet_list.append("It's not too hard!")
-  ```
+## Distribuito o centralizzato?
+
+### Perché usare un sistema decentralizzato?
+
+- I files non sono solo in un posto <!-- .element: class="fragment" --><br/><small>Rischio perdita dati o blocco lavoro (quasi) nullo</small> <!-- .element: class="fragment" -->
+- I files sono disponibili offline <!-- .element: class="fragment" --><br/><small>posso lavorare anche senza accesso ad internet</small> <!-- .element: class="fragment" -->
+
+----
+
+## Distribuito o centralizzato?
+
+### Criticitá di un sistema decentralizzato
+
+- Posso lavorare su file non aggiornati... <!-- .element: class="fragment" --><br/><small>Non posso o mi dimentico di "scaricare" gli aggiornamenti dei files</small> <!-- .element: class="fragment" -->
+- ...con rischio di creare conflitti <!-- .element: class="fragment" --><br/><b>Che vanno gestiti!</b> <!-- .element: class="fragment" style="color:red;" -->
+
+---
+
+## Let's do it
+
+### Creiamo un repository
