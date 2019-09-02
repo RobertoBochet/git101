@@ -8,7 +8,7 @@
 
 ## Come fare?
 
-<img src="/git-logo.svg" style="width: 400px;" /> <!-- .element: class="fragment" -->
+![gitlab-logo](/images/git-logo.svg) <!-- .element: class="fragment" style="width: 400px;" -->
 
 ---
 
@@ -24,9 +24,15 @@ git é un sistema di *controllo versione distribuito*
 
 ## Distribuito o centralizzato?
 
+![topology_with_hosting](/images/distribuited_centralized.svg) <!-- .element: style="width: 800px;" -->
+
+----
+
+## Distribuito o centralizzato?
+
 ### Perché usare un sistema distribuito?
 
-- I files non sono solo in un posto <!-- .element: class="fragment" --><br/><small>Rischio perdita dati (quasi) nullo</small> <!-- .element: class="fragment" -->
+- I files non sono fisicamente in un solo luogo <!-- .element: class="fragment" --><br/><small>Rischio perdita dati (quasi) nullo</small> <!-- .element: class="fragment" -->
 - I files sono disponibili offline <!-- .element: class="fragment" --><br/><small>posso lavorare anche senza accesso ad internet</small> <!-- .element: class="fragment" -->
 
 ----
@@ -220,9 +226,9 @@ Modifiche a vecchi commit sono (generalmente) proibite e facilmente individuabil
 
 ### Come interagiscono repo su macchine diverse?
 
-Piú repository, presenti su macchine diverse, possono condividere lo stesso progetto.
+Piú repository, presenti su macchine diverse, possono condividere lo stesso progetto. <!-- .element: class="fragment" -->
 
-Git fornisce gli strumenti per mantenere questi repository sincronizzati tra loro.
+Git fornisce gli strumenti per mantenere questi repository sincronizzati tra loro. <!-- .element: class="fragment" -->
 
 
 ----
@@ -235,4 +241,14 @@ Anche se possibile, la sincronizzazione diretta tra due personal computer non é
 
 Solitamente si fa affidamento a uno o piú hosting di repositories per fare da nodi comuni tra piú personal computer <!-- .element: class="fragment" -->
 
-![gitlab-logo](/gitlab-logo-white-rgb.svg) <!-- .element: class="fragment" style="width: 400px;" -->
+![gitlab-logo](/images/gitlab-logo-white-rgb.svg) <!-- .element: class="fragment" style="width: 300px;" -->
+
+----
+
+## Remote
+
+### Possibile topologia con hosting
+
+![topology_with_hosting](/images/topology_hosting.svg) <!-- .element: style="width: 400px;" -->
+
+
