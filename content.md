@@ -8,7 +8,7 @@
 
 ## Come fare?
 
-![gitlab-logo](/images/git-logo.svg) <!-- .element: class="fragment" style="width: 400px;" -->
+![gitlab-logo](images/git-logo.svg) <!-- .element: class="fragment" style="width: 400px;" -->
 
 ---
 
@@ -24,7 +24,7 @@ git é un sistema di *controllo versione distribuito*
 
 ## Distribuito o centralizzato?
 
-![topology_with_hosting](/images/distribuited_centralized.svg) <!-- .element: style="width: 800px;" -->
+![topology_with_hosting](images/distribuited_centralized.svg) <!-- .element: style="width: 800px;" -->
 
 ----
 
@@ -43,6 +43,14 @@ git é un sistema di *controllo versione distribuito*
 
 - Posso lavorare su file non aggiornati... <!-- .element: class="fragment" --><br/><small>Non posso o mi dimentico di "scaricare" gli aggiornamenti dei files</small> <!-- .element: class="fragment" -->
 - ...con rischio di creare conflitti <!-- .element: class="fragment" --><br/>**Che vanno gestiti!** <!-- .element: class="fragment" style="color:red;" -->
+
+---
+
+## Configurare Git
+
+----
+
+## Configurare Git
 
 ---
 
@@ -252,7 +260,7 @@ Anche se possibile, la sincronizzazione diretta tra due personal computer non é
 
 Solitamente si fa affidamento a uno o piú hosting di repositories per fare da nodi comuni tra piú personal computer <!-- .element: class="fragment" -->
 
-![gitlab-logo](/images/gitlab-logo-white-rgb.svg) <!-- .element: class="fragment" style="width: 300px;" -->
+![gitlab-logo](images/gitlab-logo-white-rgb.svg) <!-- .element: class="fragment" style="width: 300px;" -->
 
 ----
 
@@ -260,7 +268,7 @@ Solitamente si fa affidamento a uno o piú hosting di repositories per fare da n
 
 ### Possibile topologia con hosting
 
-![topology_with_hosting](/images/topology_hosting.svg) <!-- .element: style="width: 400px;" -->
+![topology_with_hosting](images/topology_hosting.svg) <!-- .element: style="width: 400px;" -->
 
 ----
 
