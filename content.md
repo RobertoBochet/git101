@@ -212,9 +212,20 @@ Tutti questi elementi concorrono nella creazione della firma (hash) del commit <
 
 Ogni commit contiene l'hash di quello precedente
 
-⥥
+⇓ <!-- .element: class="fragment" data-fragment-index="2"-->
 
-Modifiche a vecchi commit sono (generalmente) proibite e facilmente individuabili
+Modifiche a vecchi commit sono (generalmente) proibite e facilmente individuabili <!-- .element: class="fragment" data-fragment-index="2"-->
+
+
+---
+
+## Branch
+
+----
+
+## Branch
+
+
 
 ---
 
@@ -251,4 +262,26 @@ Solitamente si fa affidamento a uno o piú hosting di repositories per fare da n
 
 ![topology_with_hosting](/images/topology_hosting.svg) <!-- .element: style="width: 400px;" -->
 
+----
 
+## Remote
+
+### Come "sincronizzo" due repository?
+
+Prima di procedere al passaggio di dati tra repository é necessario dire a git come puó raggiungere il repository remoto
+
+----
+
+## Remote
+
+### Come si aggiunge un repository remoto?
+
+
+```bash
+git remote add origin https://gitlab.org/path/repository.git
+``` 
+<!-- .element: class="fragment" -->
+
+<p>Abbiamo cosi creato un riferimento ad un repository remoto che abbiamo soprannominato *origin*</p> <!-- .element: class="fragment" -->
+
+<small>N.B. git per scambiare informazioni tra repository supporta sia *https* che *ssh*</small> <!-- .element: class="fragment" -->
