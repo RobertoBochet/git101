@@ -16,7 +16,6 @@
 
 git é un sistema di *controllo versione distribuito* 
 
-
 ---
 
 ## Distribuito o centralizzato?
@@ -27,7 +26,7 @@ git é un sistema di *controllo versione distribuito*
 
 ### Perché usare un sistema distribuito?
 
-- I files non sono solo in un posto <!-- .element: class="fragment" --><br/><small>Rischio perdita dati o blocco lavoro (quasi) nullo</small> <!-- .element: class="fragment" -->
+- I files non sono solo in un posto <!-- .element: class="fragment" --><br/><small>Rischio perdita dati (quasi) nullo</small> <!-- .element: class="fragment" -->
 - I files sono disponibili offline <!-- .element: class="fragment" --><br/><small>posso lavorare anche senza accesso ad internet</small> <!-- .element: class="fragment" -->
 
 ----
@@ -61,6 +60,8 @@ Da terminale portiamoci nella cartella che vogliamo versionare e eseguiamo il co
 
 ```bash
 $ git init
+```
+```shell
 Initialized empty Git repository in /path/project/.git/
 ```
 
@@ -76,6 +77,8 @@ Abbiamo creato il nostro primo repository
 
 ```bash
 $ ls -al
+```
+```shell
 total 0
 drwxr-xr-x 1 user users  60 31 ago 01.16 .
 drwxr-xr-x 1 user users 460 31 ago 01.16 ..
@@ -97,7 +100,7 @@ Git ha creato una directory denominata `.git` che contiene tutti i dati che nece
 
 ### Cos'é?
 
-Un *commit* é una "fotografia" dello stato di un repository in un determinato momento
+Un *commit* é un istantanea (snapshot) dello stato di un repository in un determinato momento
 
 Un *repository* é quindi un insieme di *commit* in ordine temporale
 
@@ -119,10 +122,12 @@ $ git add file1.txt file2.json
 
 ### Cosa é successo?
 
-Git ha copiato i files in una sua area interna chiamata *stage area*
+Git ha copiato i files nella *stage area*
 
 ```bash
 $ git status
+```
+```shell
 On branch master
 
 No commits yet
@@ -171,6 +176,8 @@ Con questa sintassi preverremmo l'apertura del editor di testo, fornendo il mess
 
 ```bash
 $ git log
+```
+```shell
 commit aa581d11d4caed7084cd8114d2454d9380acd869 (HEAD -> master)
 Author: Roberto Bochet <robertobochet@gmail.com>
 Date:   Sat Aug 31 01:56:49 2019 +0200
@@ -178,8 +185,54 @@ Date:   Sat Aug 31 01:56:49 2019 +0200
     Questo é il mio primo commit
 ```
 
-Ad ogni commit sono associati: <!-- .element: class="fragment" -->
+----
+
+## Commit
+
+### Da cosa é composto un commit?
+
 - I files modificati (ovviamente) <!-- .element: class="fragment" -->
 - L'autore del commit <!-- .element: class="fragment" -->
 - La data di creazione del commit <!-- .element: class="fragment" -->
-- L'hash del commit  <!-- .element: class="fragment" --><br/><small>(per identificare rapidamente il commit in maniera univuoca) </small> <!-- .element: class="fragment" -->
+- L'hash del commit precedente <!-- .element: class="fragment" -->
+
+Tutti questi elementi concorrono nella creazione della firma (hash) del commit <!-- .element: class="fragment" -->
+
+----
+
+## Commit
+
+### (Altri) punti di forza
+
+Ogni commit contiene l'hash di quello precedente
+
+⥥
+
+Modifiche a vecchi commit sono (generalmente) proibite e facilmente individuabili
+
+---
+
+## Remote
+
+----
+
+## Remote
+
+### Come interagiscono repo su macchine diverse?
+
+Piú repository, presenti su macchine diverse, possono condividere lo stesso progetto.
+
+Git fornisce gli strumenti per mantenere questi repository sincronizzati tra loro.
+
+
+----
+
+## Remote
+
+### Come posso rendere i miei commit disponibili a tutti?
+
+Anche se possibile, la sincronizzazione diretta tra due personal computer non é generalmente utilizzata <!-- .element: class="fragment" -->
+
+Solitamente si fa affidamento a uno o piú hosting di repositories per fare da nodi comuni tra piú personal computer <!-- .element: class="fragment" -->
+
+![gitlab-logo](/gitlab-logo-white-rgb.svg) <!-- .element: class="fragment" style="width: 400px;" -->
