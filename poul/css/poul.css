@@ -299,11 +299,11 @@ body {
 }
 
 .reveal section.outro img.logo {
-  max-height: 40vh;
+  max-height: 20vh;
   padding: 0;
 }
 
 .reveal section.outro img.cc {
-  max-height: 10vh;
+  max-height: 5vh;
   padding: 0;
 }
