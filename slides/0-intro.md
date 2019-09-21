@@ -1,11 +1,13 @@
 ## (Alcuni) Casi d'uso
 
-- Tenere traccia delle modifiche a un progetto <!-- .element: class="fragment" -->
-- Gestire un progetto a piú mani <!-- .element: class="fragment" -->
-- Versionare files di configurazione <!-- .element: class="fragment" -->
+<ul>
+    <li class="fragment">Tenere traccia delle modifiche a un progetto</li>
+    <li class="fragment">Gestire un progetto a piú mani</li>
+    <li class="fragment">Versionare files di configurazione</li>
+</ul>
 
 ----
 
 ## Come fare?
 
-![gitlab-logo](images/git-logo.svg) <!-- .element: class="fragment" style="width: 400px;" -->
+<img src="./images/git-logo.svg" class="fragment" style="width: 400px;"/>
