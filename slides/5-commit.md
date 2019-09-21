@@ -29,7 +29,7 @@ $ git add file1.txt file2.json
 
 ### Cosa é successo?
 
-Git ha copiato i files nella *stage area*
+Git ha copiato i files nella *stageing area*
 
 ```bash
 $ git status
