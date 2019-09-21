@@ -293,3 +293,20 @@ git remote add origin https://gitlab.org/path/repository.git
 <p>Abbiamo cosi creato un riferimento ad un repository remoto che abbiamo soprannominato *origin*</p> <!-- .element: class="fragment" -->
 
 <small>N.B. git per scambiare informazioni tra repository supporta sia *https* che *ssh*</small> <!-- .element: class="fragment" -->
+
+----
+
+## Remote
+
+### Come posso vedere i repository remoti che ho aggiunto?
+
+```bash
+git remote -v
+``` 
+<!-- .element: class="fragment" -->
+
+```shell
+origin  https://gitlab.org/path/repository.git (fetch)
+origin  https://gitlab.org/path/repository.git (push)
+```
+<!-- .element: class="fragment" -->
