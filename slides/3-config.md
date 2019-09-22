@@ -29,6 +29,8 @@ git config [--{scope}] --list
 
 ----
 
+<!-- .element: data-section-title="Configurazione" -->
+
 ## Configurarazione
 
 ### Scope

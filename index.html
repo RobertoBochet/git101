@@ -33,7 +33,7 @@
 	<script src="reveal.js/js/reveal.js"></script>
 
 	<!-- Init Reveal.js -->
-    <script>
+	<script>
         document.addEventListener("DOMContentLoaded", () => {
             Reveal.initialize({
                 controls: false,
@@ -42,6 +42,7 @@
                 transition: 'none',
                 pdfMaxPagesPerSlide: 1,
                 pdfSeparateFragments: false,
+                display: 'flex',
                 markdown: {
                     smartypants: true,
                 },
@@ -84,7 +85,36 @@
                 ]
             });
         });
-    </script>
+	</script>
+	<style>
+		code.input::before {
+			content: "$";
+			color: #8699A4;
+			padding-right: 5px;
+		}
+		code.input.root::before {
+			content: "#";
+		}
+
+		.slides > section {
+			height: 100%;
+		}
+		.slides section > section {
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+		.reveal data-section-title {
+			position: absolute;
+			top: 20px;
+			right: 20px;
+			color: #ffc600;
+			font-weight: bold;
+			text-align: right;
+		}
+	</style>
 </head>
 
 <div class="reveal">
@@ -92,12 +122,12 @@
 		<section data-markdown="./slides/intro.html"></section>
 		<section data-markdown="./slides/0-intro.html"></section>
 		<section data-markdown="./slides/1-what_is.html"></section>
-        <section data-markdown="./slides/2-topology.html"></section>
-        <section data-markdown="./slides/3-config.md" data-separator-vertical="^\r?\n----\r?\n$"></section>
-        <section data-markdown="./slides/4-repo.md" data-separator-vertical="^\r?\n----\r?\n$"></section>
-        <section data-markdown="./slides/5-commit.md" data-separator-vertical="^\r?\n----\r?\n$"></section>
-        <section data-markdown="./slides/6-branch.md" data-separator-vertical="^\r?\n----\r?\n$"></section>
-        <section data-markdown="./slides/7-remote.md" data-separator-vertical="^\r?\n----\r?\n$"></section>
+		<section data-markdown="./slides/2-topology.html"></section>
+		<section data-markdown="./slides/3-config.md" data-separator-vertical="^\r?\n----\r?\n$"></section>
+		<section data-markdown="./slides/4-repo.md" data-separator-vertical="^\r?\n----\r?\n$"></section>
+		<section data-markdown="./slides/5-commit.md" data-separator-vertical="^\r?\n----\r?\n$"></section>
+		<section data-markdown="./slides/6-branch.html"></section>
+		<section data-markdown="./slides/7-remote.md" data-separator-vertical="^\r?\n----\r?\n$"></section>
 		<section data-markdown="./slides/outro.html"></section>
 	</div>
 </div>

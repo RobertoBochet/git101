@@ -1,0 +1,103 @@
+<section>
+	<h2>Branch</h2>
+</section>
+<section>
+	<data-section-title>Branch</data-section-title>
+
+	<p>A volte risulta comodo procedere contemporaneamente<br/>in due direzioni distinte con un progetto</p>
+	<p class="fragment">e.g. Voglio aggiungere delle feature che richiedono<br/>una profonda riorganizzazione del
+		progetto</p>
+</section>
+<section>
+	<data-section-title>Branch</data-section-title>
+
+	<p>Git per un singolo repository permette di<br/>creare piu rami di sviluppo chiamati branch</p>
+
+	<img src="./images/branch.svg" alt="branch" class="fragment" style="width: 70vw;"/>
+</section>
+<section>
+	<data-section-title>Branch</data-section-title>
+
+	<h3>Come si crea un branch?</h3>
+
+	<p class="fragment">L'operazione di creazione di un nuovo branch<br/>é definita <b>branching</b></p>
+
+	<img src="./images/branch_branching.svg" alt="branch branching" class="fragment" style="width: 70vw;"/>
+</section>
+<section>
+	<data-section-title>Branch</data-section-title>
+
+	<h3>Come si crea un branch?</h3>
+
+	<pre><code class="lang-bash hljs input">git checkout -b new_branch</code></pre>
+	<pre class="fragment"><code class="lang-sh hljs">Switched to a new branch 'new_branch'</code></pre>
+</section>
+<section>
+	<data-section-title>Branch</data-section-title>
+
+	<h3>Come si crea un branch?</h3>
+
+	<h4>Cosa é successo?</h4>
+
+	<p class="fragment">Controlliamo i branch disponibili nel repository</p>
+
+	<pre class="fragment"><code class="lang-bash hljs input">git branch</code></pre>
+	<pre class="fragment"><code class="lang-sh hljs">  master
+\* new_branch</code></pre>
+
+	<p class="fragment">É stato creato il branch "new_branch“<br/>e siamo passati a questo branch</p>
+
+	<small class="fragment">N.B. il carattere "\*" indica il branch corrente</small>
+</section>
+<section>
+	<data-section-title>Branch</data-section-title>
+
+	<h3>Come ci si sposta in un altro branch?</h3>
+
+	<pre class="fragment"><code class="lang-bash hljs input">git checkout {branch_name}</code></pre>
+</section>
+<section>
+	<data-section-title>Branch</data-section-title>
+
+	<h3>Come si "uniscono" due branch?</h3>
+
+	<p class="fragment">L'operazione di unione di due branch é definita <b>merging</b></p>
+
+	<img src="./images/branch_merging.svg" alt="branch merging" class="fragment" style="width: 70vw;"/>
+</section>
+<section>
+	<data-section-title>Branch</data-section-title>
+
+	<h3>Come si "uniscono" due branch?</h3>
+
+	<p>É necessario "spostarsi" nel branch dove<br/>vogliamo importare i cambiamenti</p>
+
+	<pre class="fragment"><code class="lang-bash hljs input">git checkout master</code></pre>
+
+	<p class="fragment">E lanciare il comando di merging con<br/>il branch che vogliamo importare</p>
+
+	<pre class="fragment"><code class="lang-bash hljs input">git merge new_branch</code></pre>
+</section>
+<section>
+	<data-section-title>Branch</data-section-title>
+
+	<h3>Come si "uniscono" due branch?</h3>
+
+	<p>Ma é cosi facile?</p>
+
+	<img src="./images/yes_but_no.jpg" alt="yes but actually no" class="fragment" style="height: 30vh;"/>
+</section>
+<section>
+	<data-section-title>Branch</data-section-title>
+
+	<h3>Come si "uniscono" due branch?</h3>
+
+	<p>Possono verificarsi 2 casi:</p>
+
+	<ul>
+		<li class="fragment">I due branch non hanno file in conflitto<br/>
+			<small class="fragment">L'operazione va a buon fine</small></li>
+		<li class="fragment">Dei file sono stati modificati in entrambi i branch<br/>
+			<b class="fragment" style="color: red;">Bisogna gestire il conflitto a manina!</b></li>
+	</ul>
+</section>
