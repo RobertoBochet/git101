@@ -1,0 +1,121 @@
+<section>
+	<h2>Commit</h2>
+</section>
+
+<section>
+	<x-section-title>Commit</x-section-title>
+
+	<p>Un <b>commit</b> é un istantanea (snapshot) dello stato di un repository in un determinato momento</p>
+	<p class="fragment">Un <b>repository</b> é quindi un insieme di <b>commit</b>> in ordine temporale</p>
+</section>
+
+<section>
+	<x-section-title>Commit</x-section-title>
+
+	<h3>Come si crea un commit?</h3>
+
+	<p class="fragment">Per prima cosa é necessario dire a git<br/>quali file includere in questo commit</p>
+
+	<pre class="fragment"><code class="lang-bash input">git add file1.txt file2.json</code></pre>
+</section>
+
+<section>
+	<x-section-title>Commit</x-section-title>
+
+	<h3>Come si crea un commit?</h3>
+
+	<p>Ma cosa é cambiato?</p>
+
+	<pre class="fragment"><code class="lang-bash input">git status</code></pre>
+	<pre class="fragment"><code class="lang-sh">On branch master
+
+No commits yet
+
+Changes to be committed:
+(use "git rm --cached &lt;file&gt;..." to unstage)
+	new file:   file1.txt
+	new file:   file2.json</code></pre>
+</section>
+<section>
+	<x-section-title>Commit</x-section-title>
+
+	<h3>Come si crea un commit?</h3>
+
+	<p>Ma cosa é cambiato?</p>
+
+	<p class="fragment">Git ha copiato i files nella <b>staging area</b></p>
+	<p class="fragment">Ora i files sono pronti per essere inclusi in un commit</p>
+
+	<small class="fragment">N.B. I files sono stati copiati altrove, se gli modifico ulteriormente<br/>
+		dovrò ri-aggiungerli alla staging area ripetendo il comando *git add*</small>
+</section>
+
+<section>
+	<x-section-title>Commit</x-section-title>
+
+	<h3>Come si crea un commit?</h3>
+
+	<p>Creiamo effettivamente il commit</p>
+
+	<pre class="fragment"><code class="lang-bash input">git commit</code></pre>
+
+	<p class="fragment">Si aprirá cosi il nostro editor di testo predefinito,<br/>
+		nel quale dovremo scrivere un breve messaggio<br/>
+		nella prima riga da associare al <b>commit</b></p>
+
+	<p class="fragment">Salviamo il file di testo e il commit é pronto</p>
+</section>
+
+<section>
+	<x-section-title>Commit</x-section-title>
+
+	<h3>Come si crea un commit?</h3>
+
+	<p>Ma cosa é successo?</p>
+
+	<pre class="fragment"><code class="lang-bash input">git log</code></pre>
+	<pre class="fragment"><code class="lang-sh">commit aa581d11d4caed7084cd8114d2454d9380acd869 (HEAD -> master)
+Author: il_mio_nome &lt;mia_mail@poul.org&gt;
+Date:   Sat Aug 31 01:56:49 2019 +0200
+
+Questo é il mio primo commit</code></pre>
+
+	<p class="fragment">Git log permette di visualizzare<br/>tutti i commit che fanno parte del repository</p>
+</section>
+
+<section>
+	<x-section-title>Commit</x-section-title>
+
+	<h3>Posso includere il messaggio<br/>nella linea di comando?</h3>
+
+	<pre class="fragment"><code class="lang-bash input">git commit -m "Questo é il mio primo commit"</code></pre>
+
+	<p class="fragment">Con questa sintassi preverremmo l'aperturadel editor<br/>di testo, fornendo il messaggio via
+		linea di comando</p>
+
+	<b class="fragment">Attenzione: un messaggio di commit<br/>non dovrebbe superare i 50 caratteri</b>
+</section>
+
+<section>
+	<x-section-title>Commit</x-section-title>
+
+	<h3>Ma cosa include realmente un commit?</h3>
+
+	<ul>
+		<li class="fragment">I files modificati (ovviamente)</li>
+		<li class="fragment">L'autore del commit</li>
+		<li class="fragment">La data di creazione del commit</li>
+		<li class="fragment">L'hash del commit precedente</li>
+	</ul>
+
+	<p class="fragment">Tutti questi elementi concorrono nella creazione<br/>della firma (hash) del commit</p>
+</section>
+
+<section>
+	<x-section-title>Commit</x-section-title>
+
+	<h3>(Altri) punti di forza</h3>
+
+	<p class="fragment">Ogni commit contiene l'hash di quello precedente</p>
+	<p class="fragment">⇓<br/>Modifiche a vecchi commit sono (generalmente) proibite e facilmente individuabili</p>
+</section>
