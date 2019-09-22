@@ -1,0 +1,73 @@
+<section>
+	<h2>Remote</h2>
+</section>
+
+<section>
+	<x-section-title>Remote</x-section-title>
+
+	<p>Piú repository, presenti su macchine diverse,<br/>
+		possono condividere lo stesso progetto.</p>
+	<p class="fragment">Git fornisce gli strumenti per mantenere<br/>
+		questi repository sincronizzati tra loro.</p>
+</section>
+
+<section>
+	<x-section-title>Remote</x-section-title>
+
+	<h3>Come posso rendere i miei commit<br/>disponibili a tutti?</h3>
+
+	<p>Anche se possibile, la sincronizzazione diretta tra due<br/>
+		personal computer non é generalmente utilizzata</p>
+	<p class="fragment">Solitamente si fa affidamento a uno o piú<br/>
+		hosting di repositories per fare da nodi comuni<br/>
+		tra piú personal computer</p>
+
+	<img src="./images/gitlab-logo-white-rgb.svg" alt="gitlab logo" class="fragment" style="height: 8vh;">
+</section>
+
+<section>
+	<x-section-title>Remote</x-section-title>
+
+	<h3>Come posso rendere i miei commit<br/>disponibili a tutti?</h3>
+
+	<p>Possibile topologia con hosting</p>
+
+	<img src="./images/topology_hosting.svg" alt="topology with hosting" class="fragment" style="height: 35vh;">
+</section>
+
+<section>
+	<x-section-title>Remote</x-section-title>
+
+	<h3>Come "sincronizzo" due repository?</h3>
+
+	<p class="fragment">Prima di procedere al passaggio di dati<br/>
+		tra repository é necessario dire a git<br/>
+		come puó raggiungere il repository remoto</p>
+</section>
+
+<section>
+	<x-section-title>Remote</x-section-title>
+
+	<h3>Come posso collegare un repository<br/>remoto al mio locale?</h3>
+
+	<pre class="fragment"><code
+			class="lang-bash input">git remote add origin https&colon;//gitlab.org/path/repository.git</code></pre>
+
+	<small class="fragment">N.B. git per scambiare informazioni tra repository supporta sia <b>https</b> che <b>ssh</b></small>
+</section>
+
+<section>
+	<x-section-title>Remote</x-section-title>
+
+	<h3>Come posso collegare un repository<br/>remoto al mio locale?</h3>
+
+	<p>Ma cosa é cambiato?</p>
+
+	<pre class="fragment"><code class="lang-bash input">git remote -v</code></pre>
+	<pre class="fragment"><code class="lang-sh">origin  https&colon;//gitlab.org/path/repository.git (fetch)
+origin  https&colon;//gitlab.org/path/repository.git (push)</code></pre>
+
+	<p class="fragment">Sono stati creati due riferimenti<br/>ad un repository remoto (soprannominato da me
+		"origin"),<br/>uno
+		per inviare i commit (push) e uno per riceverli (fetch)</p>
+</section>
