@@ -54,7 +54,7 @@
 
 	<h3>Come ci si sposta in un altro branch?</h3>
 
-	<pre class="fragment"><code class="lang-bash hljs input">git checkout {branch_name}</code></pre>
+	<pre class="fragment"><code class="lang-bash input">git checkout {branch_name}</code></pre>
 </section>
 <section>
 	<data-section-title>Branch</data-section-title>
@@ -100,4 +100,18 @@
 		<li class="fragment">Dei file sono stati modificati in entrambi i branch<br/>
 			<b class="fragment" style="color: red;">Bisogna gestire il conflitto a manina!</b></li>
 	</ul>
+</section>
+<section>
+	<data-section-title>Branch</data-section-title>
+
+	<h3>Come succede se vi sono conflitti?</h3>
+
+	<pre class="fragment"><code class="lang-sh">Auto-merging old_file
+CONFLICT (content): Merge conflict in old_file
+Automatic merge failed; fix conflicts and then commit the result.</code></pre>
+
+	<p class="fragment">Git entra in una modalità di gestione dei conflitti,<br/>
+		ci chiede di risolverli e crearne un commit</p>
+
+	<p>Il merging sarà cosi completo</p>
 </section>
