@@ -5,15 +5,18 @@
 <section>
 	<x-section-title>Branch</x-section-title>
 
-	<p>A volte risulta comodo procedere contemporaneamente<br/>in due direzioni distinte con un progetto</p>
-	<p class="fragment">e.g. Voglio aggiungere delle feature che richiedono<br/>una profonda riorganizzazione del
+	<p>A volte risulta comodo procedere contemporaneamente<br/>
+		in due direzioni distinte con un progetto</p>
+	<p class="fragment">e.g. Voglio aggiungere delle feature che richiedono<br/>
+		una profonda riorganizzazione del
 		progetto</p>
 </section>
 
 <section>
 	<x-section-title>Branch</x-section-title>
 
-	<p>Git per un singolo repository permette di<br/>creare piu rami di sviluppo chiamati branch</p>
+	<p>Git per un singolo repository permette di creare<br/>
+		più rami di sviluppo chiamati branch</p>
 
 	<img src="./images/branch.svg" alt="branch" class="fragment" style="width: 70vw;"/>
 </section>
@@ -33,8 +36,8 @@
 
 	<h3>Come si crea un branch?</h3>
 
-	<pre><code class="lang-bash hljs input">git checkout -b new_branch</code></pre>
-	<pre class="fragment"><code class="lang-sh hljs">Switched to a new branch 'new_branch'</code></pre>
+	<pre><code class="lang-bash input">git checkout -b new_branch</code></pre>
+	<pre class="fragment"><code class="lang-sh">Switched to a new branch 'new_branch'</code></pre>
 </section>
 
 <section>
@@ -42,17 +45,17 @@
 
 	<h3>Come si crea un branch?</h3>
 
-	<h4>Cosa é successo?</h4>
+	<h4>Cosa è successo?</h4>
 
 	<p class="fragment">Controlliamo i branch disponibili nel repository</p>
 
-	<pre class="fragment"><code class="lang-bash hljs input">git branch</code></pre>
-	<pre class="fragment"><code class="lang-sh hljs">  master
+	<pre class="fragment"><code class="lang-bash input">git branch</code></pre>
+	<pre class="fragment"><code class="lang-sh">  master
 \* new_branch</code></pre>
 
-	<p class="fragment">É stato creato il branch "new_branch“<br/>e siamo passati a questo branch</p>
+	<p class="fragment">È stato creato il branch &ldquo;new_branch&rdquo;<br/>e siamo passati a questo branch</p>
 
-	<small class="fragment">N.B. il carattere "\*" indica il branch corrente</small>
+	<small class="fragment">N.B. il carattere &ldquo;\*&rdquo; indica il branch corrente</small>
 </section>
 
 <section>
@@ -68,7 +71,7 @@
 
 	<h3>Come si "uniscono" due branch?</h3>
 
-	<p class="fragment">L'operazione di unione di due branch é definita <b>merging</b></p>
+	<p class="fragment">L'operazione di unione di due branch è definita <b>merging</b></p>
 
 	<img src="./images/branch_merging.svg" alt="branch merging" class="fragment" style="width: 70vw;"/>
 </section>
@@ -76,23 +79,23 @@
 <section>
 	<x-section-title>Branch</x-section-title>
 
-	<h3>Come si "uniscono" due branch?</h3>
+	<h3>Come si &ldquo;uniscono&rdquo; due branch?</h3>
 
-	<p>É necessario "spostarsi" nel branch dove<br/>vogliamo importare i cambiamenti</p>
+	<p>È necessario &ldquo;spostarsi&rdquo; nel branch dove<br/>vogliamo importare i cambiamenti</p>
 
-	<pre class="fragment"><code class="lang-bash hljs input">git checkout master</code></pre>
+	<pre class="fragment"><code class="lang-bash input">git checkout master</code></pre>
 
 	<p class="fragment">E lanciare il comando di merging con<br/>il branch che vogliamo importare</p>
 
-	<pre class="fragment"><code class="lang-bash hljs input">git merge new_branch</code></pre>
+	<pre class="fragment"><code class="lang-bash input">git merge new_branch</code></pre>
 </section>
 
 <section>
 	<x-section-title>Branch</x-section-title>
 
-	<h3>Come si "uniscono" due branch?</h3>
+	<h3>Come si &ldquo;uniscono&rdquo; due branch?</h3>
 
-	<p>Ma é cosi facile?</p>
+	<p>Ma è cosi facile?</p>
 
 	<img src="./images/yes_but_no.jpg" alt="yes but actually no" class="fragment" style="height: 30vh;"/>
 </section>
@@ -100,7 +103,7 @@
 <section>
 	<x-section-title>Branch</x-section-title>
 
-	<h3>Come si "uniscono" due branch?</h3>
+	<h3>Come si &ldquo;uniscono&rdquo; due branch?</h3>
 
 	<p>Possono verificarsi 2 casi:</p>
 
@@ -124,5 +127,5 @@ Automatic merge failed; fix conflicts and then commit the result.</code></pre>
 	<p class="fragment">Git entra in una modalità di gestione dei conflitti,<br/>
 		ci chiede di risolverli e crearne un commit</p>
 
-	<p class="fragment">Il merging sarà cosi completato</p>
+	<p class="fragment">Il merging sarà così completato</p>
 </section>
