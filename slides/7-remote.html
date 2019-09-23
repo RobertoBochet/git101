@@ -67,7 +67,62 @@
 	<pre class="fragment"><code class="lang-sh">origin  https&colon;//gitlab.org/path/repository.git (fetch)
 origin  https&colon;//gitlab.org/path/repository.git (push)</code></pre>
 
-	<p class="fragment">Sono stati creati due riferimenti<br/>ad un repository remoto (soprannominato da me
-		"origin"),<br/>uno
-		per inviare i commit (push) e uno per riceverli (fetch)</p>
+	<p class="fragment">Sono stati creati due riferimenti<br/>
+		ad un repository remoto (soprannominato da me "origin"),<br/>
+		uno per inviare i commit (push) e uno per riceverli (fetch)</p>
+</section>
+
+<section>
+	<x-section-title>Remote</x-section-title>
+
+	<h3>Come aggiorno il repository remoto?</h3>
+
+	<h3 class="fragment">Push</h3>
+
+	<pre class="fragment"><code class="lang-bash input">git push origin master</code></pre>
+
+	<p class="fragment">Git invierà i commit del branch <i>master</i> al repository<br/>
+		remoto chiamato <i>origin</i> che cercherà di effettuare<br/>
+		il merging con il proprio repository</p>
+</section>
+
+<section>
+	<x-section-title>Remote</x-section-title>
+
+	<h3>E se invece volessi scaricare i commit<br/>dal repository remoto?</h3>
+
+	<h3 class="fragment">Pull</h3>
+
+	<pre class="fragment"><code class="lang-bash input">git pull origin master</code></pre>
+
+	<p class="fragment">Git proverà a scaricare i commit del branch <i>master</i><br/>
+		dal repository remoto chiamato <i>origin</i> ed ad effettuare<br/>
+		il merging con la nostra storia locale</p>
+</section>
+
+<section>
+	<x-section-title>Remote</x-section-title>
+
+	<h3>Prova... e se c'é un conflitto?</h3>
+
+	<p class="fragment">Indovinate un po'...</p>
+	<b class="fragment" style="color: red;">...bisogna correggerlo a manina!</b>
+
+	<p class="fragment">In maniera molto simile a come abbiamo visto<br/>
+		nella sezione dei <a href="#/7/11/">branch</a>
+	</p>
+</section>
+
+<section>
+	<x-section-title>Remote</x-section-title>
+
+	<h3>Prova... e se c'é un conflitto?</h3>
+
+	<p>Anche nel caso stessimo effettuando un operazione di <b>push</b><br/>
+		siamo noi che dobbiamo risolvere il conflitto</p>
+
+	<p class="fragment">Dovremo effettuare un operazione di <b>pull</b><br/>
+		risolvere il conflitto e poi ri-effettuare l'operazione di push</p>
+
+	<small class="fragment">Buona prassi consiste nell'effettuare un'operazione di <b>pull</b><br/>prima di riprendere a lavorare sul nostro progetto per ridurre al minimo questa possibilità</small>
 </section>
