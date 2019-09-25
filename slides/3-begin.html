@@ -1,0 +1,53 @@
+<section>
+	<h2>Iniziamo</h2>
+</section>
+
+<section>
+	<x-section-title>Iniziamo</x-section-title>
+
+	<h3>Come si installa git?</h3>
+
+	<div class="fragment" data-fragment-index="1">Ubuntu/Debian<br/>
+		<pre><code class="lang-bash input root">apt install git</code></pre>
+	</div>
+
+	<div class="fragment" data-fragment-index="1">Arch/Majaro<br/>
+		<pre><code class="lang-bash input root">pacman -S git</code></pre>
+	</div>
+
+	<div class="fragment" data-fragment-index="1">Fedora<br/>
+		<pre><code class="lang-bash input root">dnf install git</code></pre>
+	</div>
+
+	<p class="fragment">Per gli altri sistemi operativi c'é la <a
+			href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">guida ufficiale</a></p>
+</section>
+
+<section>
+	<x-section-title>Iniziamo</x-section-title>
+
+	<h3>Come si usa git?</h3>
+
+	<p class="fragment">Tutti i comandi git iniziano con <b>git</b> (ma dai...)<br/>seguito dall'operazione che vogliamo
+		compiere</p>
+
+	<pre class="fragment"><code class="lang-bash input">git {comando} [{sotto_comando}]</code></pre>
+</section>
+
+<section>
+	<x-section-title>Iniziamo</x-section-title>
+
+	<h3>Devo fare altro per usare git?</h3>
+
+	<p class="fragment">Git per funzionare richiede che almeno i parametri <b>user.name</b> e <b>user.email</b> siano
+		configurati</p>
+
+	<p class="fragment">Per far questo usiamo il sotto-comando <b>config</b></p>
+
+	<pre class="fragment"><code class="lang-bash input">git config \-\-global user.name il_mio_nome</code></pre>
+	<pre class="fragment"><code class="lang-bash input">git config \-\-global user.email mia_mail@poul.org</code></pre>
+
+	<h4 class="fragment">Siamo pronti per usare git</h4>
+
+	<small class="fragment">N.B. Il parametro <b>\-\-global</b> impone che l'impostazione sia configurata per l'utente corrente</small>
+</section>
