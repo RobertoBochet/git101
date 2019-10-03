@@ -26,6 +26,13 @@ There are **no** more heading levels.
 
 ----
 
+<x-section-title>This is a section title</x-section-title>
+
+If you want the section title in the top-right cornet
+you can add **&lt;x-section-title&gt;title&lt;/x-section-title&gt;** in the slide
+
+----
+
 ```python
 import sys
 
