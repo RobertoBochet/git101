@@ -332,3 +332,15 @@ body {
   max-height: 5vh;
   padding: 0;
 }
+
+/*********************************************
+ * CODE
+ *********************************************/
+code.input::before, pre.input > code::before {
+  content: "$";
+  color: #8699A4;
+  padding-right: 5px;
+}
+code.input.root::before, pre.input.root > code::before {
+  content: "#";
+}
