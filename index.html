@@ -2,40 +2,39 @@
 <html lang="it">
 
 <head>
-	<meta charset="utf-8">
+    <meta charset="utf-8">
 
-	<title>Corsi Linux 2019 - Basi di git</title>
-	<meta name="description" content="Slides &quot;Corsi Linux 2019&quot; talk &quot;Basi di git&quot;">
-	<meta name="author" content="Roberto Bochet <robertobochet@gmail.com>">
+    <title>Corsi Linux 2019 - Basi di git</title>
+    <meta content="Slides &quot;Corsi Linux 2019&quot; talk &quot;Basi di git&quot;" name="description">
+    <meta content="Roberto Bochet <robertobochet@gmail.com>" name="author">
 
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
 
-	<!-- reveal.js base stylesheel. Don't remove nor edit this. -->
-	<link rel="stylesheet" href="reveal.js/css/reveal.css">
+    <!-- reveal.js base stylesheel. Don't remove nor edit this. -->
+    <link href="reveal.js/css/reveal.css" rel="stylesheet">
 
-	<!-- POuL theme for reveal.js -->
-	<link rel="stylesheet" href="poul/css/poul.css" id="theme">
+    <!-- POuL theme for reveal.js -->
+    <link href="poul/css/poul.css" id="theme" rel="stylesheet">
 
-	<!-- Code syntax highlighting -->
-	<link rel="stylesheet" href="reveal.js/lib/css_highlight/hopscotch.css">
+    <!-- Code syntax highlighting -->
+    <link href="reveal.js/lib/css_highlight/hopscotch.css" rel="stylesheet">
 
-	<!-- Printing and PDF exports -->
-	<script>
+    <!-- Printing and PDF exports -->
+    <script>
         let link = document.createElement('link');
         link.rel = 'stylesheet';
-        link.type = 'text/css';
         link.href = window.location.search.match(/print-pdf/gi)
-            ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+            ? './poul/css/print/pdf.css' : './poul/css/print/paper.css';
         document.getElementsByTagName('head')[0].appendChild(link);
-	</script>
+    </script>
 
-	<script src="reveal.js/lib/js/head.min.js"></script>
-	<script src="reveal.js/js/reveal.js"></script>
+    <script src="./reveal.js/lib/js/head.min.js"></script>
+    <script src="./reveal.js/js/reveal.js"></script>
 
-	<!-- Init Reveal.js -->
-	<script>
+    <!-- Init Reveal.js -->
+    <script>
         document.addEventListener("DOMContentLoaded", () => {
             Reveal.initialize({
                 controls: false,
@@ -53,84 +52,55 @@
                     40: 'next'   // Down arrow
                 },
                 math: {
-                    mathjax: 'reveal.js/lib/js/mathjax/MathJax.js',
+                    mathjax: './reveal.js/lib/js/mathjax/MathJax.js',
                     config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
                 },
                 dependencies: [
                     {
-                        src: 'reveal.js/plugin/markdown/marked.js',
+                        src: './reveal.js/plugin/markdown/marked.js',
                         condition: function () {
                             return !!document.querySelector('[data-markdown]');
                         }
                     },
                     {
-                        src: 'reveal.js/plugin/markdown/markdown.js',
+                        src: './reveal.js/plugin/markdown/markdown.js',
                         condition: function () {
                             return !!document.querySelector('[data-markdown]');
                         }
                     },
                     {
-                        src: 'reveal.js/plugin/highlight/highlight.js',
+                        src: './reveal.js/plugin/highlight/highlight.js',
                         async: true,
                         callback: function () {
                             hljs.initHighlightingOnLoad();
                         }
                     },
                     {
-                        src: 'reveal.js/plugin/notes/notes.js',
+                        src: './reveal.js/plugin/notes/notes.js',
                         async: true
                     },
                     {
-                        src: 'reveal.js/plugin/math/math.js',
+                        src: './reveal.js/plugin/math/math.js',
                         async: true
                     }
                 ]
             });
         });
-	</script>
-	<style>
-		code.input::before {
-			content: "$";
-			color: #8699A4;
-			padding-right: 5px;
-		}
-		code.input.root::before {
-			content: "#";
-		}
-
-		.slides > section {
-			height: 100%;
-		}
-		.slides section > section {
-			height: 100%;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-		}
-		.reveal x-section-title {
-			position: absolute;
-			top: 0;
-			right: 20px;
-			color: #ffc600;
-			font-weight: bold;
-			text-align: right;
-		}
-	</style>
+    </script>
 </head>
 
 <div class="reveal">
-	<div class="slides">
-		<section data-markdown="./slides/intro.html"></section>
-		<section data-markdown="./slides/0-intro.html"></section>
-		<section data-markdown="./slides/1-what_is.html"></section>
-		<section data-markdown="./slides/2-topology.html"></section>
-		<section data-markdown="./slides/3-begin.html"></section>
-		<section data-markdown="./slides/4-repo.html"></section>
-		<section data-markdown="./slides/5-commit.html"></section>
-		<section data-markdown="./slides/6-branch.html"></section>
-		<section data-markdown="./slides/7-remote.html"></section>
-		<section data-markdown="./slides/8-extra.html"></section>
-		<section data-markdown="./slides/outro.html"></section>
-	</div>
+    <div class="slides">
+        <section data-markdown="./slides/intro.html"></section>
+        <section data-markdown="./slides/0-intro.html"></section>
+        <section data-markdown="./slides/1-what_is.html"></section>
+        <section data-markdown="./slides/2-topology.html"></section>
+        <section data-markdown="./slides/3-begin.html"></section>
+        <section data-markdown="./slides/4-repo.html"></section>
+        <section data-markdown="./slides/5-commit.html"></section>
+        <section data-markdown="./slides/6-branch.html"></section>
+        <section data-markdown="./slides/7-remote.html"></section>
+        <section data-markdown="./slides/8-extra.html"></section>
+        <section data-markdown="./slides/outro.html"></section>
+    </div>
 </div>
