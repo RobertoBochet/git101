@@ -132,7 +132,21 @@ Questo è il mio primo commit</code></pre>
     <h3>(Altri) punti di forza</h3>
 
     <p class="fragment" data-fragment-index="0">Ogni commit contiene l'hash di quello precedente</p>
-    <p class="fragment" data-fragment-index="1">⇓<p/>
-	<p class="fragment" data-fragment-index="1">Modifiche a vecchi commit sono (generalmente) proibite<br/>
+    <p class="fragment" data-fragment-index="1">⇓
+    <p/>
+    <p class="fragment" data-fragment-index="1">Modifiche a vecchi commit sono (generalmente) proibite<br/>
         e facilmente individuabili</p>
+</section>
+
+<section>
+    <x-section-title>Commit</x-section-title>
+
+    <h3>Ma il ctrl+z dov'è finito?</h3>
+
+    <p class="fragment">Una volta recuperato l'hash del commit<br/>
+        al quale vogliamo tornare</p>
+
+    <pre class="fragment"><code class="lang-bash input">git reset \-\-hard {target_hash}</code></pre>
+
+    <small class="fragment">N.B. non è necessario tutto l'hash ma è sufficiente la parte iniziale</small>
 </section>
