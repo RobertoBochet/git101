@@ -1,128 +1,129 @@
 <section>
-	<h2>Remote</h2>
+    <h2>Remote</h2>
 </section>
 
 <section>
-	<x-section-title>Remote</x-section-title>
+    <x-section-title>Remote</x-section-title>
 
-	<p>Più repository, presenti su macchine diverse,<br/>
-		possono condividere lo stesso progetto.</p>
-	<p class="fragment">Git fornisce gli strumenti per mantenere<br/>
-		questi repository sincronizzati tra loro.</p>
+    <p>Più repository, presenti su macchine diverse,<br/>
+        possono condividere lo stesso progetto.</p>
+    <p class="fragment">Git fornisce gli strumenti per mantenere<br/>
+        questi repository sincronizzati tra loro.</p>
 </section>
 
 <section>
-	<x-section-title>Remote</x-section-title>
+    <x-section-title>Remote</x-section-title>
 
-	<h3>Come posso rendere i miei commit<br/>disponibili a tutti?</h3>
+    <h3>Come posso rendere i miei commit<br/>disponibili a tutti?</h3>
 
-	<p class="fragment">Anche se possibile, la sincronizzazione diretta<br/>
-		tra due	personal computer non è generalmente utilizzata</p>
-	<p class="fragment">Solitamente si fa affidamento a uno o più<br/>
-		hosting di repositories per fare da nodi comuni<br/>
-		tra più personal computer</p>
+    <p class="fragment">Anche se possibile, la sincronizzazione diretta<br/>
+        tra due personal computer non è generalmente utilizzata</p>
+    <p class="fragment">Solitamente si fa affidamento a uno o più<br/>
+        hosting di repositories per fare da nodi comuni<br/>
+        tra più personal computer</p>
 
-	<img src="./images/gitlab-logo-white-rgb.svg" alt="gitlab logo" class="fragment" style="height: 8vh;">
+    <img alt="gitlab logo" class="fragment" src="./images/gitlab-logo-white-rgb.svg" style="height: 8vh;">
 </section>
 
 <section>
-	<x-section-title>Remote</x-section-title>
+    <x-section-title>Remote</x-section-title>
 
-	<h3>Come posso rendere i miei commit<br/>disponibili a tutti?</h3>
+    <h3>Come posso rendere i miei commit<br/>disponibili a tutti?</h3>
 
-	<p>Possibile topologia con hosting</p>
+    <p>Possibile topologia con hosting</p>
 
-	<img src="./images/topology_hosting.svg" alt="topology with hosting" class="fragment" style="height: 35vh;">
+    <img alt="topology with hosting" class="fragment" src="./images/topology_hosting.svg" style="height: 35vh;">
 </section>
 
 <section>
-	<x-section-title>Remote</x-section-title>
+    <x-section-title>Remote</x-section-title>
 
-	<h3>Come "sincronizzo" due repository?</h3>
+    <h3>Come "sincronizzo" due repository?</h3>
 
-	<p class="fragment">Prima di procedere al passaggio di dati<br/>
-		tra repository è necessario dire a git<br/>
-		come può raggiungere il repository remoto</p>
+    <p class="fragment">Prima di procedere al passaggio di dati<br/>
+        tra repository è necessario dire a git<br/>
+        come può raggiungere il repository remoto</p>
 </section>
 
 <section>
-	<x-section-title>Remote</x-section-title>
+    <x-section-title>Remote</x-section-title>
 
-	<h3>Come posso collegare un repository<br/>remoto al mio locale?</h3>
+    <h3>Come posso collegare un repository<br/>remoto al mio locale?</h3>
 
-	<pre class="fragment"><code
-			class="lang-bash input">git remote add origin https&colon;//gitlab.org/path/repository.git</code></pre>
+    <pre class="fragment"><code
+            class="lang-bash input">git remote add origin https&colon;//gitlab.org/path/repository.git</code></pre>
 
-	<small class="fragment">N.B. git per scambiare informazioni tra repository supporta sia <b>https</b> che <b>ssh</b></small>
+    <small class="fragment">N.B. git per scambiare informazioni tra repository supporta sia <b>https</b> che <b>ssh</b></small>
 </section>
 
 <section>
-	<x-section-title>Remote</x-section-title>
+    <x-section-title>Remote</x-section-title>
 
-	<h3>Come posso collegare un repository<br/>remoto al mio locale?</h3>
+    <h3>Come posso collegare un repository<br/>remoto al mio locale?</h3>
 
-	<p>Ma cosa è cambiato?</p>
+    <p>Ma cosa è cambiato?</p>
 
-	<pre class="fragment"><code class="lang-bash input">git remote -v</code></pre>
-	<pre class="fragment"><code class="lang-sh">origin  https&colon;//gitlab.org/path/repository.git (fetch)
+    <pre class="fragment"><code class="lang-bash input">git remote -v</code></pre>
+    <pre class="fragment"><code class="lang-sh">origin  https&colon;//gitlab.org/path/repository.git (fetch)
 origin  https&colon;//gitlab.org/path/repository.git (push)</code></pre>
 
-	<p class="fragment">Sono stati creati due riferimenti<br/>
-		ad un repository remoto (soprannominato da me &ldquo;origin&rdquo;),<br/>
-		uno per inviare i commit (push) e uno per riceverli (fetch)</p>
+    <p class="fragment">Sono stati creati due riferimenti<br/>
+        ad un repository remoto (soprannominato da me &ldquo;origin&rdquo;),<br/>
+        uno per inviare i commit (push) e uno per riceverli (fetch)</p>
 </section>
 
 <section>
-	<x-section-title>Remote</x-section-title>
+    <x-section-title>Remote</x-section-title>
 
-	<h3>Come aggiorno il repository remoto?</h3>
+    <h3>Come aggiorno il repository remoto?</h3>
 
-	<h3 class="fragment">Push</h3>
+    <h3 class="fragment">Push</h3>
 
-	<pre class="fragment"><code class="lang-bash input">git push origin master</code></pre>
+    <pre class="fragment"><code class="lang-bash input">git push origin master</code></pre>
 
-	<p class="fragment">Git invierà i commit del branch <i>master</i> al repository<br/>
-		remoto chiamato <i>origin</i> che cercherà di effettuare<br/>
-		il merging con il proprio repository</p>
+    <p class="fragment">Git invierà i commit del branch <i>master</i> al repository<br/>
+        remoto chiamato <i>origin</i> che cercherà di effettuare<br/>
+        il merging con il proprio repository</p>
 </section>
 
 <section>
-	<x-section-title>Remote</x-section-title>
+    <x-section-title>Remote</x-section-title>
 
-	<h3>E se invece volessi scaricare i commit<br/>dal repository remoto?</h3>
+    <h3>E se invece volessi scaricare i commit<br/>dal repository remoto?</h3>
 
-	<h3 class="fragment">Pull</h3>
+    <h3 class="fragment">Pull</h3>
 
-	<pre class="fragment"><code class="lang-bash input">git pull origin master</code></pre>
+    <pre class="fragment"><code class="lang-bash input">git pull origin master</code></pre>
 
-	<p class="fragment">Git proverà a scaricare i commit del branch <i>master</i><br/>
-		dal repository remoto chiamato <i>origin</i> ed ad effettuare<br/>
-		il merging con la nostra storia locale</p>
+    <p class="fragment">Git proverà a scaricare i commit del branch <i>master</i><br/>
+        dal repository remoto chiamato <i>origin</i> ed ad effettuare<br/>
+        il merging con la nostra storia locale</p>
 </section>
 
 <section>
-	<x-section-title>Remote</x-section-title>
+    <x-section-title>Remote</x-section-title>
 
-	<h3>Prova... e se c'è un conflitto?</h3>
+    <h3>Prova... e se c'è un conflitto?</h3>
 
-	<p class="fragment">Indovinate un po'...</p>
-	<b class="fragment" style="color: red;">...bisogna correggerlo a manina!</b>
+    <p class="fragment">Indovinate un po'...</p>
+    <b class="fragment" style="color: red;">...bisogna correggerlo a manina!</b>
 
-	<p class="fragment">In maniera molto simile a come abbiamo visto<br/>
-		nella sezione dei <a href="#/7/11/">branch</a>
-	</p>
+    <p class="fragment">In maniera molto simile a come abbiamo visto<br/>
+        nella sezione dei <a href="#/7/11/">branch</a>
+    </p>
 </section>
 
 <section>
-	<x-section-title>Remote</x-section-title>
+    <x-section-title>Remote</x-section-title>
 
-	<h3>Prova... e se c'è un conflitto?</h3>
+    <h3>Prova... e se c'è un conflitto?</h3>
 
-	<p>Anche nel caso stessimo effettuando un'operazione di <b>push</b><br/>
-		siamo noi che dobbiamo risolvere il conflitto</p>
+    <p>Anche nel caso di un'operazione di <b>push</b><br/>
+        saremmo noi a dover risolvere il conflitto</p>
 
-	<p class="fragment">Dovremo effettuare un'operazione di <b>pull</b>,<br/>
-		risolvere il conflitto e poi ri-effettuare l'operazione di <b>push</b></p>
+    <p class="fragment">Dovremo effettuare un'operazione di <b>pull</b>,<br/>
+        risolvere il conflitto e poi ri-effettuare l'operazione di <b>push</b></p>
 
-	<small class="fragment">Buona prassi consiste nell'effettuare un'operazione di <b>pull</b><br/>prima di riprendere a lavorare sul nostro progetto per ridurre al minimo questa possibilità</small>
+    <small class="fragment">Buona prassi consiste nell'effettuare un'operazione di <b>pull</b><br/>
+        prima di riprendere a lavorare sul nostro progetto per ridurre al minimo questa possibilità</small>
 </section>
