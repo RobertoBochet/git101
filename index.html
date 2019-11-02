@@ -1,37 +1,37 @@
 <!doctype html>
 
 <head>
-    <meta charset="utf-8"/>
-    <meta name="description" content=""/>
-    <meta name="author" content=""/>
+	<meta charset="utf-8"/>
+	<meta content="" name="description"/>
+	<meta content="" name="author"/>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-    <meta name="apple-mobile-web-app-capable" content="yes"/>
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+	<meta content="yes" name="apple-mobile-web-app-capable"/>
+	<meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"/>
 
-    <!-- reveal.js base stylesheel. Don't remove nor edit this. -->
-    <link rel="stylesheet" href="./reveal.js/css/reveal.css"/>
+	<!-- reveal.js base stylesheel. Don't remove nor edit this. -->
+	<link href="./reveal.js/css/reveal.css" rel="stylesheet"/>
 
-    <!-- POuL theme for reveal.js -->
-    <link rel="stylesheet" href="./poul/css/poul.css" id="theme"/>
+	<!-- POuL theme for reveal.js -->
+	<link href="./poul/css/poul.css" id="theme" rel="stylesheet"/>
 
-    <!-- Code syntax highlighting -->
-    <link rel="stylesheet" href="./reveal.js/lib/css_highlight/hopscotch.css"/>
+	<!-- Code syntax highlighting -->
+	<link href="./reveal.js/lib/css_highlight/hopscotch.css" rel="stylesheet"/>
 
-    <!-- Printing and PDF exports -->
-    <script>
+	<!-- Printing and PDF exports -->
+	<script>
         let link = document.createElement('link');
         link.rel = 'stylesheet';
         link.href = window.location.search.match(/print-pdf/gi)
             ? './poul/css/print/pdf.css' : './poul/css/print/paper.css';
         document.getElementsByTagName('head')[0].appendChild(link);
-    </script>
+	</script>
 
-    <script src="./reveal.js/lib/js/head.min.js"></script>
-    <script src="./reveal.js/js/reveal.js"></script>
+	<script src="./reveal.js/lib/js/head.min.js"></script>
+	<script src="./reveal.js/js/reveal.js"></script>
 
-    <!-- Init Reveal.js -->
-    <script>
+	<!-- Init Reveal.js -->
+	<script>
         document.addEventListener("DOMContentLoaded", () => {
             Reveal.initialize({
                 controls: false,
@@ -83,18 +83,20 @@
                 ]
             });
         });
-    </script>
+	</script>
 </head>
 
 <div class="reveal">
-    <div class="slides">
-        <section data-markdown="./slides/intro.html"></section>
-        <section data-markdown="./slides/content.md"
-                 data-charset="utf-8"
-                 data-separator="^\r?\n---\r?\n$"
-                 data-separator-vertical="^\r?\n----\r?\n$"
-                 data-separator-notes="^Notes:">
-        </section>
-        <section data-markdown="./slides/outro.html"></section>
-    </div>
+	<div class="slides">
+		<section data-markdown="./slides/intro.html"></section>
+		<section data-charset="utf-8"
+		         data-markdown="./slides/content.md"
+		         data-separator="^\r?\n---\r?\n$"
+		         data-separator-notes="^Notes:"
+		         data-separator-vertical="^\r?\n----\r?\n$">
+		</section>
+		<section data-markdown="./slides/outro.html"></section>
+	</div>
 </div>
+
+<a class="printable-version" href="?print-pdf"></a>

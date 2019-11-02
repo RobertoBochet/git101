@@ -59,10 +59,7 @@ Alternatively you can write your slides with pure **html**
 
 ## How do I make a PDF out of the slides?
 
-Append `?print-pdf` at the end of the URL.
-
-For instance if you're running the `deploy.py` script locally the URL will be
-something like `http://127.0.0.1:8080/?print-pdf`.
+Click on the printer symbol in the bottom-left corner to get the printable version of the slides.
 
 Then just use the print function of your browser to make a PDF of the page.
 
