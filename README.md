@@ -24,10 +24,12 @@ need to force-push.
 ## Getting Started
 
 In order for the slides to work (ie. display anything) you need to run:
-`git submodule update --init --depth 1`
+`git submodule update --init`
 
 In case you need the mathjax submodule as well
-`git submodule update --init --depth 1 --recursive`
+`git submodule update --init --recursive`
+
+You can add `--depth 1` to the previous commands to improve the update speed but only if you are using the latest `reveal.js` module.
 
 ## How do I use this thing?
 
@@ -55,7 +57,7 @@ Alternatively you can write your slides with pure **html**
 
 ### How do I see my stuff?
 
-- You can run `./deploy.py` with Python 3 and open the provided link in your browser.
+You can run `./deploy.py` with Python 3 and open the provided link in your browser.
 
 ## How do I make a PDF out of the slides?
 
