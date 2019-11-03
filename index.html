@@ -54,6 +54,12 @@
                 },
                 dependencies: [
                     {
+                        src: './reveal.js/plugin/external/external.js',
+                        condition: function() {
+                            return !!document.querySelector( '[data-external],[data-external-replace]' );
+                        }
+                    },
+                    {
                         src: './reveal.js/plugin/markdown/marked.js',
                         condition: function () {
                             return !!document.querySelector('[data-markdown]');
@@ -88,14 +94,14 @@
 
 <div class="reveal">
 	<div class="slides">
-		<section data-markdown="./slides/intro.html"></section>
+		<section data-external-replace="./slides/intro.html"></section>
 		<section data-charset="utf-8"
 		         data-markdown="./slides/content.md"
 		         data-separator="^\r?\n---\r?\n$"
 		         data-separator-notes="^Notes:"
 		         data-separator-vertical="^\r?\n----\r?\n$">
 		</section>
-		<section data-markdown="./slides/outro.html"></section>
+		<section data-external-replace="./slides/outro.html"></section>
 	</div>
 </div>
 
