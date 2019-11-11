@@ -394,13 +394,18 @@ body {
 /*********************************************
  * CODE
  *********************************************/
-code.input::before, pre.input > code::before {
+.reveal code {
+    tab-size: 4;
+    -moz-tab-size: 4;
+}
+
+.reveal code.input::before, .reveal pre.input > code::before {
     content: "$";
     color: #8699A4;
     padding-right: 5px;
 }
 
-code.input.root::before, pre.input.root > code::before {
+.reveal code.input.root::before, .reveal pre.input.root > code::before {
     content: "#";
 }
 
