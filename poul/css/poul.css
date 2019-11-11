@@ -299,13 +299,12 @@ body {
 /*********************************************
  * IMAGES
  *********************************************/
-.reveal section img {
+.reveal img {
     max-width: 67%;
-    padding: 4%;
+    margin: 2%;
 }
 
-
-.reveal section img.plain {
+.reveal img.plain {
     border: 0;
     box-shadow: none;
 }
@@ -320,6 +319,10 @@ body {
     background: rgba(255, 255, 255, 0.2);
     border-color: #fc4a2c;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.55);
+}
+
+.reveal img.shadow {
+    box-shadow: 5px 5px 8px #000;
 }
 
 /*********************************************
