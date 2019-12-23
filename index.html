@@ -2,39 +2,39 @@
 <html lang="it">
 
 <head>
-    <meta charset="utf-8">
+	<meta charset="utf-8">
 
-    <title>Corsi Linux 2019 - Basi di git</title>
-    <meta content="Slides &quot;Corsi Linux 2019&quot; talk &quot;Basi di git&quot;" name="description">
-    <meta content="Roberto Bochet <robertobochet@gmail.com>" name="author">
+	<title>Corsi Linux 2019 - Basi di git</title>
+	<meta content="Slides &quot;Corsi Linux 2019&quot; talk &quot;Basi di git&quot;" name="description">
+	<meta content="Roberto Bochet <robertobochet@gmail.com>
 
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
-    <meta content="yes" name="apple-mobile-web-app-capable">
-    <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+	<meta content="yes" name="apple-mobile-web-app-capable"/>
+	<meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"/>
 
-    <!-- reveal.js base stylesheel. Don't remove nor edit this. -->
-    <link href="reveal.js/css/reveal.css" rel="stylesheet">
+	<!-- reveal.js base stylesheel. Don't remove nor edit this. -->
+	<link href="./reveal.js/css/reveal.css" rel="stylesheet"/>
 
-    <!-- POuL theme for reveal.js -->
-    <link href="poul/css/poul.css" id="theme" rel="stylesheet">
+	<!-- POuL theme for reveal.js -->
+	<link href="./poul/css/poul.css" id="theme" rel="stylesheet"/>
 
-    <!-- Code syntax highlighting -->
-    <link href="reveal.js/lib/css_highlight/hopscotch.css" rel="stylesheet">
+	<!-- Code syntax highlighting -->
+	<link href="./reveal.js/lib/css_highlight/hopscotch.css" rel="stylesheet"/>
 
-    <!-- Printing and PDF exports -->
-    <script>
+	<!-- Printing and PDF exports -->
+	<script>
         let link = document.createElement('link');
         link.rel = 'stylesheet';
         link.href = window.location.search.match(/print-pdf/gi)
             ? './poul/css/print/pdf.css' : './poul/css/print/paper.css';
         document.getElementsByTagName('head')[0].appendChild(link);
-    </script>
+	</script>
 
-    <script src="./reveal.js/lib/js/head.min.js"></script>
-    <script src="./reveal.js/js/reveal.js"></script>
+	<script src="./reveal.js/lib/js/head.min.js"></script>
+	<script src="./reveal.js/js/reveal.js"></script>
 
-    <!-- Init Reveal.js -->
-    <script>
+	<!-- Init Reveal.js -->
+	<script>
         document.addEventListener("DOMContentLoaded", () => {
             Reveal.initialize({
                 controls: false,
@@ -56,6 +56,12 @@
                     config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
                 },
                 dependencies: [
+                    {
+                        src: './reveal.js/plugin/external/external.js',
+                        condition: function () {
+                            return !!document.querySelector('[data-external],[data-external-replace]');
+                        }
+                    },
                     {
                         src: './reveal.js/plugin/markdown/marked.js',
                         condition: function () {
@@ -91,16 +97,20 @@
 
 <div class="reveal">
     <div class="slides">
-        <section data-markdown="./slides/intro.html"></section>
-        <section data-markdown="./slides/0-intro.html"></section>
-        <section data-markdown="./slides/1-what_is.html"></section>
-        <section data-markdown="./slides/2-topology.html"></section>
-        <section data-markdown="./slides/3-begin.html"></section>
-        <section data-markdown="./slides/4-repo.html"></section>
-        <section data-markdown="./slides/5-commit.html"></section>
-        <section data-markdown="./slides/6-branch.html"></section>
-        <section data-markdown="./slides/7-remote.html"></section>
-        <section data-markdown="./slides/8-extra.html"></section>
-        <section data-markdown="./slides/outro.html"></section>
+        <section data-external-replace="./slides/intro.html"></section>
+
+        <section data-external="./slides/0-intro.html"></section>
+        <section data-external="./slides/1-what_is.html"></section>
+        <section data-external="./slides/2-topology.html"></section>
+        <section data-external="./slides/3-begin.html"></section>
+        <section data-external="./slides/4-repo.html"></section>
+        <section data-external="./slides/5-commit.html"></section>
+        <section data-external="./slides/6-branch.html"></section>
+        <section data-external="./slides/7-remote.html"></section>
+        <section data-external="./slides/8-extra.html"></section>
+
+        <section data-external-replace="./slides/outro.html"></section>
     </div>
 </div>
+
+<a class="printable-version" href="?print-pdf" title="Versione Stampabile"></a>
