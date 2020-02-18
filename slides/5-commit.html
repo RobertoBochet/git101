@@ -5,19 +5,16 @@
 <section>
     <x-section-title>Commit</x-section-title>
 
-    <p>Un <b>commit</b> è un'istantanea (<i>snapshot</i>) dello stato<br/>
-        di un repository in un determinato momento</p>
-    <p class="fragment">Un <b>repository</b> è quindi un insieme di <b>commit</b><br/>
-        in ordine temporale</p>
+    <p>A <b>commit</b> is a <b>snapshot</b> of the state of a <b>repository</b> in a determinate moment</p>
+    <p class="fragment">A <b>repository</b> is thus a ordered set of <b>commits</b></p>
 </section>
 
 <section>
     <x-section-title>Commit</x-section-title>
 
-    <h3>Come si crea un commit?</h3>
+    <h3>How to create a commit?</h3>
 
-    <p class="fragment">Per prima cosa è necessario dire a git<br/>
-        quali file includere in questo commit</p>
+    <p class="fragment">First it's needed tell to git which files will have to be included in the next commit</p>
 
     <pre class="fragment"><code class="lang-bash input">git add file1.txt file2.json</code></pre>
 </section>
@@ -25,9 +22,9 @@
 <section>
     <x-section-title>Commit</x-section-title>
 
-    <h3>Come si crea un commit?</h3>
+    <h3>How to create a commit?</h3>
 
-    <p>Ma cosa è cambiato?</p>
+    <p>What has changed?</p>
 
     <pre class="fragment"><code class="lang-bash input">git status</code></pre>
     <pre class="fragment"><code class="lang-sh">On branch master
@@ -43,110 +40,110 @@ Changes to be committed:
 <section>
     <x-section-title>Commit</x-section-title>
 
-    <h3>Come si crea un commit?</h3>
+    <h3>How to create a commit?</h3>
 
-    <p>Ma cosa è cambiato?</p>
+    <p>What has changed?</p>
 
-    <p class="fragment">Git ha copiato i files nella <b>staging area</b></p>
-    <p class="fragment">Ora i files sono pronti per essere inclusi in un commit</p>
+    <p class="fragment">git copied the files to the <b>staging area</b></p>
+    <p class="fragment">Now, the files are ready to be included in a commit</p>
 
-    <small class="fragment">N.B. I files sono stati copiati altrove, se li modifico ulteriormente<br/>
-        dovrò ri-aggiungerli alla staging area ripetendo il comando <i>git add</i></small>
+    <small class="fragment">N.B. The files were copied to another place, so,<br/>
+        if we will further edit them, then,<br/>
+        we will have to add them again with the command <b>git add</b></small>
 </section>
 
 <section>
     <x-section-title>Commit</x-section-title>
 
-    <h3>Come si crea un commit?</h3>
+    <h3>How to create a commit?</h3>
 
-    <p>Creiamo effettivamente il commit</p>
+    <p>Let's create the commit</p>
 
     <pre class="fragment"><code class="lang-bash input">git commit</code></pre>
 
-    <p class="fragment">Si aprirà cosi il nostro editor di testo predefinito,<br/>
-        nel quale dovremo scrivere un breve messaggio<br/>
-        nella prima riga da associare al <b>commit</b></p>
+    <p class="fragment">A text file will open in our predefined text editor,<br/>
+        in which we have to write, in the first line,<br/>
+        a brief comment of the <b>commit</b></p>
 
-    <p class="fragment">Salviamo il file di testo e il commit è pronto</p>
+    <p class="fragment">We save the file and the commit will be ready</p>
 
-    <small class="fragment">N.B. di default l'editor di testo che verrà usato in ambiente Linux sarà vi o vim,
-        <a href="https://git-scm.com/book/it/v1/Per-Iniziare-Prima-Configurazione-di-Git#Il-tuo-Editor">per
-            modificarlo</a></small>
+    <small class="fragment">N.B. In linux environment the default editor for git is "vi" or "vim".
+        <a href="https://git-scm.com/book/it/v1/Per-Iniziare-Prima-Configurazione-di-Git#Il-tuo-Editor">Change it is
+            easy</a></small>
 </section>
 
 <section>
     <x-section-title>Commit</x-section-title>
 
-    <h3>Come si crea un commit?</h3>
+    <h3>How to create a commit?</h3>
 
-    <p>Ma cosa è successo?</p>
+    <p>What happened?</p>
 
     <pre class="fragment"><code class="lang-bash input">git log</code></pre>
     <pre class="fragment"><code class="lang-sh">commit aa581d11d4caed7084cd8114d2454d9380acd869 (HEAD -> master)
-Author: il_mio_nome &lt;mia_mail@poul.org&gt;
+Author: my_name &lt;my_mail@poul.org&gt;
 Date:   Sat Aug 31 01:56:49 2019 +0200
 
-Questo è il mio primo commit</code></pre>
+This is my first commit</code></pre>
 
-    <p class="fragment">Git log permette di visualizzare<br/>
-        tutti i commit che fanno parte del repository</p>
+    <p class="fragment"><b>git log</b> allow us to see all the commits of the repository</p>
 </section>
 
 <section>
     <x-section-title>Commit</x-section-title>
 
-    <h3>Posso includere il messaggio<br/>nella linea di comando?</h3>
+    <h3>Can i include the comment in the command?</h3>
 
-    <pre class="fragment"><code class="lang-bash input">git commit -m "Questo è il mio primo commit"</code></pre>
+    <pre class="fragment"><code class="lang-bash input">git commit -m "This is my first commit"</code></pre>
 
-    <p class="fragment">Con questa sintassi preverremmo<br/>
-        l'apertura dell'editor di testo,<br/>
-        fornendo il messaggio via linea di comando</p>
+    <p class="fragment">With this syntax we will prevent the opening of the text editor, providing the comment by
+        command line</p>
 
     <b class="fragment"
-       data-notes="Se é necessario avere più spazio, si puo andare a capo, ma il messaggio principale dovrebbe comunque rimanere nella prima riga entro i 50 caratteri">Attenzione:
-        un messaggio di commit<br/>
-        non dovrebbe superare i 50 caratteri</b>
+       data-notes="Se é necessario avere più spazio, si puo andare a capo, ma il messaggio principale dovrebbe comunque rimanere nella prima riga entro i 50 caratteri">Warning:
+        A commit's comment should not exceed 50 characters</b>
 </section>
 
 <section>
     <x-section-title>Commit</x-section-title>
 
-    <h3>Ma cosa include realmente un commit?</h3>
+    <h3>But, what is included in a commit?</h3>
 
     <ul>
-        <li class="fragment">I files modificati (ovviamente)<br/>
-            <small class="fragment">...comprensivi di permessi</small></li>
-        <li class="fragment">L'autore del commit</li>
-        <li class="fragment">La data di creazione del commit</li>
-        <li class="fragment">L'hash del commit precedente</li>
+        <li class="fragment">The edited files (obviously)<br/>
+            <small class="fragment">...permissions included</small></li>
+        <li class="fragment">Commit's author</li>
+        <li class="fragment">The creation date of the commit</li>
+        <li class="fragment">The fingerprint(hash) of the previous commit</li>
     </ul>
 
-    <p class="fragment">Tutti questi elementi concorrono nella creazione<br/>
-        della firma (hash) del commit</p>
+    <p class="fragment">All these data will be used to create the fingerprint(hash) of the commit</p>
 </section>
 
 <section>
     <x-section-title>Commit</x-section-title>
 
-    <h3>(Altri) punti di forza</h3>
+    <h3>(Other) strengths</h3>
 
-    <p class="fragment" data-fragment-index="0">Ogni commit contiene l'hash di quello precedente</p>
-    <p class="fragment" data-fragment-index="1">⇓
-    <p/>
-    <p class="fragment" data-fragment-index="1">Modifiche a vecchi commit sono (generalmente) proibite<br/>
-        e facilmente individuabili</p>
+    <p class="fragment" data-fragment-index="0">Each commit includes the fingerprint of the previous one</p>
+    <p class="fragment" data-fragment-index="1">⇓<p/>
+    <p class="fragment" data-fragment-index="1">Edits of old commits are (generally) forbidden<br/>
+        and easily identifiable</p>
 </section>
 
 <section>
     <x-section-title>Commit</x-section-title>
 
-    <h3>Ma il ctrl+z dov'è finito?</h3>
+    <h3>But the <kbd>ctrl</kbd>+
+        <kdb>z</kdb>
+        where did is go?
+    </h3>
 
-    <p class="fragment">Una volta recuperato l'hash del commit<br/>
-        al quale vogliamo tornare</p>
+    <p class="fragment">Recovered the fingerprint of the commit,<br/>
+        which we want to roll back</p>
 
-    <pre class="fragment"><code class="lang-bash input">git reset \-\-hard {target_hash}</code></pre>
+    <pre class="fragment"><code class="lang-bash input">git reset --hard {target_hash}</code></pre>
 
-    <small class="fragment">N.B. non è necessario tutto l'hash ma è sufficiente la parte iniziale</small>
+    <small class="fragment">N.B. Is not necessary specify the whole fingerprint of the commit,<br/>
+        it's sufficient the initial part</small>
 </section>
