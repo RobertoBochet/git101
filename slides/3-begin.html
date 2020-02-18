@@ -1,11 +1,11 @@
 <section>
-	<h2>Iniziamo</h2>
+	<h2>Let's do this</h2>
 </section>
 
 <section>
-	<x-section-title>Iniziamo</x-section-title>
+	<x-section-title>Let's do this</x-section-title>
 
-	<h3>Come si installa git?</h3>
+	<h3>How to install git?</h3>
 
 	<div class="fragment" data-fragment-index="1">Ubuntu/Debian<br/>
 		<pre><code class="lang-bash input root">apt install git</code></pre>
@@ -19,38 +19,35 @@
 		<pre><code class="lang-bash input root">dnf install git</code></pre>
 	</div>
 
-	<p class="fragment">Per gli altri sistemi operativi c'é la <a
-			href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">guida ufficiale</a></p>
+	<p class="fragment">For the other systems there is the <a
+			href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">official guide</a></p>
 </section>
 
 <section>
-	<x-section-title>Iniziamo</x-section-title>
+	<x-section-title>Let's do this</x-section-title>
 
-	<h3>Come si usa git?</h3>
+	<h3>How to use git?</h3>
 
-	<p class="fragment">Tutti i comandi git iniziano con <b>git</b> (ma dai...)<br/>seguito dall'operazione che vogliamo
-		compiere</p>
+	<p class="fragment">All git commands begin with <b>git</b> (seriously?!)<br/>followed by a command</p>
 
-	<pre class="fragment"><code class="lang-bash input">git {comando} [{sotto_comando}]</code></pre>
+	<pre class="fragment"><code class="lang-bash input">git {command} [{subcommand}]</code></pre>
 </section>
 
 <section>
-	<x-section-title>Iniziamo</x-section-title>
+	<x-section-title>Let's do this</x-section-title>
 
-	<h3>Devo fare altro per usare git?</h3>
+	<h3>Do we have to do anything else to use git?</h3>
 
-	<p class="fragment">Git per funzionare richiede che almeno<br/>
-		i parametri <b>user.name</b> e <b>user.email</b><br>
-		siano configurati sulla nostra macchina</p>
+	<p class="fragment">git, to work, needs at least that parameters<br/><b>user.name</b> and <b>user.email</b> are set</p>
 
-	<p class="fragment">Per far questo usiamo il sotto-comando <b>config</b></p>
+	<p class="fragment">To do this, we use the command <b>config</b></p>
 	<div class="fragment">
-		<pre><code class="lang-bash input">git config \-\-global user.name il_mio_nome</code></pre>
-		<pre><code class="lang-bash input">git config \-\-global user.email mia_mail@poul.org</code></pre>
+		<pre><code class="lang-bash input">git config --global user.name {my_name}</code></pre>
+		<pre><code class="lang-bash input">git config --global user.email {my_mail@poul.org}</code></pre>
 	</div>
 
-	<h4 class="fragment">Siamo pronti per usare git</h4>
+	<h4 class="fragment">We are ready to use git</h4>
 
-	<small class="fragment">N.B. Il parametro <b>\-\-global</b> impone che l'impostazione sia configurata<br/>
-		per <b>l'utente corrente, solamente sul nostro computer</b></small>
+	<small class="fragment">N.B. The argument <b>--global</b> implies that the configuration<br/>
+		is about <b>current user</b>, only on our <b>local machine</b></small>
 </section>
