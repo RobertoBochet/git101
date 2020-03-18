@@ -36,7 +36,7 @@
 
     <h3>How to "sync" two repositories?</h3>
 
-    <p class="fragment">Before of start the "sync" we have to tell to git how it can reach the remote repository</p>
+    <p class="fragment">Before starting the "sync" we have to tell git how it can reach the remote repository</p>
 </section>
 
 <section>
@@ -61,13 +61,13 @@
     <pre class="fragment"><code class="lang-sh">origin  https&colon;//gitlab.org/path/repository.git (fetch)
 origin  https&colon;//gitlab.org/path/repository.git (push)</code></pre>
 
-    <p class="fragment">Were been created two references to a remote repository (called by me "origin"), one to send commits (push) and one to receive commits (fetch) </p>
+    <p class="fragment">Two references to a remote repository (which I called "origin") were created, one to send commits (push) and one to receive commits (fetch) </p>
 </section>
 
 <section>
     <x-section-title>Remote</x-section-title>
 
-    <h3>How to "update" remote repository?</h3>
+    <h3>How to "update" a remote repository?</h3>
 
     <h3 class="fragment">Push</h3>
 
@@ -80,7 +80,7 @@ origin  https&colon;//gitlab.org/path/repository.git (push)</code></pre>
 <section>
     <x-section-title>Remote</x-section-title>
 
-    <h3>And if we want to download the remote commits?</h3>
+    <h3>And what if we want to download the remote commits?</h3>
 
     <h3 class="fragment">Pull</h3>
 
@@ -93,9 +93,9 @@ origin  https&colon;//gitlab.org/path/repository.git (push)</code></pre>
 <section>
     <x-section-title>Remote</x-section-title>
 
-    <h3>Tries... and if there is a conflict?</h3>
+    <h3>It tries... and what if is there a conflict?</h3>
 
-    <p class="fragment">And guess what...</p>
+    <p class="fragment">Guess what...</p>
     <b class="fragment" style="color: red;">...we have to correct it by ourselves!</b>
 
     <p class="fragment">In a way very similar to how we have seen in the <a href="#/7/11/">branch</a> section.</p>
@@ -104,14 +104,14 @@ origin  https&colon;//gitlab.org/path/repository.git (push)</code></pre>
 <section>
     <x-section-title>Remote</x-section-title>
 
-    <h3>Tries... and if there is a conflict?</h3>
+    <h3>It tries... and what if is there a conflict?</h3>
 
-    <p>Also for a conflict during a <b>push</b> operation we have to be us to handle the conflict</p>
+    <p>Also for a conflict during a <b>push</b> operation we have to manually handle the conflict</p>
 
-    <h3>Conflicts must be ever handled by the client-side!</h3>
+    <h3>Conflicts must always be resolved by the client-side!</h3>
 
     <p class="fragment">We have to do a <b>pull</b> operation,<br/>
         solve the conflicts and then do again the <b>push</b> operation.</p>
 
-    <small class="fragment">As a best practices, do a <b>pull</b> operation ever before resuming to work over a project.</small>
+    <small class="fragment">As a best practice, do a <b>pull</b> operation ever before resuming to work over a project.</small>
 </section>
