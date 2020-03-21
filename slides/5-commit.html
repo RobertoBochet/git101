@@ -129,8 +129,7 @@ This is my first commit</code></pre>
 	<h3>(Other) strengths</h3>
 
 	<p class="fragment" data-fragment-index="0">Each commit includes the fingerprint of the previous one</p>
-	<p class="fragment" data-fragment-index="1">⇓
-	<p/>
+	<p class="fragment" data-fragment-index="1">⇓</p>
 	<p class="fragment" data-fragment-index="1">Edits of old commits are (generally) forbidden<br/>
 		and easily identifiable</p>
 </section>
@@ -138,12 +137,14 @@ This is my first commit</code></pre>
 <section>
 	<x-section-title>Commit</x-section-title>
 
-	<h3>But the <kbd>ctrl</kbd>+<kdb>z</kdb> where did is go?</h3>
+	<h3>But the <kbd>ctrl</kbd>+<kbd>z</kbd> where did is go?</h3>
 
 	<p class="fragment">Search for the fingerprint of the commit,<br/>
 		which we want to roll back</p>
 
 	<pre class="fragment"><code class="lang-bash input">git reset --hard {target_hash}</code></pre>
+
+	<p class="fragment" style="color: red;">Be careful: from this point you could make a mess</p>
 
 	<small class="fragment">N.B. it is not necessary to specify the whole fingerprint of the commit,<br/>
 		the initial part is sufficient</small>
