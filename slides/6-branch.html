@@ -1,131 +1,137 @@
 <section>
-    <h2>Branch</h2>
+	<h2>Branch</h2>
 </section>
 
 <section>
-    <x-section-title>Branch</x-section-title>
+	<x-section-title>Branch</x-section-title>
 
-    <p>Sometimes, it's convenient develop a project towards two or more different ways</p>
+	<p>Sometimes, it's convenient develop a project<br/>
+		towards two or more different ways</p>
 
-    <p class="fragment">E.G. We want to add some features that require deep changes of the project </p>
+	<p class="fragment">E.G. We want to add some features that<br/>
+		require deep changes of the project </p>
 </section>
 
 <section>
-    <x-section-title>Branch</x-section-title>
+	<x-section-title>Branch</x-section-title>
 
-    <p>git, for a single repository allows the creation of multiple development branches</p>
+	<p>git, for a single repository allows the creation<br/>
+		of multiple development branches</p>
 
-    <img src="./images/branch.svg" alt="branch" class="fragment" style="width: 90%;"/>
+	<img src="./images/branch.svg" alt="branch" class="fragment" style="width: 90%;"/>
 </section>
 
 <section>
-    <x-section-title>Branch</x-section-title>
+	<x-section-title>Branch</x-section-title>
 
-    <h3>How to create a branch?</h3>
+	<h3>How to create a branch?</h3>
 
-    <p class="fragment">The operation of create a new branch is called <b>branching</b></p>
+	<p class="fragment">The operation of create a new branch is called <b>branching</b></p>
 
-    <img src="./images/branch_branching.svg" alt="branch branching" class="fragment" style="width: 90%;"/>
+	<img src="./images/branch_branching.svg" alt="branch branching" class="fragment" style="width: 90%;"/>
 </section>
 
 <section>
-    <x-section-title>Branch</x-section-title>
+	<x-section-title>Branch</x-section-title>
 
-    <h3>How to create a branch?</h3>
+	<h3>How to create a branch?</h3>
 
-    <pre><code class="lang-bash input">git checkout -b {branch_name}</code></pre>
-    <pre class="fragment"><code class="lang-sh">Switched to a new branch 'new_branch'</code></pre>
+	<pre><code class="lang-bash input">git checkout -b {branch_name}</code></pre>
+	<pre class="fragment"><code class="lang-sh">Switched to a new branch 'new_branch'</code></pre>
 </section>
 
 <section>
-    <x-section-title>Branch</x-section-title>
+	<x-section-title>Branch</x-section-title>
 
-    <h3>How to create a branch?</h3>
+	<h3>How to create a branch?</h3>
 
-    <h4>What has happened?</h4>
+	<h4>What has happened?</h4>
 
-    <p class="fragment">let's check the repository's branches</p>
+	<p class="fragment">let's check the repository's branches</p>
 
-    <pre class="fragment"><code class="lang-bash input">git branch</code></pre>
-    <pre class="fragment"><code class="lang-sh">  master
+	<pre class="fragment"><code class="lang-bash input">git branch</code></pre>
+	<pre class="fragment"><code class="lang-sh">  master
 * new_branch</code></pre>
 
-    <p class="fragment">Branch "new_branch" was created and we moved on it</p>
+	<p class="fragment">Branch "new_branch" was created and we moved on it</p>
 
-    <small class="fragment">N.B. the char &ldquo;<b>*</b>&rdquo; marks the current branch</small>
+	<small class="fragment">N.B. the char &ldquo;<b>*</b>&rdquo; marks the current branch</small>
 </section>
 
 <section>
-    <x-section-title>Branch</x-section-title>
+	<x-section-title>Branch</x-section-title>
 
-    <h3>How to move to another branch?</h3>
+	<h3>How to move to another branch?</h3>
 
-    <pre class="fragment"><code class="lang-bash input">git checkout {branch_name}</code></pre>
+	<pre class="fragment"><code class="lang-bash input">git checkout {branch_name}</code></pre>
 </section>
 
 <section>
-    <x-section-title>Branch</x-section-title>
+	<x-section-title>Branch</x-section-title>
 
-    <h3>How to merge two branches?</h3>
+	<h3>How to merge two branches?</h3>
 
-    <p class="fragment">The merge operation of two branches is called <b>merging</b></p>
+	<p class="fragment">The merge operation of two branches is called <b>merging</b></p>
 
-    <img src="./images/branch_merging.svg" alt="branch merging" class="fragment" style="width: 90%;"/>
+	<img src="./images/branch_merging.svg" alt="branch merging" class="fragment" style="width: 90%;"/>
 </section>
 
 <section>
-    <x-section-title>Branch</x-section-title>
+	<x-section-title>Branch</x-section-title>
 
-    <h3>How to merge two branches?</h3>
+	<h3>How to merge two branches?</h3>
 
-    <p>We have to move to the branch in which we want to import the changes</p>
+	<p>We have to move to the branch in which<br/>
+		we want to import the changes</p>
 
-    <pre class="fragment"><code class="lang-bash input">git checkout master</code></pre>
+	<pre class="fragment"><code class="lang-bash input">git checkout master</code></pre>
 
-    <p class="fragment">And we use the command of merging addressing the branch whose edits we want to import</p>
+	<p class="fragment">And we use the command of merging addressing<br/>
+		the branch whose edits we want to import</p>
 
-    <pre class="fragment"><code class="lang-bash input">git merge {branch_name}</code></pre>
+	<pre class="fragment"><code class="lang-bash input">git merge {branch_name}</code></pre>
 </section>
 
 <section>
-    <x-section-title>Branch</x-section-title>
+	<x-section-title>Branch</x-section-title>
 
-    <h3>How to merge two branches?</h3>
+	<h3>How to merge two branches?</h3>
 
-    <p>But, is it that simple?</p>
+	<p>But, is it that simple?</p>
 
-    <img src="./images/yes_but_no.jpg" alt="yes but actually no" class="fragment" style="height: 50%;"/>
+	<img src="./images/yes_but_no.jpg" alt="yes but actually no" class="fragment" style="height: 50%;"/>
 </section>
 
 <section>
-    <x-section-title>Branch</x-section-title>
+	<x-section-title>Branch</x-section-title>
 
-    <h3>How to merge two branches?</h3>
+	<h3>How to merge two branches?</h3>
 
-    <p>May occur two cases:</p>
+	<p>May occur two cases:</p>
 
-    <ul>
-        <li class="fragment">Between the two branches there are no files in conflict<br/>
-            <small class="fragment">The merging is successful</small></li>
-        <li class="fragment">Some files were edited in both branches<br/>
-            <b class="fragment" style="color: red;">We must handle the conflicts!</b></li>
-    </ul>
+	<ul>
+		<li class="fragment">Between the two branches there are no files in conflict<br/>
+			<small class="fragment">The merging is successful</small></li>
+		<li class="fragment">Some files were edited in both branches<br/>
+			<b class="fragment" style="color: red;">We must handle the conflicts!</b></li>
+	</ul>
 </section>
 
 <section>
-    <x-section-title>Branch</x-section-title>
+	<x-section-title>Branch</x-section-title>
 
-    <h3>What happens if there are conflicts?</h3>
+	<h3>What happens if there are conflicts?</h3>
 
-    <pre class="fragment"><code class="lang-sh">Auto-merging old_file
+	<pre class="fragment"><code class="lang-sh">Auto-merging old_file
 CONFLICT (content): Merge conflict in old_file
 Automatic merge failed; fix conflicts and then commit the result.</code></pre>
 
-    <p class="fragment">git enters in a conflict handling mode, asking us to solve them and create a new commit</p>
+	<p class="fragment">git enters in a conflict handling mode,<br/>
+		asking us to solve them and create a new commit</p>
 
-    <p class="fragment">The merging operation is done</p>
+	<p class="fragment">The merging operation is done</p>
 
-    <a class="fragment"
-       href="https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging#_basic_merge_conflicts">Basic
-        merge conflicts on git-scm.com</a>
+	<a class="fragment"
+	   href="https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging#_basic_merge_conflicts">Basic
+		merge conflicts on git-scm.com</a>
 </section>

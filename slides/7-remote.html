@@ -1,117 +1,130 @@
 <section>
-    <h2>Remote</h2>
+	<h2>Remote</h2>
 </section>
 
 <section>
-    <x-section-title>Remote</x-section-title>
+	<x-section-title>Remote</x-section-title>
 
-    <p>More repositories, on different computers,<br/>
-        can share the same project.</p>
-    <p class="fragment">Git provides the tools to keep<br/>
-        these repositories synchronized with one another.</p>
+	<p>More repositories, on different computers,<br/>
+		can share the same project.</p>
+	<p class="fragment">Git provides the tools to keep<br/>
+		these repositories synchronized with one another.</p>
 </section>
 
 <section>
-    <x-section-title>Remote</x-section-title>
+	<x-section-title>Remote</x-section-title>
 
-    <h3>How can i make my commits available<br/>to anybody else?</h3>
+	<h3>How can i make my commits available<br/>to anybody else?</h3>
 
-    <p class="fragment">Even if possible, the direct synchronization between<br/>
-        two personal computers is not generally used</p>
-    <p class="fragment">Usually we rely on one or more hosting of repositories to be common nodes among personal computers</p>
+	<p class="fragment">Even if possible, the direct synchronization between<br/>
+		two personal computers is not generally used</p>
+	<p class="fragment">Usually we rely on one or more hosting of repositories to be common nodes among personal
+		computers</p>
 
-    <img alt="gitlab logo" class="fragment" src="./images/gitlab-logo-white-rgb.svg" style="width: 30%;">
+	<img alt="gitlab logo" class="fragment" src="./images/gitlab-logo-white-rgb.svg" style="width: 30%;">
 </section>
 
 <section>
-    <x-section-title>Remote</x-section-title>
+	<x-section-title>Remote</x-section-title>
 
-    <h3>Example of topology with hosting</h3>
+	<h3>Example of topology with hosting</h3>
 
-    <img alt="topology with hosting" class="fragment" src="./images/topology_hosting.svg" style="width: 40%;">
+	<img alt="topology with hosting" class="fragment" src="./images/topology_hosting.svg" style="width: 40%;">
 </section>
 
 <section>
-    <x-section-title>Remote</x-section-title>
+	<x-section-title>Remote</x-section-title>
 
-    <h3>How to "sync" two repositories?</h3>
+	<h3>How to "sync" two repositories?</h3>
 
-    <p class="fragment">Before starting the "sync" we have to tell git how it can reach the remote repository</p>
+	<p class="fragment">Before starting the "sync" we have to tell git<br/>
+		how it can reach the remote repository</p>
 </section>
 
 <section>
-    <x-section-title>Remote</x-section-title>
+	<x-section-title>Remote</x-section-title>
 
-    <h3>How to bind a remote repository to my local one?</h3>
+	<h3>How to bind a remote repository<br/>
+		to my local one?</h3>
 
-    <pre class="fragment"><code
-            class="lang-bash input">git remote add origin https&colon;//gitlab.org/path/repository.git</code></pre>
+	<pre class="fragment"><code
+			class="lang-bash input">git remote add origin https&colon;//gitlab.org/path/repository.git</code></pre>
 
-    <small class="fragment">N.B. git supports both <b>https</b> and <b>ssh</b></small>
+	<small class="fragment">N.B. git supports both <b>https</b> and <b>ssh</b></small>
 </section>
 
 <section>
-    <x-section-title>Remote</x-section-title>
+	<x-section-title>Remote</x-section-title>
 
-    <h3>How to bind a remote repository to my local one?</h3>
+	<h3>How to bind a remote repository<br/>
+		to my local one?</h3>
 
-    <p>What has changed?</p>
+	<p>What has changed?</p>
 
-    <pre class="fragment"><code class="lang-bash input">git remote -v</code></pre>
-    <pre class="fragment"><code class="lang-sh">origin  https&colon;//gitlab.org/path/repository.git (fetch)
+	<pre class="fragment"><code class="lang-bash input">git remote -v</code></pre>
+	<pre class="fragment"><code class="lang-sh">origin  https&colon;//gitlab.org/path/repository.git (fetch)
 origin  https&colon;//gitlab.org/path/repository.git (push)</code></pre>
 
-    <p class="fragment">Two references to a remote repository (which I called "origin") were created, one to send commits (push) and one to receive commits (fetch) </p>
+	<p class="fragment">Two references to a remote repository<br/>
+		(which I called "origin") were created,<br/>
+		one to send commits (push)<br/>
+		and one to receive commits (fetch) </p>
 </section>
 
 <section>
-    <x-section-title>Remote</x-section-title>
+	<x-section-title>Remote</x-section-title>
 
-    <h3>How to "update" a remote repository?</h3>
+	<h3>How to "update" a remote repository?</h3>
 
-    <h3 class="fragment">Push</h3>
+	<h3 class="fragment">Push</h3>
 
-    <pre class="fragment"><code class="lang-bash input">git push origin master</code></pre>
+	<pre class="fragment"><code class="lang-bash input">git push origin master</code></pre>
 
-    <p class="fragment">git sends the commits of the <i>master</i> to the remote repository
-        called <i>origin</i>, which tries to merge them to its repository's history.</p>
+	<p class="fragment">git sends the commits of the <i>master</i><br/>
+		to the remote repository called <i>origin</i>,<br/>
+		which tries to merge them to its repository's history.</p>
 </section>
 
 <section>
-    <x-section-title>Remote</x-section-title>
+	<x-section-title>Remote</x-section-title>
 
-    <h3>And what if we want to download the remote commits?</h3>
+	<h3>And what if we want to download<br/>
+		the remote commits?</h3>
 
-    <h3 class="fragment">Pull</h3>
+	<h3 class="fragment">Pull</h3>
 
-    <pre class="fragment"><code class="lang-bash input">git pull origin master</code></pre>
+	<pre class="fragment"><code class="lang-bash input">git pull origin master</code></pre>
 
-    <p class="fragment">git tries to download the commits of branch <i>master</i><br/>
-        from the remote repository called <i>origin</i>, and it merges them with the local history.</p>
+	<p class="fragment">git tries to download the commits of branch <i>master</i><br/>
+		from the remote repository called <i>origin</i>,<br/>
+		and it merges them with the local history.</p>
 </section>
 
 <section>
-    <x-section-title>Remote</x-section-title>
+	<x-section-title>Remote</x-section-title>
 
-    <h3>It tries... and what if is there a conflict?</h3>
+	<h3>It tries... and what if is there a conflict?</h3>
 
-    <p class="fragment">Guess what...</p>
-    <b class="fragment" style="color: red;">...we have to correct it by ourselves!</b>
+	<p class="fragment">Guess what...</p>
+	<b class="fragment" style="color: red;">...we have to correct it by ourselves!</b>
 
-    <p class="fragment">In a way very similar to how we have seen in the <a href="#/7/11/">branch</a> section.</p>
+	<p class="fragment">In a way very similar to how we have seen<br/>
+		in the <a href="#/7/11/">branch</a> section.</p>
 </section>
 
 <section>
-    <x-section-title>Remote</x-section-title>
+	<x-section-title>Remote</x-section-title>
 
-    <h3>It tries... and what if is there a conflict?</h3>
+	<h3>It tries... and what if is there a conflict?</h3>
 
-    <p>Also for a conflict during a <b>push</b> operation we have to manually handle the conflict</p>
+	<p>Also for a conflict during a <b>push</b> operation<br/>
+		we have to manually handle the conflict</p>
 
-    <h3>Conflicts must always be resolved by the client-side!</h3>
+	<h3>Conflicts must always be resolved<br/>
+		by the client-side!</h3>
 
-    <p class="fragment">We have to do a <b>pull</b> operation,<br/>
-        solve the conflicts and then do again the <b>push</b> operation.</p>
+	<p class="fragment">We have to do a <b>pull</b> operation,<br/>
+		solve the conflicts and then do again the <b>push</b> operation.</p>
 
-    <small class="fragment">As a best practice, do a <b>pull</b> operation ever before resuming to work over a project.</small>
+	<small class="fragment">As a best practice, do a <b>pull</b> operation ever before resuming to work over a project.</small>
 </section>
