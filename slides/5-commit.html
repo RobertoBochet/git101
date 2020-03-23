@@ -126,7 +126,7 @@ This is my first commit</code></pre>
 		the fingerprint(hash) of the commit</p>
 </section>
 
-<section>
+<section data-notes="DEMO git init, add, commit">
 	<x-section-title>Commit</x-section-title>
 
 	<h3>(Other) strengths</h3>
@@ -137,7 +137,7 @@ This is my first commit</code></pre>
 		and easily identifiable</p>
 </section>
 
-<section>
+<section data-notes="DEMO git reset">
 	<x-section-title>Commit</x-section-title>
 
 	<h3>But the <kbd>ctrl</kbd>+<kbd>z</kbd> where did is go?</h3>
@@ -145,7 +145,7 @@ This is my first commit</code></pre>
 	<p class="fragment">Search for the fingerprint of the commit,<br/>
 		which we want to roll back</p>
 
-	<pre class="fragment"><code class="lang-bash input">git reset --hard {target_hash}</code></pre>
+	<pre class="fragment"><code class="lang-bash input">git reset {target_hash}</code></pre>
 
 	<p class="fragment" style="color: red;">Be careful: from this point you could make a mess</p>
 
