@@ -46,7 +46,7 @@ Changes to be committed:
 
 	<p>What has changed?</p>
 
-	<p class="fragment">git copied the files to the <b>staging area</b></p>
+	<p>git copied the files to the <b>staging area</b></p>
 	<p class="fragment">Now, the files are ready to be included in a commit</p>
 
 	<small class="fragment">N.B. the files were copied to another place,<br/>
@@ -79,7 +79,7 @@ Changes to be committed:
 
 	<h3>How to create a commit?</h3>
 
-	<p>What happened?</p>
+	<p>What has happened?</p>
 
 	<pre class="fragment"><code class="lang-bash input">git log</code></pre>
 	<pre class="fragment"><code class="lang-sh">commit aa581d11d4caed7084cd8114d2454d9380acd869 (HEAD -> master)
@@ -94,16 +94,19 @@ This is my first commit</code></pre>
 <section>
 	<x-section-title>Commit</x-section-title>
 
-	<h3>Can I include the comment in the command?</h3>
+	<h3>Can I include the comment<br/>
+		in the command?</h3>
 
 	<pre class="fragment"><code class="lang-bash input">git commit -m "This is my first commit"</code></pre>
 
-	<p class="fragment">With this syntax we will prevent the opening of the text editor, providing the comment through
-		the command line</p>
+	<p class="fragment">With this syntax we will prevent the opening of<br/>
+		the text editor, providing the comment<br/>
+		through the command line</p>
 
 	<b class="fragment"
-	   data-notes="Se é necessario avere più spazio, si puo andare a capo, ma il messaggio principale dovrebbe comunque rimanere nella prima riga entro i 50 caratteri">Warning:
-		A commit's comment should not exceed 50 characters</b>
+	   data-notes="Se é necessario avere più spazio, si puo andare a capo, ma il messaggio principale dovrebbe comunque rimanere nella prima riga entro i 50 caratteri">N.B.
+		a commit's comment should not<br/>
+		exceed 50 characters</b>
 </section>
 
 <section>
