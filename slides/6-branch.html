@@ -35,11 +35,21 @@
 <section>
 	<x-section-title>Branch</x-section-title>
 
-	<h3>How to create a branch?</h3>
+	<pre><code class="lang-bash input">git switch -c {branch_name}</code></pre>
+	<p>To work with branches we generally<br/>use the command <b>switch</b><br/>With the argument <b>-c</b>, it creates a
+		new branch</p>
 
-	<pre class="fragment" data-fragment-index="0"><code class="lang-bash input">git switch -c {branch_name}</code></pre>
-	<p class="fragment" data-fragment-index="0">To work with branches we generally use the command <b>switch</b>, with the argument <b>-c</b> to create a new branch</p>
+	<small class="fragment">n.b. <b>switch</b> is a "new command" (git 2.23) in older guides you may find that <b>checkout</b>
+		is used instead</small>
+</section>
+
+<section>
+	<x-section-title>Branch</x-section-title>
+	<p>Let us create a new branch called "new_branch"</p>
+	<pre class="fragment"><code class="lang-bash input">git switch -c new_branch</code></pre>
 	<pre class="fragment"><code class="lang-sh">Switched to a new branch 'new_branch'</code></pre>
+
+	<small class="fragment">n.b. after the creation git will move us to the new branch</small>
 </section>
 
 <section>
@@ -48,16 +58,17 @@
 	<h4>What has happened?</h4>
 
 	<p class="fragment" data-fragment-index="0">let's check the repository's branches</p>
+	<p class="fragment" data-fragment-index="1">To do this we can use the command <b>branch</b> which returns the list
+		of the branches in the current repository</p>
 
 	<pre class="fragment" data-fragment-index="1"><code class="lang-bash input">git branch</code></pre>
-	<p class="fragment" data-fragment-index="1">Command <b>branch</b> returns the list of the branches in the current repository</p>
 
 	<pre class="fragment"><code class="lang-sh">  master
 * new_branch</code></pre>
 
 	<p class="fragment">Branch "new_branch" was created and we moved on it</p>
 
-	<small class="fragment">N.B. the char &ldquo;<b>*</b>&rdquo; marks the current branch</small>
+	<small class="fragment">n.b. the char &ldquo;<b>*</b>&rdquo; marks the current branch</small>
 </section>
 
 <section data-notes="DEMO git checkout">
@@ -66,6 +77,7 @@
 	<h3>How to move to another branch?</h3>
 
 	<pre class="fragment"><code class="lang-bash input">git switch {branch_name}</code></pre>
+	<small class="fragment">n.b. to move only argument <b>-c</b> is omitted</small>
 </section>
 
 <section>
@@ -86,12 +98,12 @@
 	<p>We have to move to the branch in which<br/>
 		we want to import the changes</p>
 
-	<pre class="fragment"><code class="lang-bash input">git switch master</code></pre>
+	<pre class="fragment"><code class="lang-bash input">git switch {branch_merge_to}</code></pre>
 
 	<p class="fragment">Then we can use the command <b>merge</b> with the argument<br/>
 		the branch whose edits we want to import</p>
 
-	<pre class="fragment"><code class="lang-bash input">git merge {branch_name}</code></pre>
+	<pre class="fragment"><code class="lang-bash input">git merge {branch_merge_from}</code></pre>
 </section>
 
 <section>
