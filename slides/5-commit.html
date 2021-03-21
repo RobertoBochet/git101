@@ -19,18 +19,21 @@
 	<p class="fragment">First it's needed to tell to git which <b>files</b><br/>
 		will have to be included in the next <b>commit</b></p>
 
-	<pre class="fragment"><code class="lang-bash input">git add file1.txt file2.json</code></pre>
+	<pre class="fragment"><code class="lang-bash input">git add [&lt;path_to_file&gt;...]</code></pre>
 
-	<small class="fragment">N.B. <b>git</b> will not include any file in a commit unless we will tell to do it</small>
+	<p class="fragment">Command <a href="https://git-scm.com/docs/git-add"><b>add</b></a> allows us to include files to the next snapshot(commit)</p>
+
+	<small class="fragment">n.b. git will not include any file in a commit unless we will tell to do it</small>
 </section>
 
 <section>
 	<x-section-title>Commit</x-section-title>
 
-	<p>What has changed?</p>
+	<pre><code class="lang-bash input">git add file1.txt file2.json</code></pre>
+
+	<p class="fragment">What has changed?</p>
 
 	<pre class="fragment"><code class="lang-bash input">git status</code></pre>
-	<p class="fragment">Command <b>status</b> returns some information about the current repository status</p>
 	<pre class="fragment"><code class="lang-sh">On branch master
 
 No commits yet
@@ -39,14 +42,15 @@ Changes to be committed:
 (use "git rm --cached &lt;file&gt;..." to unstage)
 	new file:   file1.txt
 	new file:   file2.json</code></pre>
+	<p class="fragment">Command <a href="https://git-scm.com/docs/git-status"><b>status</b></a> returns some information about the current repository status</p>
 </section>
 
 <section>
 	<x-section-title>Commit</x-section-title>
 
-	<p>What has changed?</p>
+	<p>What has happened?</p>
 
-	<p>git copied the files to the <b>staging area</b></p>
+	<p class="fragment">git copied the files to the <b>staging area</b></p>
 	<p class="fragment">Now, the files are ready to be included in a commit</p>
 
 	<small class="fragment">N.B. the files were copied to another place,<br/>
@@ -58,6 +62,7 @@ Changes to be committed:
 	<x-section-title>Commit</x-section-title>
 
 	<p>Let's create the commit</p>
+	<p class="fragment">To do this, we use the command <a href="https://git-scm.com/docs/git-commit"><b>commit</b></a></p>
 
 	<pre class="fragment"><code class="lang-bash input">git commit</code></pre>
 
@@ -67,7 +72,7 @@ Changes to be committed:
 
 	<p class="fragment">We save the file and the commit will be ready</p>
 
-	<small class="fragment">N.B. in the Linux environment the default editor for git is "vi" or "vim".
+	<small class="fragment">n.b. in the Linux environment the default editor for git is "vi" or "vim".
 		<a href="https://git-scm.com/book/it/v1/Per-Iniziare-Prima-Configurazione-di-Git#Il-tuo-Editor">Change it is
 			easy</a></small>
 </section>
@@ -84,7 +89,7 @@ Date:   Sat Aug 31 01:56:49 2019 +0200
 
 This is my first commit</code></pre>
 
-	<p class="fragment">The command <b>log</b> allows us to see all the commits in the history of the repository</p>
+	<p class="fragment">The command <a href="https://git-scm.com/docs/git-log"><b>log</b></a> allows us to see all the commits in the history of the repository</p>
 </section>
 
 <section>
@@ -99,10 +104,9 @@ This is my first commit</code></pre>
 		the text editor, providing the comment<br/>
 		through the command line</p>
 
-	<p class="fragment"
-	   data-notes="Se é necessario avere più spazio, si puo andare a capo, ma il messaggio principale dovrebbe comunque rimanere nella prima riga entro i 50 caratteri">N.B.
-		a commit's comment <b>should not</b><br/>
-		exceed 50 characters</p>
+	<small class="fragment"
+	   data-notes="Se é necessario avere più spazio, si puo andare a capo, ma il messaggio principale dovrebbe comunque rimanere nella prima riga entro i 50 caratteri">n.b.
+		a commit's comment <b>should not</b> exceed 50 characters</small>
 </section>
 
 <section>
@@ -141,10 +145,12 @@ This is my first commit</code></pre>
 	<p class="fragment">Search for the fingerprint of the commit,<br/>
 		which we want to roll back</p>
 
-	<pre class="fragment"><code class="lang-bash input">git reset {target_hash}</code></pre>
+	<pre class="fragment"><code class="lang-bash input">git reset &lt;commit_hash&gt;</code></pre>
 
-	<p class="fragment" style="color: red;">Be careful: from this point you could make a mess</p>
+	<p class="fragment">Command <a href="https://git-scm.com/docs/git-reset"><b>reset</b></a> restores the repo status to the specified old commit</p>
 
-	<small class="fragment">N.B. it is not necessary to specify the whole fingerprint of the commit,<br/>
+	<p class="fragment" style="color: red;">Be careful: from this point you could make a mess ⚠️</p>
+
+	<small class="fragment">n.b. it is not necessary to specify the whole fingerprint of the commit,<br/>
 		the initial part is sufficient</small>
 </section>
