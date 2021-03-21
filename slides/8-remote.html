@@ -46,16 +46,16 @@
 	<h3>How to bind a remote repository<br/>
 		to my local one?</h3>
 
-	<p class="fragment">Binding to "remote" repository could be handled with command <b>remote</b></p>
+	<p class="fragment">Binding to "remote" repository could be handled with command <a href="https://git-scm.com/docs/git-remote"><b>remote</b></a></p>
 
 	<p class="fragment">Subcommand <b>add</b> allows to create a new reference to a remote repository</p>
 
 	<pre class="fragment"><code
-			class="lang-bash input">git remote add {ref_name} {uri_to_repo}</code></pre>
+			class="lang-bash input">git remote add &lt;ref_name&gt; &lt;uri_to_repo&gt;</code></pre>
 
 	<p class="fragment"><b>add</b> requires an arbitrary name for the reference and an uri to the "remote" repo</p>
 
-	<small class="fragment">N.B. git supports <b>https</b>, <b>ssh</b> or <b>path</b></small>
+	<small class="fragment">n.b. git supports <b>https</b>, <b>ssh</b> or <b>path</b></small>
 </section>
 
 <section>
@@ -81,9 +81,9 @@ origin  https&colon;//gitlab.org/path/repository.git (push)</code></pre>
 
 	<h3>How to "update" a remote repository?</h3>
 
-	<pre class="fragment"><code class="lang-bash input">git push {remote_ref_name} {ref}</code></pre>
+	<pre class="fragment"><code class="lang-bash input">git push &lt;remote_ref_name&gt; &lt;ref&gt;</code></pre>
 
-	<p class="fragment">Command <b>push</b> takes a reference to a remote and a reference to commit,
+	<p class="fragment">Command <a href="https://git-scm.com/docs/git-push"><b>push</b></a> takes a reference to a remote and a reference to commit,
 		then it sends to the remote all the commits which reference depends on</p>
 
 	<small class="fragment">The reference to commit can be a <b>tag</b> or a <b>branch</b>(branch's head)<br/>
@@ -108,9 +108,9 @@ origin  https&colon;//gitlab.org/path/repository.git (push)</code></pre>
 	<h3>And what if we want to download<br/>
 		the remote commits?</h3>
 
-	<pre class="fragment"><code class="lang-bash input">git pull {remote_ref_name} {ref}</code></pre>
+	<pre class="fragment"><code class="lang-bash input">git pull &lt;remote_ref_name&gt; &lt;ref&gt;</code></pre>
 
-	<p class="fragment">Command <b>pull</b> tries to retrive a ref(and associated commits) from a remote and merging with the local history</p>
+	<p class="fragment">Command <a href="https://git-scm.com/docs/git-pull"><b>pull</b></a> tries to retrive a ref(and associated commits) from a remote and merging with the local history</p>
 </section>
 <section>
 	<x-section-title>Remote</x-section-title>
@@ -158,13 +158,13 @@ origin  https&colon;//gitlab.org/path/repository.git (push)</code></pre>
 
 	<p class="fragment">We can do it with the previous commands</p>
 
-	<pre class="fragment"><code class="lang-sh">mkdir {repo_name}
-cd {repo_name}
+	<pre class="fragment"><code class="lang-sh">mkdir &lt;repo_name&gt;
+cd &lt;repo_name&gt;
 git init
-git remote add origin {repo_url}
+git remote add origin &lt;repo_uri&gt;
 git pull</code></pre>
 
-	<p class="fragment">...or, we can also use <b>git clone</b></p>
+	<p class="fragment">...or, we can also use command <a href="https://git-scm.com/docs/git-clone"><b>clone</b></a></p>
 
-	<pre class="fragment"><code class="lang-sh">git clone {repo_url}</code></pre>
+	<pre class="fragment"><code class="lang-sh">git clone &lt;repo_uri&gt;</code></pre>
 </section>

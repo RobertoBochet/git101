@@ -16,9 +16,9 @@
 	<x-section-title>tags</x-section-title>
 	<h3>How can we create a tag?</h3>
 
-	<pre class="fragment" data-fragment-index="0"><code class="lang-bash input">git tag {tag_name} [{commit_hash}]</code></pre>
+	<pre class="fragment" data-fragment-index="0"><code class="lang-bash input">git tag &lt;tag_name&gt; [&lt;commit_hash&gt;]</code></pre>
 
-	<p class="fragment" data-fragment-index="0">The command <b>tag</b> requires a name for the tag and optionally the hash of the commit which has to be tagged
+	<p class="fragment" data-fragment-index="0">The command <a href="https://git-scm.com/docs/git-tag"><b>tag</b></a> requires a name for the tag and optionally the hash of the commit which has to be tagged
 	<small class="fragment">(If no hash is provided the "last" commit wil be tagged)</small></p>
 
 	<small class="fragment">n.b. tag name must be short and simple,<br/>for more complex notes you can assign also a message to a tag with the argument <code>-m</code> followed by it</small>
@@ -99,9 +99,9 @@ v1.2.0
 
 	<h3>If we want to move HEAD<br/>to a specific commit?</h3>
 
-	<p>To do this we can use the command <b>checkout</b> with the hash of the commit we want move <b>HEAD</b> to</p>
+	<p>To do this we can use the command <a href="https://git-scm.com/docs/git-checkout"><b>checkout</b></a> with the hash of the commit we want move <b>HEAD</b> to</p>
 
-	<pre><code class="lang-bash input">git checkout {commit_hash}</code></pre>
+	<pre><code class="lang-bash input">git checkout &lt;commit_hash&gt;</code></pre>
 
 
 	<img src="./images/tag_detached.svg" alt="detached HEAD" class="fragment" style="width: 90%;"/>

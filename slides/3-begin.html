@@ -26,23 +26,23 @@
 
 	<p class="fragment">All git commands begin with <b>git</b> (seriously?!)<br/>followed by a command</p>
 
-	<pre class="fragment"><code class="lang-bash input">git {command} [{subcommand}]</code></pre>
+	<pre class="fragment"><code class="lang-bash input">git &lt;command&gt; [&lt;subcommand&gt;]</code></pre>
 </section>
 
 <section>
 	<h3>Do we need anything else to use git?</h3>
 
-	<p class="fragment">To work, <b>git</b> needs that at least the parameters<br/>
+	<p class="fragment">To work, git needs that at least the parameters<br/>
 		<b>user.name</b> and <b>user.email</b> are set</p>
 
-	<p class="fragment">To do this, we use the command <b>config</b></p>
+	<p class="fragment">To do this, we use the command <a href="https://git-scm.com/docs/git-config"><b>config</b></a></p>
 	<div class="fragment">
-		<pre><code class="lang-bash input">git config --global user.name {my_name}</code></pre>
-		<pre><code class="lang-bash input">git config --global user.email {my_mail@poul.org}</code></pre>
+		<pre><code class="lang-bash input">git config --global user.name &lt;my_name&gt;</code></pre>
+		<pre><code class="lang-bash input">git config --global user.email &lt;my_email&gt;</code></pre>
 	</div>
 
 	<h4 class="fragment">We are ready to use git</h4>
 
-	<small class="fragment">N.B. The argument <b>--global</b> implies that the configuration<br/>
+	<small class="fragment">n.b. The argument <b>--global</b> implies that the configuration<br/>
 		is about <b>current user</b>, only on our <b>local machine</b></small>
 </section>
