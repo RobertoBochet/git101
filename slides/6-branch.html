@@ -37,20 +37,21 @@
 
 	<h3>How to create a branch?</h3>
 
-	<pre><code class="lang-bash input">git checkout -b {branch_name}</code></pre>
+	<pre class="fragment" data-fragment-index="0"><code class="lang-bash input">git switch -c {branch_name}</code></pre>
+	<p class="fragment" data-fragment-index="0">To work with branches we generally use the command <b>switch</b>, with the argument <b>-c</b> to create a new branch</p>
 	<pre class="fragment"><code class="lang-sh">Switched to a new branch 'new_branch'</code></pre>
 </section>
 
 <section>
 	<x-section-title>Branch</x-section-title>
 
-	<h3>How to create a branch?</h3>
-
 	<h4>What has happened?</h4>
 
-	<p class="fragment">let's check the repository's branches</p>
+	<p class="fragment" data-fragment-index="0">let's check the repository's branches</p>
 
-	<pre class="fragment"><code class="lang-bash input">git branch</code></pre>
+	<pre class="fragment" data-fragment-index="1"><code class="lang-bash input">git branch</code></pre>
+	<p class="fragment" data-fragment-index="1">Command <b>branch</b> returns the list of the branches in the current repository</p>
+
 	<pre class="fragment"><code class="lang-sh">  master
 * new_branch</code></pre>
 
@@ -64,7 +65,7 @@
 
 	<h3>How to move to another branch?</h3>
 
-	<pre class="fragment"><code class="lang-bash input">git checkout {branch_name}</code></pre>
+	<pre class="fragment"><code class="lang-bash input">git switch {branch_name}</code></pre>
 </section>
 
 <section>
@@ -85,9 +86,9 @@
 	<p>We have to move to the branch in which<br/>
 		we want to import the changes</p>
 
-	<pre class="fragment"><code class="lang-bash input">git checkout master</code></pre>
+	<pre class="fragment"><code class="lang-bash input">git switch master</code></pre>
 
-	<p class="fragment">And we use the command of merging addressing<br/>
+	<p class="fragment">Then we can use the command <b>merge</b> with the argument<br/>
 		the branch whose edits we want to import</p>
 
 	<pre class="fragment"><code class="lang-bash input">git merge {branch_name}</code></pre>
