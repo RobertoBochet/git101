@@ -8,6 +8,7 @@
 	<p>A <b>commit</b> is a <b>snapshot</b> of the state of<br/>
 		a <b>repository</b> in a specific moment</p>
 	<p class="fragment">A <b>repository</b> is thus an ordered set of <b>commits</b></p>
+	<small class="fragment">...and few additive stuff (we will come back later)</small>
 </section>
 
 <section>
@@ -19,16 +20,17 @@
 		will have to be included in the next <b>commit</b></p>
 
 	<pre class="fragment"><code class="lang-bash input">git add file1.txt file2.json</code></pre>
+
+	<small class="fragment">N.B. <b>git</b> will not include any file in a commit unless we will tell to do it</small>
 </section>
 
 <section>
 	<x-section-title>Commit</x-section-title>
 
-	<h3>How to create a commit?</h3>
-
 	<p>What has changed?</p>
 
 	<pre class="fragment"><code class="lang-bash input">git status</code></pre>
+	<p class="fragment">Subcommand <b>status</b> returns some information about the current repository status</p>
 	<pre class="fragment"><code class="lang-sh">On branch master
 
 No commits yet
@@ -42,8 +44,6 @@ Changes to be committed:
 <section>
 	<x-section-title>Commit</x-section-title>
 
-	<h3>How to create a commit?</h3>
-
 	<p>What has changed?</p>
 
 	<p>git copied the files to the <b>staging area</b></p>
@@ -56,8 +56,6 @@ Changes to be committed:
 
 <section>
 	<x-section-title>Commit</x-section-title>
-
-	<h3>How to create a commit?</h3>
 
 	<p>Let's create the commit</p>
 
@@ -77,8 +75,6 @@ Changes to be committed:
 <section>
 	<x-section-title>Commit</x-section-title>
 
-	<h3>How to create a commit?</h3>
-
 	<p>What has happened?</p>
 
 	<pre class="fragment"><code class="lang-bash input">git log</code></pre>
@@ -88,14 +84,14 @@ Date:   Sat Aug 31 01:56:49 2019 +0200
 
 This is my first commit</code></pre>
 
-	<p class="fragment"><b>git log</b> allows us to see all the commits of the repository</p>
+	<p class="fragment">Subcommand <b>log</b> allows us to see all the commits in the history of the repository (almost true, see later)</p>
 </section>
 
 <section>
 	<x-section-title>Commit</x-section-title>
 
-	<h3>Can I include the comment<br/>
-		in the command?</h3>
+	<h4>Can I include the comment<br/>
+		in the command?</h4>
 
 	<pre class="fragment"><code class="lang-bash input">git commit -m "This is my first commit"</code></pre>
 
@@ -103,10 +99,10 @@ This is my first commit</code></pre>
 		the text editor, providing the comment<br/>
 		through the command line</p>
 
-	<b class="fragment"
+	<p class="fragment"
 	   data-notes="Se é necessario avere più spazio, si puo andare a capo, ma il messaggio principale dovrebbe comunque rimanere nella prima riga entro i 50 caratteri">N.B.
-		a commit's comment should not<br/>
-		exceed 50 characters</b>
+		a commit's comment <b>should not</b><br/>
+		exceed 50 characters</p>
 </section>
 
 <section>
