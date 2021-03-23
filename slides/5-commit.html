@@ -6,9 +6,9 @@
 	<x-section-title>Commit</x-section-title>
 
 	<p>A <b>commit</b> is a <b>snapshot</b> of the state of<br/>
-		a <b>repository</b> in a specific moment</p>
+		a <b>repository</b> at a specific moment</p>
 	<p class="fragment">A <b>repository</b> is thus an ordered set of <b>commits</b></p>
-	<small class="fragment">...and few additive stuff (we will come back later)</small>
+	<small class="fragment">...and few additive stuff (we will get back to it later)</small>
 </section>
 
 <section>
@@ -16,14 +16,14 @@
 
 	<h3>How to create a commit?</h3>
 
-	<p class="fragment">First it's needed to tell to git which <b>files</b><br/>
-		will have to be included in the next <b>commit</b></p>
+	<p class="fragment">First we need to tell to git which <b>files</b><br/>
+		we want to be included in the next <b>commit</b></p>
 
 	<pre class="fragment"><code class="lang-bash input">git add [&lt;path_to_file&gt;...]</code></pre>
 
 	<p class="fragment">Command <a href="https://git-scm.com/docs/git-add"><b>add</b></a> allows us to include files to the next snapshot(commit)</p>
 
-	<small class="fragment">n.b. git will not include any file in a commit unless we will tell to do it</small>
+	<small class="fragment">n.b. git will not include any file in a commit unless we will tell it to</small>
 </section>
 
 <section>
@@ -72,8 +72,8 @@ Changes to be committed:
 
 	<p class="fragment">We save the file and the commit will be ready</p>
 
-	<small class="fragment">n.b. in the Linux environment the default editor for git is "vi" or "vim".
-		<a href="https://git-scm.com/book/it/v1/Per-Iniziare-Prima-Configurazione-di-Git#Il-tuo-Editor">Change it is
+	<small class="fragment">n.b. in Linux environments the default editor for git is usually `vim`, `nano` or `vi`
+		<a href="https://git-scm.com/book/it/v1/Per-Iniziare-Prima-Configurazione-di-Git#Il-tuo-Editor">Changing it is
 			easy</a></small>
 </section>
 
@@ -123,7 +123,7 @@ This is my first commit</code></pre>
 	</ul>
 
 	<p class="fragment">All these data will be used to create<br/>
-		the fingerprint(hash) of the commit</p>
+		the fingerprint (hash) of the commit</p>
 </section>
 
 <section data-notes="DEMO git init, add, commit">
@@ -140,7 +140,7 @@ This is my first commit</code></pre>
 <section data-notes="DEMO git reset; PAUSE">
 	<x-section-title>Commit</x-section-title>
 
-	<h3>But the <kbd>ctrl</kbd>+<kbd>z</kbd> where did is go?</h3>
+	<h3>But where did <kbd>ctrl</kbd>+<kbd>z</kbd> go?</h3>
 
 	<p class="fragment">Search for the fingerprint of the commit,<br/>
 		which we want to roll back</p>

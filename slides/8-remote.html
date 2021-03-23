@@ -8,17 +8,17 @@
 	<p>More repositories, on different computers,<br/>
 		can share the same project</p>
 	<p class="fragment">Git provides the tools to keep<br/>
-		these repositories synchronized with another one</p>
+		these repositories synchronized with each other</p>
 </section>
 
 <section>
 	<x-section-title>Remote</x-section-title>
 
-	<h3>How can i make my commits available<br/>to anybody else?</h3>
+	<h3>How can I make my commits available<br/>to someone else?</h3>
 
 	<p class="fragment">Even if possible, the direct synchronization between<br/>
 		two personal computers is not generally used</p>
-	<p class="fragment">Usually we rely on one or more hosting of repositories to be common nodes among personal
+	<p class="fragment">Usually we rely on one or more git repository hosting platforms to be common nodes among personal
 		computers</p>
 
 	<img alt="gitlab logo" class="fragment" src="./images/gitlab-logo-white-rgb.svg" style="width: 30%;">
@@ -27,7 +27,7 @@
 <section>
 	<x-section-title>Remote</x-section-title>
 
-	<h3>Example of topology with hosting</h3>
+	<h3>Example of a topology with a hosting platform</h3>
 
 	<img alt="topology with hosting" class="fragment" src="./images/topology_hosting.svg" style="width: 40%;">
 </section>
@@ -44,16 +44,16 @@
 	<x-section-title>Remote</x-section-title>
 
 	<h3>How to bind a remote repository<br/>
-		to my local one?</h3>
+		to a local one?</h3>
 
-	<p class="fragment">Binding to "remote" repository could be handled with command <a href="https://git-scm.com/docs/git-remote"><b>remote</b></a></p>
+	<p class="fragment">Binding to "remote" repository can be done with the command <a href="https://git-scm.com/docs/git-remote"><b>remote</b></a></p>
 
 	<p class="fragment">Subcommand <b>add</b> allows to create a new reference to a remote repository</p>
 
 	<pre class="fragment"><code
 			class="lang-bash input">git remote add &lt;ref_name&gt; &lt;uri_to_repo&gt;</code></pre>
 
-	<p class="fragment"><b>add</b> requires an arbitrary name for the reference and an uri to the "remote" repo</p>
+	<p class="fragment"><b>add</b> requires an arbitrary name for the reference and a URI to the "remote" repo</p>
 
 	<small class="fragment">n.b. git supports <b>https</b>, <b>ssh</b> or <b>path</b></small>
 </section>
@@ -83,10 +83,10 @@ origin  https&colon;//gitlab.org/path/repository.git (push)</code></pre>
 
 	<pre class="fragment"><code class="lang-bash input">git push &lt;remote_ref_name&gt; &lt;ref&gt;</code></pre>
 
-	<p class="fragment">Command <a href="https://git-scm.com/docs/git-push"><b>push</b></a> takes a reference to a remote and a reference to commit,
-		then it sends to the remote all the commits which reference depends on</p>
+	<p class="fragment">Command <a href="https://git-scm.com/docs/git-push"><b>push</b></a> takes a reference to a remote and a reference to a commit,
+		then it sends to the remote all the commits which the referenced commit depends on</p>
 
-	<small class="fragment">The reference to commit can be a <b>tag</b> or a <b>branch</b>(branch's head)<br/>
+	<small class="fragment">The reference to a commit can be a <b>tag</b> or a <b>branch</b>(branch's head)<br/>
 		i.e. a pointer to a commit (<a href="https://git-scm.com/book/it/v2/Git-Internals-Git-References">refs in official guide</a>)</small>
 </section>
 <section data-notes="DEMO: git remote (push)">
@@ -94,12 +94,12 @@ origin  https&colon;//gitlab.org/path/repository.git (push)</code></pre>
 
 	<pre><code class="lang-bash input">git push origin master</code></pre>
 
-	<p class="fragment">git sends the commits on which the branch <i>master</i> depends<br/>
+	<p class="fragment">git sends the commits which the branch <i>master</i> depends on<br/>
 		to the remote repository called <i>origin</i>,<br/>
 		which tries to merge them to its repository's history.</p>
 
 	<small class="fragment">n.b. if there are conflict between remote and local commits, the remote will refuse to accept the push</small>
-	<small class="fragment" style="color: red;">️merging conflict have to be solved locally before push ⚠️</small>
+	<small class="fragment" style="color: red;">️merge conflict have to be solved locally before pushing ⚠️</small>
 </section>
 
 <section>
@@ -110,7 +110,7 @@ origin  https&colon;//gitlab.org/path/repository.git (push)</code></pre>
 
 	<pre class="fragment"><code class="lang-bash input">git pull &lt;remote_ref_name&gt; &lt;ref&gt;</code></pre>
 
-	<p class="fragment">Command <a href="https://git-scm.com/docs/git-pull"><b>pull</b></a> tries to retrive a ref(and associated commits) from a remote and merging with the local history</p>
+	<p class="fragment">Command <a href="https://git-scm.com/docs/git-pull"><b>pull</b></a> tries to retrive a ref (and associated commits) from a remote and merge them to the local history</p>
 </section>
 <section>
 	<x-section-title>Remote</x-section-title>
@@ -128,9 +128,9 @@ origin  https&colon;//gitlab.org/path/repository.git (push)</code></pre>
 	<h3>It tries... and what if is there a conflict?</h3>
 
 	<p class="fragment">Guess what...</p>
-	<b class="fragment" style="color: red;">...we have to correct it by ourselves!</b>
+	<b class="fragment" style="color: red;">...we have to correct it!</b>
 
-	<p class="fragment">In a way very similar to how we have seen<br/>
+	<p class="fragment">In a very similar way to that we have seen<br/>
 		in the <a href="#/7/11/">branch</a> section.</p>
 </section>
 
@@ -139,22 +139,22 @@ origin  https&colon;//gitlab.org/path/repository.git (push)</code></pre>
 
 	<h3>It tries... and what if is there a conflict?</h3>
 
-	<p>Also for a conflict during a <b>push</b> operation<br/>
+	<p>Just like for a conflict during a <b>push</b> operation<br/>
 		we have to manually handle the conflict</p>
 
 	<h3>Conflicts must always be resolved<br/>
-		by the client-side!</h3>
+		on the client side!</h3>
 
 	<p class="fragment">We have to do a <b>pull</b> operation,<br/>
-		solve the conflicts and then do again the <b>push</b> operation.</p>
+		solve the conflicts and then perform the <b>push</b> operation again.</p>
 
-	<small class="fragment">As a best practice, do a <b>pull</b> operation ever before resuming to work over a project.</small>
+	<small class="fragment">As a best practice, always do a <b>pull</b> operation before resuming to work on a project.</small>
 </section>
 
 <section data-notes="DEMO: git remote (pull); DEMO: git clone">
 	<x-section-title>Remote</x-section-title>
 
-	<h3>If we want to download a whole remote repo...</h3>
+	<h3>If we want to download a entire remote repo...</h3>
 
 	<p class="fragment">We can do it with the previous commands</p>
 
