@@ -5,17 +5,17 @@
 <section>
 	<x-section-title>Branch</x-section-title>
 
-	<p>Sometimes, it's convenient develop a project<br/>
-		towards two or more different ways</p>
+	<p>Sometimes, it's convenient to develop two or more<br/>
+		different parts of a project in parallel</p>
 
 	<p class="fragment">E.G. We want to add some features that<br/>
-		require deep changes of the project </p>
+		require deep changes to the project </p>
 </section>
 
 <section>
 	<x-section-title>Branch</x-section-title>
 
-	<p>git, for a single repository allows the creation<br/>
+	<p>git, for a single repository, allows the creation<br/>
 		of multiple development branches</p>
 
 	<img src="./images/branch.svg" alt="branch" class="fragment" style="width: 90%;"/>
@@ -26,7 +26,7 @@
 
 	<h3>How to create a branch?</h3>
 
-	<p class="fragment">The operation of create a new branch<br/>
+	<p class="fragment">The operation of creating a new branch<br/>
 		is called <b>branching</b></p>
 
 	<img src="./images/branch_branching.svg" alt="branch branching" class="fragment" style="width: 90%;"/>
@@ -38,7 +38,7 @@
 	<pre><code class="lang-bash input">git switch -c &lt;branch_name&gt;</code></pre>
 	<p>To work with branches we generally<br/>use the command <a
 			href="https://git-scm.com/docs/git-switch"><b>switch</b></a><br/>
-		With the argument <b>-c</b>, it creates a new branch</p>
+		With the argument <b>-c</b> it creates a new branch</p>
 
 	<small class="fragment">n.b. <b>switch</b> is a "new command" (git 2.23) in older guides you may find that <b>checkout</b>
 		is used instead</small>
@@ -50,7 +50,7 @@
 	<pre class="fragment"><code class="lang-bash input">git switch -c new_branch</code></pre>
 	<pre class="fragment"><code class="lang-sh">Switched to a new branch 'new_branch'</code></pre>
 
-	<small class="fragment">n.b. after the creation git will move us to the new branch</small>
+	<small class="fragment">n.b. after the creation git will move us into the new branch</small>
 </section>
 
 <section>
@@ -68,7 +68,7 @@
 	<pre class="fragment"><code class="lang-sh">  master
 * new_branch</code></pre>
 
-	<p class="fragment">Branch "new_branch" was created and we moved on it</p>
+	<p class="fragment">Branch "new_branch" was created and we moved into it</p>
 
 	<small class="fragment">n.b. the char &ldquo;<b>*</b>&rdquo; marks the current branch</small>
 </section>
@@ -79,7 +79,7 @@
 	<h3>How to move to another branch?</h3>
 
 	<pre class="fragment"><code class="lang-bash input">git switch &lt;branch_name&gt;</code></pre>
-	<small class="fragment">n.b. to move only argument <b>-c</b> is omitted</small>
+	<small class="fragment">n.b. to only move/switch the argument <b>-c</b> is omitted</small>
 </section>
 
 <section>
@@ -123,14 +123,14 @@
 
 	<h3>How to merge two branches?</h3>
 
-	<p>May occur two cases:</p>
+	<p>Two cases may occur:</p>
 
 	<ul>
 		<li class="fragment">Between the two branches<br/>
-			there are no files in conflict<br/>
+			there are no conflicts between files<br/>
 			<small class="fragment">The merging is successful</small></li>
 		<li class="fragment">Some files were edited in both branches<br/>
-			<b class="fragment" style="color: red;">We must handle the conflicts!</b></li>
+			<b class="fragment" style="color: red;">We must resolve the conflicts!</b></li>
 	</ul>
 </section>
 
@@ -144,7 +144,7 @@ CONFLICT (content): Merge conflict in old_file
 Automatic merge failed; fix conflicts and then commit the result.</code></pre>
 
 	<p class="fragment">git enters in a conflict handling mode,<br/>
-		asking us to solve them and create a new commit</p>
+		asking us to resolve them and create a new commit</p>
 
 	<p class="fragment">The merging operation is done</p>
 
