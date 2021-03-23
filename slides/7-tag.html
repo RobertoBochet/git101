@@ -8,9 +8,9 @@
 </section>
 <section>
 	<x-section-title>tags</x-section-title>
-	<h3>What they are to?</h3>
-	<p class="fragment"><b>Tags</b> are used to identify a commits as significant ones</p>
-	<p class="fragment">e.g. tags could be used to identify the commit of a specific release version of a software</p>
+	<h3>What are they for?</h3>
+	<p class="fragment"><b>Tags</b> are used to identify a commit as a significant one</p>
+	<p class="fragment">e.g. tags could be used to identify the commit of a specific release of a program</p>
 </section>
 <section>
 	<x-section-title>tags</x-section-title>
@@ -19,9 +19,9 @@
 	<pre class="fragment" data-fragment-index="0"><code class="lang-bash input">git tag &lt;tag_name&gt; [&lt;commit_hash&gt;]</code></pre>
 
 	<p class="fragment" data-fragment-index="0">The command <a href="https://git-scm.com/docs/git-tag"><b>tag</b></a> requires a name for the tag and optionally the hash of the commit which has to be tagged
-	<small class="fragment">(If no hash is provided the "last" commit wil be tagged)</small></p>
+	<small class="fragment">(If no hash is provided the "last" commit will be tagged)</small></p>
 
-	<small class="fragment">n.b. tag name must be short and simple,<br/>for more complex notes you can assign also a message to a tag with the argument <code>-m</code> followed by it</small>
+	<small class="fragment">n.b. tag name must be short and simple,<br/>for more complex notes you can also add a message with the argument <code>-m</code>, followed by the message</small>
 </section>
 <section>
 	<x-section-title>tags</x-section-title>
@@ -51,7 +51,7 @@ v1.2.0
 
 	<h3>History as commit pointers</h3>
 
-	<p class="fragment">As we said each commit has a pointer to its parent, so we can see the entire history of a gir repo like a collection of commits and commit pointers</p>
+	<p class="fragment">As we said earlier each commit has a pointer to its parent, so we can see the entire history of a git repo like a collection of commits and commit pointers</p>
 
 	<img src="./images/tag_pointers.svg" alt="history with pointers" class="fragment" style="width: 90%;"/>
 </section>
@@ -71,21 +71,21 @@ v1.2.0
 
 	<h3>Which commit is a new one attached to?</h3>
 
-	<h4 class="fragment">The answer is "the commit pointed by HEAD"</h4>
+	<h4 class="fragment">The answer is "the commit pointed to by HEAD"</h4>
 </section>
 <section>
 	<x-section-title>tags</x-section-title>
 
 	<h3>The special tag HEAD</h3>
 
-	<p><b>HEAD</b> is a special tag pointing the current working branch<br/><small>in ordinary situation</small></p>
+	<p><b>HEAD</b> is a special tag pointing the current working branch<br/><small>in an ordinary situation</small></p>
 
 	<img src="./images/tag_head.svg" alt="HEAD tag" class="fragment" style="width: 90%;"/>
 </section>
 <section>
 	<x-section-title>tags</x-section-title>
 
-	<h3>Which operations move (implicitly) HEAD?</h3>
+	<h3>Which operations (implicitly) move HEAD?</h3>
 
 	<ul>
 		<li class="fragment">Change branch (<b>switch</b>)<br/>
@@ -97,7 +97,7 @@ v1.2.0
 <section>
 	<x-section-title>tags</x-section-title>
 
-	<h3>If we want to move HEAD<br/>to a specific commit?</h3>
+	<h3>What if we want to move HEAD<br/>to a specific commit?</h3>
 
 	<p>To do this we can use the command <a href="https://git-scm.com/docs/git-checkout"><b>checkout</b></a> with the hash of the commit we want move <b>HEAD</b> to</p>
 
@@ -106,5 +106,5 @@ v1.2.0
 
 	<img src="./images/tag_detached.svg" alt="detached HEAD" class="fragment" style="width: 90%;"/>
 
-	<small class="fragment">n.b. when <b>HEAD</b> point to a specific commit, we talk of <b>detached HEAD</b></small>
+	<small class="fragment">n.b. when <b>HEAD</b> points to a specific commit not pointed to by a branch, we call it <b>detached HEAD</b></small>
 </section>
