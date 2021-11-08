@@ -52,6 +52,12 @@ finally:
 
 ----
 
+### How to display a warning
+
+This is a warning box <!-- .element: class="warning" -->
+
+----
+
 - Do you remember bullet list?
   ```python
   bullet_list = ["Do you remember bullet list?"]
