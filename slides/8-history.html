@@ -1,0 +1,143 @@
+<section>
+	<h2>History</h2>
+</section>
+<section>
+	<x-section-title>History</x-section-title>
+
+	<h3>History as commit pointers</h3>
+
+	<p class="fragment">As we said earlier each commit has a pointer to its parent, so we can see the entire history of a git repo like a collection of commits and commit pointers</p>
+
+	<img src="./images/tag_pointers.svg" alt="history with pointers" class="fragment" style="width: 90%;"/>
+</section>
+<section>
+	<x-section-title>History</x-section-title>
+
+	<h3>Branches as commit pointers</h3>
+
+	<p class="fragment">We used an intuitive meaning of branch for simplicity, but actually for git the branches are really similar to commit pointers</p>
+	<p class="fragment">Specifically branch is a pointer to the last commit of the "intuitive branch"</p>
+
+	<img src="./images/tag_branches.svg" alt="branches like tags" class="fragment" style="width: 90%;"/>
+	<h4 class="fragment">Branches are tags<br/><small>(more or less)</small></h4>
+</section>
+<section>
+	<x-section-title>History</x-section-title>
+
+	<h3>Which commit is a new one attached to?</h3>
+
+	<h4 class="fragment">The answer is "the commit pointed to by HEAD"</h4>
+</section>
+<section>
+	<x-section-title>History</x-section-title>
+
+	<h3>The special tag HEAD</h3>
+
+	<p><b>HEAD</b> is a special tag pointing the current working branch<br/><small>in an ordinary situation</small></p>
+
+	<img src="./images/tag_head.svg" alt="HEAD tag" class="fragment" style="width: 90%;"/>
+</section>
+<section>
+	<x-section-title>History</x-section-title>
+
+	<h3>Which operations (implicitly) move HEAD?</h3>
+
+	<ul>
+		<li class="fragment">Change branch (<b>switch</b>)<br/>
+		<small>move HEAD to a branch</small></li>
+		<li class="fragment">Create a commit (<b>commit</b>)<br/>
+			<small>move HEAD to the new commit</small></li>
+	</ul>
+</section>
+<section>
+	<x-section-title>History</x-section-title>
+
+	<h3>What if we want to move HEAD<br/>to a specific commit?</h3>
+
+	<p>To do this we can use the command <a href="https://git-scm.com/docs/git-checkout"><b>checkout</b></a> with the hash of the commit we want move <b>HEAD</b> to</p>
+
+	<pre><code class="lang-bash input">git checkout &lt;commit_hash&gt;</code></pre>
+
+
+	<img src="./images/tag_detached.svg" alt="detached HEAD" class="fragment" style="width: 90%;"/>
+
+	<small class="fragment">n.b. when <b>HEAD</b> points to a specific commit not pointed to by a branch, we call it <b>detached HEAD</b></small>
+</section>
+<section>
+	<x-section-title>History</x-section-title>
+
+	<h3>Now let us see a special method<br/>to perform a merge orderly</h3>
+
+	<p class="fragment" data-fragment-index="0">We are working on a dev <b>branch</b> forked by the another one.<br/>
+		We end our work, and we want to merge it to the original branch...</p>
+
+	<img src="./images/history_rebase_before.svg" alt="before rebase" class="fragment" data-fragment-index="0" style="height:20%;"/>
+
+	<p class="fragment" data-fragment-index="1">...but while we were working on it, some commits were added to original branch</p>
+</section>
+
+<section>
+	<x-section-title>History</x-section-title>
+
+	<p>The problem can be solved with a simple <b>merge</b> operation, handling the potentially conflicts in a merging <b>commit</b></p>
+
+	<h4 class="fragment">...but there is an alternative way to handle this scenario</h4>
+</section>
+
+<section>
+	<x-section-title>History</x-section-title>
+
+	<h3>Rewrite the history</h3>
+
+	<p class="fragment">The idea is to rewrite history of our develop branch, and put it on the "last" commit of the original branch</p>
+
+	<img src="./images/history_rebase_after.svg" alt="after rebase" class="fragment" style="height: 23%;"/>
+
+	<p class="fragment">After this operation, we can complete the <b>merge</b> operation easily moving the original branch pointer to the new "last" commit</p>
+
+	<h4 class="fragment">This operation is called <a href="https://git-scm.com/book/en/v2/Git-Branching-Rebasing"><b>rebasing</b></a></h4>
+</section>
+<section>
+	<x-section-title>History</x-section-title>
+
+	<h3>How can we perform a rebase?</h3>
+
+	<p class="fragment">We have to move to the branch we want to rebase, and...</p>
+
+	<pre class="fragment"><code class="lang-bash input">git rebase &lt;ref_new_base&gt;</code></pre>
+
+	<p class="fragment">indicating a reference to the "new base"</p>
+
+	<p class="fragment">Then, git will try to rewrite the history of the current branch</p>
+</section>
+<section>
+	<x-section-title>History</x-section-title>
+
+	<h3>Could we run into a conflict?</h3>
+
+	<h2 class="fragment">Sure!</h2>
+
+	<p class="fragment">In case of <b>conflict</b> git will ask us to handle it, like a merge</p>
+</section>
+<section>
+	<x-section-title>History</x-section-title>
+
+	<h3>Why could we perform a rebase?</h3>
+
+	<p class="fragment">Classic <b>merge</b>, and merging based on <b>rebase</b> bring us to the same final commit,<br/>
+	but exploiting <b>rebase</b> we get a clearer history</p>
+
+	<p class="fragment">The linear history given by rebase simplify its own navigation</p>
+
+	<b class="fragment">When possible <b>rebase</b> is to be preferred compared to classic merge</b>
+</section>
+<section>
+	<p class="warning">Pay attention: perform a rebase is not painless.<br/>
+		It rewrites the history, which should be immutable!</p>
+
+	<p class="fragment">If the rebased branch is <b>already shared</b> with another repositories, and we try to <b>update</b> these with the new history we get an error given by the fact the <b>two histories are not compatible</b></p>
+
+	<p class="fragment">We can <b>force</b> the remote repository to use <b>our history</b>,<br/>but this could cause several issues if we are working in team</p>
+
+	<a class="fragment" href="https://git-scm.com/book/en/v2/Git-Branching-Rebasing">Rebasing on git-scm.com</a>
+</section>
