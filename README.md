@@ -42,6 +42,14 @@ You can add `--depth 1` to the previous commands to improve the update speed but
 1. Add author's info in `./slides/intro.html` and `./slides/outro.html`
 1. Put your content in `./slides/content.md` or add slides files in `./slides/` and link these in `./index.html`
 
+All user-supplied content MUST be placed under the `slides` directory.
+
+This allows to easily merge changes from this template without breaking the
+slides.
+
+If you're updating old slides you should resolve all the conflicts yourself and
+migrate to the new layout described here.
+
 ### How do I write my stuff?
 
 Using Vim.
@@ -98,3 +106,10 @@ A CI build job for the `master` branch should run automatically. If it doesn't, 
 `CI / CD` and click `Run Pipeline`.
 
 You can find the link to your Pages preview under `Settings` > `Pages`.
+
+## License selection
+By deafault this template indicates the license as CC-BY-SA, however by editing
+the `slides/outro.html` file one can pick a different license from the "suggested"
+ones.  
+(This however does not forbid anyone from using a different license altogether,
+just that those are the ones that we find suit best `;)` )
